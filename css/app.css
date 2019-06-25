@@ -136,7 +136,14 @@ nav a:hover {
 
 
 .industries {
+    padding-top: 36px;
     display: flex;
+    font-size: 16px;
+    line-height: 24px;
+}
+.icon {
+    height: 80px;
+    width: auto;
 }
 
 .col {
