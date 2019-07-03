@@ -3,48 +3,18 @@ html {
 }
 body {
     font-family: "freight-sans-pro", sans-serif;
-    background: #414439;
-    color: #F6FAEC;
+    background: #F6FAEC;
+    color: #414731;
     font-size: 20px;
     margin: 0;
     line-height: 36px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
-.band-top {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 20px;
-    background: #383A32;
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
 }
-.band-right {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    width: 20px;
-    background: #383A32;
-}
-.band-left {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 20px;
-    background: #383A32;
-}
-.band-bottom {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 20px;
-    background: #383A32;
-}
-
 h2 {
     font-family: "freight-display-pro", sans-serif;
     font-weight: 900;
@@ -69,16 +39,17 @@ p {
 a,
 a:visited {
     text-decoration: underline;
-    color: #F6FAEC;
+    color: #414731;
 }
 section {
     /* outline: 1px solid red; */
-    height: calc(100vh - 40px);
-    padding: 0 300px 0 100px;
+    height: calc(100vh + 100px);
+    padding: 0 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: relative;
+    overflow: hidden;
 }
 
 #logo {
@@ -89,42 +60,62 @@ section {
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
-    margin-bottom: 60px;
-    /* position: absolute;
-    top: 120px;
-    left: 100px; */
+    margin: 0 40px 0 0;
 }
 nav {
-    text-align: right;
     position: fixed;
-    top: 120px;
-    right: 80px;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+    background-image: linear-gradient(180deg, rgba(246,250,236,0.79) 33%, rgba(246,250,236,0.00) 99%);
 }
 nav ul {
     margin: 0;
+    padding: 0;
     list-style-type: none;
+    display: flex;
 }
 nav li a {
-    display: block;
+    /* outline: 1px solid red; */
+    position: relative;
+    display: inline-block;
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 2px;
     font-size: 14px;
-    /* outline: 1px solid red; */
+    padding: 55px 25px;
     text-decoration: none;
     line-height: 36px;
     transition: color 0.2s ease;
+}
+nav li a.active {
+    color: #FFCE2D;
+}
+nav li a.active:after {
+    content: '';
+    position: absolute;
+    bottom: 40px;
+    left: calc(50% - 5px);
+    width: 10px;
+    height: 10px;
+    background: #FFCE2D;
+    border-radius: 20px;
 }
 nav a:hover {
     color: #FFCE2D;
 }
 
 #top {
-    background: url('../img/stripes.svg') bottom center no-repeat;
+    background: url('../img/hero.jpg') top center no-repeat #F6FAEC;
     background-size: cover;
+    height: 100vh;
 }
-#top:after {
+/* #top:after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -132,7 +123,7 @@ nav a:hover {
     right: 0;
     height: 250px;
     background-image: linear-gradient(180deg, rgba(56,58,50,0.00) 0%, #383A32 99%);
-}
+} */
 
 
 .industries {
@@ -151,10 +142,44 @@ nav a:hover {
 }
 
 .why-tamarack {
-    background: #383A32;
 }
 
 .transactions {
-    background: url('../img/transactions.jpg') top center no-repeat #383A32;
+}
+.parallax-window,
+.full-photo {
+    /* background: url('../img/needles.jpg'); */
+    background-attachment: fixed;
     background-size: cover;
+    background-position: center center;
+    /* position: absolute; */
+    position: relative;
+    z-index: 5;
+    /* bottom: -300px; */
+    margin: -100px 0;
+    left: 0;
+    right: 0;
+    height: 600px;
+    clip-path: polygon(0px 100px, 100% 0%, 100% calc(100% - 100px), 0 100%);
+}
+.parallax-mirror {
+    clip-path: polygon(0px 100px, 100% 0%, 100% calc(100% - 100px), 0 100%);
+    z-index: 10 !important;
+}
+
+.sunburst-green {
+    position: absolute;
+    bottom: calc( -1077px / 2);
+    right: calc( -1077px / 2);
+    background: url(../img/sunburst-green.svg);
+    width: 1077px;
+    height: 1077px;
+}
+.sunburst-gold {
+    position: absolute;
+    bottom: calc( -1077px / 2);
+    left: calc( -1077px / 2);
+    background: url(../img/sunburst-gold.svg);
+    width: 1077px;
+    height: 1077px;
 }
