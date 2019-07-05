@@ -1,6 +1,10 @@
 html {
-    /* border: 20px solid #383A32; */
+  box-sizing: border-box;
 }
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
     font-family: "freight-sans-pro", sans-serif;
     background: #F6FAEC;
@@ -12,7 +16,16 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 .wrapper {
+    width: 100%;
     max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+.centered {
+    text-align: center;
+}
+.centered h2,
+.centered p {
     margin: 0 auto;
 }
 h2 {
@@ -24,11 +37,12 @@ h2 {
     max-width: 840px;
 }
 h3 {
+    color: #96C121;
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 900;
-    margin: 0;
+    margin: 20px 0;
 }
 
 p {
@@ -44,7 +58,7 @@ a:visited {
 section {
     /* outline: 1px solid red; */
     height: calc(100vh + 100px);
-    padding: 0 100px;
+    /* padding: 0 100px; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -94,7 +108,7 @@ nav li a {
     transition: color 0.2s ease;
 }
 nav li a.active {
-    color: #FFCE2D;
+    color: #FFCF42;
 }
 nav li a.active:after {
     content: '';
@@ -103,11 +117,11 @@ nav li a.active:after {
     left: calc(50% - 5px);
     width: 10px;
     height: 10px;
-    background: #FFCE2D;
+    background: #FFCF42;
     border-radius: 20px;
 }
 nav a:hover {
-    color: #FFCE2D;
+    color: #FFCF42;
 }
 
 #top {
@@ -131,6 +145,7 @@ nav a:hover {
     display: flex;
     font-size: 16px;
     line-height: 24px;
+    text-align: left;
 }
 .icon {
     height: 80px;
