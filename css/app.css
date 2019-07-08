@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  /* scroll-behavior: smooth; */
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -107,10 +108,12 @@ nav li a {
     line-height: 36px;
     transition: color 0.2s ease;
 }
-nav li a.active {
+nav li.active a {
     color: #FFCF42;
 }
-nav li a.active:after {
+nav li a:after {
+    transform: translateY(10px);
+    transition: all 0.1s ease;
     content: '';
     position: absolute;
     bottom: 40px;
@@ -119,6 +122,13 @@ nav li a.active:after {
     height: 10px;
     background: #FFCF42;
     border-radius: 20px;
+    opacity: 0;
+    visibility: hidden;
+}
+nav li.active a:after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
 }
 nav a:hover {
     color: #FFCF42;
