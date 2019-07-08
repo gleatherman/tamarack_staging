@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>icon-down-arrow</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Round-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home" transform="translate(-700.000000, -819.000000)" fill="#383A32">
+            <path d="M720,844.840376 L727.981221,836.765258 L712.018779,836.765258 L720,844.840376 Z M720,819 C725.508633,819 730.219075,820.956165 734.131458,824.868542 C738.043835,828.780925 740,833.491367 740,839 C740,844.508633 738.043835,849.219075 734.131458,853.131455 C730.219075,857.043838 725.508633,859 720,859 C714.491367,859 709.780925,857.043838 705.868545,853.131455 C701.956162,849.219075 700,844.508633 700,839 C700,833.491367 701.956162,828.780925 705.868545,824.868542 C709.780925,820.956165 714.491367,819 720,819 Z" id="icon-down-arrow"></path>
+        </g>
+    </g>
+</svg>

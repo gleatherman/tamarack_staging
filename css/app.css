@@ -128,17 +128,17 @@ nav a:hover {
     background: url('../img/hero.jpg') top center no-repeat #F6FAEC;
     background-size: cover;
     height: 100vh;
+    clip-path: polygon(0px 0, 100% 0%, 100% calc(100% - 7vh), 0 100%);
+    margin-bottom: -7vh;
 }
-/* #top:after {
-    content: "";
+.down-arrow {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 250px;
-    background-image: linear-gradient(180deg, rgba(56,58,50,0.00) 0%, #383A32 99%);
-} */
-
+    bottom: 100px;
+    left: calc(50% - 20px);
+    background: url('../img/icon-down-arrow.svg') center center no-repeat;
+    height: 40px;
+    width: 40px;
+}
 
 .industries {
     padding-top: 36px;
@@ -171,14 +171,14 @@ nav a:hover {
     position: relative;
     z-index: 5;
     /* bottom: -300px; */
-    margin: -100px 0;
+    margin: -7vh 0;
     left: 0;
     right: 0;
     height: 600px;
     clip-path: polygon(0px 100px, 100% 0%, 100% calc(100% - 100px), 0 100%);
 }
 .parallax-mirror {
-    clip-path: polygon(0px 100px, 100% 0%, 100% calc(100% - 100px), 0 100%);
+    clip-path: polygon(0px 7vh, 100% 0%, 100% calc(100% - 7vh), 0 100%);
     z-index: 10 !important;
 }
 
