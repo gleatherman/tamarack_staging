@@ -73,5 +73,12 @@ $(window).scroll(function() {
     var theta = $(window).scrollTop() / 2250 % Math.PI;
     $('.sunburst-green').css({ transform: 'rotate(-' + theta + 'rad)' });
     $('.sunburst-gold').css({ transform: 'rotate(' + theta + 'rad)' });
+
+    // Collapse nav when not at the top
+    if ( $(window).scrollTop() > 0 ) {
+        $("nav").addClass('collapsed');
+    } else {
+        $("nav").removeClass('collapsed');
+    }
 });
 

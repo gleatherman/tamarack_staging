@@ -72,10 +72,12 @@ section {
     height: 152px;
     display: block;
     background-image: url('../img/tamarack-logo.svg');
+    background-size: 100%;
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
     margin: 0 40px 0 0;
+    transition: all 0.3s ease;
 }
 nav {
     position: fixed;
@@ -88,6 +90,11 @@ nav {
     justify-content: center;
     padding: 30px 0;
     background-image: linear-gradient(180deg, rgba(246,250,236,0.79) 33%, rgba(246,250,236,0.00) 99%);
+    transition: all 0.3s ease;
+    /* outline: 1px solid blue; */
+}
+nav * {
+    /* outline: 1px solid red; */
 }
 nav ul {
     margin: 0;
@@ -106,14 +113,14 @@ nav li a {
     padding: 55px 25px;
     text-decoration: none;
     line-height: 36px;
-    transition: color 0.2s ease;
+    transition: color 0.1s ease, padding 0.3s ease;
 }
 nav li.active a {
     color: #FFCF42;
 }
 nav li a:after {
     transform: translateY(10px);
-    transition: all 0.1s ease;
+    transition: transform 0.1s ease, opacity 0.1s ease, bottom 0.3s ease;
     content: '';
     position: absolute;
     bottom: 40px;
@@ -132,6 +139,23 @@ nav li.active a:after {
 }
 nav a:hover {
     color: #FFCF42;
+}
+
+/* Collapsed Nav */
+.collapsed {
+    padding: 15px 0;
+    background: rgba(246,250,236,0.90);
+}
+.collapsed #logo {
+    width: 100px;
+    height: 75px;
+    margin: 0 70px;
+}
+.collapsed li a {
+    padding: 20px 25px;
+}
+.collapsed li a:after {
+    bottom: 10px;
 }
 
 #top {
