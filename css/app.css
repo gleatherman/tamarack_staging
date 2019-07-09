@@ -221,6 +221,7 @@ nav a:hover {
     bottom: calc( -1077px / 2);
     right: calc( -1077px / 2);
     background: url(../img/sunburst-green.svg);
+    background-size: 100%;
     width: 1077px;
     height: 1077px;
 }
@@ -229,6 +230,19 @@ nav a:hover {
     bottom: calc( -1077px / 2);
     left: calc( -1077px / 2);
     background: url(../img/sunburst-gold.svg);
+    background-size: 100%;
     width: 1077px;
     height: 1077px;
+}
+.sunburst-green.big {
+    width: 1400px;
+    height: 1400px;
+    bottom: calc( -1400px / 2);
+    right: calc( -1400px / 2);
+}
+.sunburst-gold.big {
+    width: 1400px;
+    height: 1400px;
+    bottom: calc( -1400px / 2);
+    left: calc( -1400px / 2);
 }
