@@ -2,6 +2,32 @@
 
 $( document ).ready(function() {
 
+    // Founders
+
+    $('.founder-card.michael-small').on('click', function(){
+        $('#founders').addClass('founders-active michael-active');
+    });
+
+    $('.founder-card.larry-small').on('click', function(){
+        $('#founders').addClass('founders-active larry-active');
+    });
+
+    $('.michael-large').on('click', function(){
+        $('#founders').addClass('michael-active').removeClass('larry-active');
+    });
+    $('.larry-large').on('click', function(){
+        $('#founders').addClass('larry-active').removeClass('michael-active');
+    });
+
+    $('.close-x').on('click', function(){
+        $('#founders').removeClass('founders-active');
+        setTimeout(function(){
+            $('#founders').removeClass('michael-active larry-active');
+        }, 300);
+        return false;
+
+    });
+
     // MenuSpy
     var elm = document.querySelector('#main-nav');
     var ms = new MenuSpy(elm, {

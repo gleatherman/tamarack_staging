@@ -1,3 +1,8 @@
+
+//
+// Tamarack Partners
+//
+
 // Colors
 
 $white:     #FFFFFF;
@@ -6,10 +11,12 @@ $black:     #414731;
 $green:     #96C121;
 $gold:      #FFCF42;
 
+
 // Font Families
 
 $freight-display:   "freight-display-pro", Georgia, serif;
 $freight-sans:      "freight-sans-pro", "Helvetica Neue", Arial sans-serif;
+
 
 // Layout
 
@@ -35,6 +42,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 30px;
+    position: relative;
 }
 section {
     height: calc(100vh + 100px);
@@ -188,6 +196,7 @@ nav li.active a:after {
     padding: 20px 25px;
     &:after {
         bottom: 10px;
+    }
 }
 
 
@@ -220,6 +229,13 @@ nav li.active a:after {
         width: 50%;
     }
 }
+.founders-content {
+    transition: all 0.2s ease;
+    .founders-active & {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
 .founders-cards {
     display: flex;
     margin: 36px 0;
@@ -233,6 +249,9 @@ nav li.active a:after {
     min-height: 220px;
     border-radius: 4px;
     box-shadow: 0 6px 12px 0 rgba($black,0.07);
+    &:hover {
+        cursor: pointer;
+    }
     &:first-child {
         margin-right: 15px;
     }
@@ -252,6 +271,63 @@ nav li.active a:after {
     position: absolute;
     top: 30px;
     left: 30px;
+}
+
+.founders-cards-large-container {
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(60px);
+    position: absolute;
+    top: 90px;
+    width: 160%;
+    // left: 0;
+    display: flex;
+    .founders-active & {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    .michael-active & {
+        // left: 30px;
+        transform: translateX(0);
+        // right: auto;
+    }
+    .larry-active & {
+        // right: 30px;
+        transform: translateX(-780px);
+        // left: auto;
+    }
+    .founder-card-large {
+        position: relative;
+        background: $white;
+        width: 100%;
+        height: 600px;
+        box-shadow: 0 6px 12px 0 rgba($black,0.07);
+        &:first-child {
+            margin-right: 15px;
+        }
+        &:last-child {
+            margin-left: 15px;
+        }
+        .close-x {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background: url(../img/icon-close-x.svg) center center no-repeat;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.larry-active .michael-large,
+.michael-active .larry-large {
+    transition: all 0.3s ease;
+    opacity: 0.5;
 }
 
 /* Why Tamarack */

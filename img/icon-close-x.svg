@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>icon-close-x</title>
+    <desc>Created with Sketch.</desc>
+    <g id="icon-close-x" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.400000006">
+        <path d="M13.5,10.5 L27,10.5 L27,13.5 L13.5,13.5 L13.5,27 L10.5,27 L10.5,13.5 L-3,13.5 L-3,10.5 L10.5,10.5 L10.5,-3 L13.5,-3 L13.5,10.5 Z" id="Rectangle-2" fill="#414731" transform="translate(12.000000, 12.000000) rotate(45.000000) translate(-12.000000, -12.000000) "></path>
+    </g>
+</svg>
