@@ -14,12 +14,19 @@ gulp.task('default', function(){
 
     // SCSS/CSS WATCHERS
     gulp.watch('./scss/**/*.scss', gulp.series('scss'));
+
+    browserSync.init({
+        server: "./"
+    });
+
 });
 
 
 // SASS/CSS
 //--------------------------------------------
 gulp.task('scss', function () {
+
+
     return gulp.src(['./scss/app.scss'])
 
     // Compile SASS
@@ -33,4 +40,7 @@ gulp.task('scss', function () {
 
     // Save minified CSS file to compiled site
     .pipe(gulp.dest('./css/'))
+
+    // Update via Browser Sync
+    .pipe(browserSync.stream())
 });

@@ -1,15 +1,29 @@
+// Colors
+
+$white:     #FFFFFF;
+$offwhite:  #F6FAEC;
+$black:     #414731;
+$green:     #96C121;
+$gold:      #FFCF42;
+
+// Font Families
+
+$freight-display:   "freight-display-pro", Georgia, serif;
+$freight-sans:      "freight-sans-pro", "Helvetica Neue", Arial sans-serif;
+
+// Layout
+
 html {
   box-sizing: border-box;
-  /* scroll-behavior: smooth; */
 }
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
 body {
-    font-family: "freight-sans-pro", sans-serif;
-    background: #F6FAEC;
-    color: #414731;
+    font-family: $freight-sans;
+    background: $offwhite;
+    color: $black;
     font-size: 20px;
     margin: 0;
     line-height: 36px;
@@ -22,15 +36,27 @@ body {
     margin: 0 auto;
     padding: 0 30px;
 }
-.centered {
-    text-align: center;
+section {
+    height: calc(100vh + 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
 }
-.centered h2,
-.centered p {
-    margin: 12px auto;
+
+
+// Typography
+
+p {
+    margin: 12px 0;
+    max-width: 880px;
+}
+.indented {
+    text-indent: 30px;
 }
 h2 {
-    font-family: "freight-display-pro", sans-serif;
+    font-family: $freight-display;
     font-weight: 900;
     font-size: 60px;
     line-height: 72px;
@@ -38,7 +64,7 @@ h2 {
     max-width: 840px;
 }
 h3 {
-    color: #96C121;
+    color: $green;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 16px;
@@ -51,20 +77,11 @@ h5 {
     margin: 0;
 }
 
-p {
-    margin: 12px 0;
-    max-width: 880px;
-}
-.indented {
-    text-indent: 30px;
-}
-
 a,
 a:visited {
     text-decoration: underline;
-    color: #414731;
+    color: $black;
 }
-
 blockquote {
     font-weight: bold;
     font-style: italic;
@@ -73,19 +90,18 @@ blockquote {
     line-height: 48px;
     margin: -10px 0 0 0;
     padding: 24px 0 24px 30px;
-    border-left: 2px solid #96C121;
+    border-left: 2px solid $green;
+}
+.centered {
+    text-align: center;
+}
+.centered h2,
+.centered p {
+    margin: 12px auto;
 }
 
-section {
-    /* outline: 1px solid red; */
-    height: calc(100vh + 100px);
-    /* padding: 0 100px; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-}
+
+// Navigation
 
 #logo {
     width: 200px;
@@ -111,10 +127,6 @@ nav {
     padding: 30px 0;
     background-image: linear-gradient(180deg, rgba(246,250,236,0.79) 33%, rgba(246,250,236,0.00) 99%);
     transition: all 0.3s ease;
-    /* outline: 1px solid blue; */
-}
-nav * {
-    /* outline: 1px solid red; */
 }
 nav ul {
     margin: 0;
@@ -123,7 +135,6 @@ nav ul {
     display: flex;
 }
 nav li a {
-    /* outline: 1px solid red; */
     position: relative;
     display: inline-block;
     text-transform: uppercase;
@@ -134,9 +145,12 @@ nav li a {
     text-decoration: none;
     line-height: 36px;
     transition: color 0.1s ease, padding 0.3s ease;
+    &:hover {
+        color: $gold;
+    }
 }
 nav li.active a {
-    color: #FFCF42;
+    color: $gold;
 }
 nav li a:after {
     transform: translateY(10px);
@@ -157,9 +171,6 @@ nav li.active a:after {
     visibility: visible;
     transform: translateY(0px);
 }
-nav a:hover {
-    color: #FFCF42;
-}
 
 /* Collapsed Nav */
 .collapsed {
@@ -175,13 +186,15 @@ nav a:hover {
 }
 .collapsed li a {
     padding: 20px 25px;
-}
-.collapsed li a:after {
-    bottom: 10px;
+    &:after {
+        bottom: 10px;
 }
 
+
+// Top Section
+
 #top {
-    background: url('../img/hero.jpg') top center no-repeat #F6FAEC;
+    background: url('../img/hero.jpg') top center no-repeat $offwhite;
     background-size: cover;
     height: 100vh;
     clip-path: polygon(0px 0, 100% 0%, 100% calc(100% - 7vh), 0 100%);
@@ -195,6 +208,61 @@ nav a:hover {
     height: 40px;
     width: 40px;
 }
+
+
+// Founders
+
+.founders {}
+
+.two-halves {
+    display: flex;
+    .col {
+        width: 50%;
+    }
+}
+.founders-cards {
+    display: flex;
+    margin: 36px 0;
+}
+.founder-card {
+    background: $white;
+    padding: 30px;
+    width: 100%;
+    position: relative;
+    padding: 30px 30px 30px 220px;
+    min-height: 220px;
+    border-radius: 4px;
+    box-shadow: 0 6px 12px 0 rgba($black,0.07);
+    &:first-child {
+        margin-right: 15px;
+    }
+    &:last-child {
+        margin-left: 15px;
+    }
+    h5 {
+        margin-top: 20px;
+    }
+    p {
+        margin: 0;
+    }
+}
+.founder-photo {
+    width: 160px;
+    border-radius: 80px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+/* Why Tamarack */
+.why-tamarack {}
+
+
+/* Transactions */
+.transactions {}
+
+
+// Industries
 
 .industries {
     padding-top: 36px;
@@ -212,56 +280,43 @@ nav a:hover {
     padding-right: 30px;
 }
 
-/* Founders */
 
-.founders {}
+// Sunbursts
 
-.two-halves {
-    display: flex;
-}
-.two-halves .col {
-    width: 50%;
-}
-.founders-cards {
-    display: flex;
-    margin: 36px 0;
-}
-.founder-card {
-    background: #fff;
-    padding: 30px;
-    width: 100%;
-    position: relative;
-    padding: 30px 30px 30px 220px;
-    min-height: 220px;
-    border-radius: 4px;
-    box-shadow: 0 6px 12px 0 rgba(0,0,0,0.07);
-}
-.founder-card:first-child {
-    margin-right: 15px;
-}
-.founder-card:last-child {
-    margin-left: 15px;
-}
-.founder-photo {
-    width: 160px;
-    border-radius: 80px;
+.sunburst-green {
     position: absolute;
-    top: 30px;
-    left: 30px;
+    bottom: calc( -1077px / 2);
+    right: calc( -1077px / 2);
+    background: url(../img/sunburst-green.svg);
+    background-size: 100%;
+    width: 1077px;
+    height: 1077px;
+    z-index: -1;
+    &.big {
+        width: 1400px;
+        height: 1400px;
+        bottom: calc( -1400px / 2);
+        right: calc( -1400px / 2);
+    }
 }
-.founder-card h5 {
-    margin-top: 20px;
-}
-.founder-card p {
-    margin: 0;
+.sunburst-gold {
+    position: absolute;
+    bottom: calc( -1077px / 2);
+    left: calc( -1077px / 2);
+    background: url(../img/sunburst-gold.svg);
+    background-size: 100%;
+    width: 1077px;
+    height: 1077px;
+    z-index: -1;
+    &.big {
+        width: 1400px;
+        height: 1400px;
+        bottom: calc( -1400px / 2);
+        left: calc( -1400px / 2);
+    }
 }
 
-/* Why Tamarack */
-.why-tamarack {}
-
-
-/* Transactions */
-.transactions {}
+// Parallax
 
 .parallax-window,
 .full-photo {
@@ -282,37 +337,4 @@ nav a:hover {
 .parallax-mirror {
     clip-path: polygon(0px 7vh, 100% 0%, 100% calc(100% - 7vh), 0 100%);
     z-index: 10 !important;
-}
-
-.sunburst-green {
-    position: absolute;
-    bottom: calc( -1077px / 2);
-    right: calc( -1077px / 2);
-    background: url(../img/sunburst-green.svg);
-    background-size: 100%;
-    width: 1077px;
-    height: 1077px;
-    z-index: -1;
-}
-.sunburst-gold {
-    position: absolute;
-    bottom: calc( -1077px / 2);
-    left: calc( -1077px / 2);
-    background: url(../img/sunburst-gold.svg);
-    background-size: 100%;
-    width: 1077px;
-    height: 1077px;
-    z-index: -1;
-}
-.sunburst-green.big {
-    width: 1400px;
-    height: 1400px;
-    bottom: calc( -1400px / 2);
-    right: calc( -1400px / 2);
-}
-.sunburst-gold.big {
-    width: 1400px;
-    height: 1400px;
-    bottom: calc( -1400px / 2);
-    left: calc( -1400px / 2);
 }
