@@ -4,11 +4,11 @@ $( document ).ready(function() {
 
     // Founders
 
-    $('.founder-card.michael-small').on('click', function(){
+    $('.founder-card-small.michael-small').on('click', function(){
         $('#founders').addClass('founders-active michael-active');
     });
 
-    $('.founder-card.larry-small').on('click', function(){
+    $('.founder-card-small.larry-small').on('click', function(){
         $('#founders').addClass('founders-active larry-active');
     });
 
@@ -27,6 +27,15 @@ $( document ).ready(function() {
         return false;
 
     });
+
+
+    // Work / Play Switch
+    $('.switch').on('click', function(){
+        $(this).toggleClass('play');
+        $(this).closest('.founder-card-large').toggleClass('play-active');
+        return false;
+    });
+
 
     // MenuSpy
     var elm = document.querySelector('#main-nav');
