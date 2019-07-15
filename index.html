@@ -6,24 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/app.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-    <!-- <script type="text/javascript" src="js/lethargy.min.js"></script> -->
-    <!-- <script type="text/javascript" src="js/smartscroll.min.js"></script> -->
     <script type="text/javascript" src="js/parallax.min.js"></script>
-    <!-- <script type="text/javascript" src="js/jquery.waypoints.min.js"></script> -->
-    <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
-    <script type="text/javascript" src="js/menuspy.min.js"></script>
+    <script type="text/javascript" src="js/jquery.scrollify.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
     <link rel="stylesheet" href="https://use.typekit.net/cck7jvw.css">
 </head>
 
 <body>
 <div class="wrapper">
     <nav>
-        <a href="#top">
-            <h1 id="logo">Tamarack Partners</h1>
+        <a href="#top" id="logo">
+            <h1 class="logo">Tamarack Partners</h1>
         </a>
         <ul id="main-nav">
-            <li class="active"><a href="#top">About</a></li>
+            <li><a class="active" href="#top">About</a></li>
             <li><a href="#founders">Founders</a></li>
             <li><a href="#why-tamarack">Why Tamarack</a></li>
             <li><a href="#industry-partners">Industry Partners</a></li>
@@ -33,14 +30,14 @@
     </nav>
 </div>
 <div class="section-wrapper">
-    <section class="section top" id="top">
+    <section class="section top" data-section-name="top">
         <div class="wrapper centered">
             <h2>Transactional capability meets industry intelligence.</h2>
             <p>At Tamarack Partners, our focus and our expertise is representing business owners who want to realize the value they have built by selling all or a portion of their company. Our team includes seasoned industry partners who know your business.</p>
         </div>
         <div class="down-arrow"></div>
     </section>
-    <section class="section founders" id="founders">
+    <section class="section founders" data-section-name="founders">
         <div class="wrapper">
             <h2>Founders</h2>
             <div class="founders-content">
@@ -116,7 +113,7 @@
         <div class="sunburst-gold big"></div>
     </section>
     <div class="parallax-window" data-parallax="scroll" data-image-src="img/tree.jpg"></div>
-    <section class="section why-tamarack" id="why-tamarack">
+    <section class="section why-tamarack" data-section-name="why-tamarack">
         <div class="wrapper">
             <h2>Why Tamarack?</h2>
             <h3>You want an advisor that can make you shine brightly </h3>
@@ -132,7 +129,7 @@
         <div class="sunburst-green"></div>
     </section>
     <div class="parallax-window" data-parallax="scroll" data-image-src="img/buds.jpg"></div>
-    <section class="section industry-partners" id="industry-partners">
+    <section class="section industry-partners" data-section-name="industry-partners">
         <div class="wrapper centered">
             <h2>Industry Partners</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis molestie interdum hendrerit. Praesent tincidunt elementum tincidunt. Aenean nunc neque, scelerisque a mollis nec, tempus pellentesque diam. In venenatis, nisi sit amet dapibus rutrum, elit lacus mollis felis, id venenatis.</p>
@@ -160,7 +157,7 @@
         <div class="sunburst-gold"></div>
     </section>
     <div class="parallax-window" data-parallax="scroll" data-image-src="img/needles.jpg"></div>
-    <section class="section transactions" id="transactions">
+    <section class="section transactions" data-section-name="transactions">
         <div class="wrapper">
             <h2>Transactions</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis molestie interdum hendrerit. Praesent tincidunt elementum tincidunt. Aenean nunc neque, scelerisque a mollis nec, tempus pellentesque diam. In venenatis, nisi sit amet dapibus rutrum, elit lacus mollis felis.</p>
@@ -168,7 +165,7 @@
         <div class="sunburst-green big"></div>
     </section>
     <div class="parallax-window" data-parallax="scroll" data-image-src="img/tamarack-full-color.jpg"></div>
-    <section class="section contact-us" id="contact-us">
+    <section class="section contact-us" data-section-name="contact-us">
         <div class="wrapper">
             <h2>Contact Us</h2>
             <p>Tamarack Partners<br>

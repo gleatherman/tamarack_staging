@@ -111,7 +111,7 @@ blockquote {
 
 // Navigation
 
-#logo {
+.logo {
     width: 200px;
     height: 152px;
     display: block;
@@ -157,7 +157,8 @@ nav li a {
         color: $gold;
     }
 }
-nav li.active a {
+nav li.active a,
+nav li a.active {
     color: $gold;
 }
 nav li a:after {
@@ -174,7 +175,8 @@ nav li a:after {
     opacity: 0;
     visibility: hidden;
 }
-nav li.active a:after {
+nav li.active a:after,
+nav li a.active:after {
     opacity: 1;
     visibility: visible;
     transform: translateY(0px);
@@ -187,7 +189,7 @@ nav li.active a:after {
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
 }
-.collapsed #logo {
+.collapsed .logo {
     width: 100px;
     height: 75px;
     margin: 0 70px;
@@ -202,7 +204,7 @@ nav li.active a:after {
 
 // Top Section
 
-#top {
+.top {
     background: url('../img/hero.jpg') top center no-repeat $offwhite;
     background-size: cover;
     height: 100vh;
