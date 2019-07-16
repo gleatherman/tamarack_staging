@@ -48,9 +48,9 @@ $( document ).ready(function() {
 
     $('.transactions-nav a').not('.close').on('click', function(){
         // $('.transactions-nav a').removeClass('active');
+        // $(this).addClass('active');
         $('.transactions-display').attr('class', 'transactions-display');
         $('.transactions-display').addClass($(this).attr('data-category'));
-        // $(this).addClass('active');
         return false;
     });
 

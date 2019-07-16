@@ -597,7 +597,7 @@ nav li a.active:after {
             padding: 5px 24px;
             margin: 0 10px;
             font-size: 18px;
-            transition: all 0.3s ease;
+            transition: all 0.2s ease;
             &.active {
                 background: $green;
                 color: $white;
@@ -618,7 +618,7 @@ nav li a.active:after {
         flex-wrap: wrap;
     }
     .transaction {
-        height: 140px;
+        height: 120px;
         width: calc(33.33333% - 20px);
         margin: 10px;
         background: $white;
@@ -630,13 +630,17 @@ nav li a.active:after {
         opacity: 0;
         .logo-top {
             position: absolute;
+            width: 120px;
+            height: auto;
             top: 10px;
-            left: calc(50% - 75px);
+            left: calc(50% - 60px);
         }
         .logo-bottom {
             position: absolute;
             bottom: 10px;
-            left: calc(50% - 75px);
+            width: 120px;
+            height: auto;
+            left: calc(50% - 60px);
         }
         // Down Arrow
         &:after {
