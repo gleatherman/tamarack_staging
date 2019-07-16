@@ -9,7 +9,7 @@ $white:     #FFFFFF;
 $offwhite:  #F6FAEC;
 $black:     #414731;
 $green:     #96C121;
-$gold:      #FFCF42;
+$gold:      darken(#FFCF42, 10);
 
 
 // Font Families
@@ -77,7 +77,7 @@ h3 {
     letter-spacing: 2px;
     font-size: 16px;
     font-weight: 900;
-    margin: 20px 0;
+    margin: 20px 0 20px;
 }
 h5 {
     font-size: 20px;
@@ -96,7 +96,7 @@ blockquote {
     font-size: 40px;
     letter-spacing: -1px;
     line-height: 48px;
-    margin: -10px 0 0 0;
+    margin: 10px 0 0 0;
     padding: 24px 0 24px 30px;
     border-left: 2px solid $green;
 }
@@ -108,6 +108,13 @@ blockquote {
     margin: 12px auto;
 }
 
+ul {
+    list-style-image: url('../img/bullet.svg');
+    padding-left: 18px;
+    li {
+        padding-left: 6px;
+    }
+}
 
 // Navigation
 
@@ -141,6 +148,7 @@ nav ul {
     padding: 0;
     list-style-type: none;
     display: flex;
+    list-style-image: none;
 }
 nav li a {
     position: relative;
@@ -170,7 +178,7 @@ nav li a:after {
     left: calc(50% - 5px);
     width: 10px;
     height: 10px;
-    background: #FFCF42;
+    background: $gold;
     border-radius: 20px;
     opacity: 0;
     visibility: hidden;
@@ -229,6 +237,9 @@ nav li a.active:after {
     display: flex;
     .col {
         width: 50%;
+        &:first-child {
+            padding-right: 30px;
+        }
     }
 }
 .founders-content {
@@ -454,17 +465,42 @@ nav li a.active:after {
 .industries {
     padding-top: 36px;
     display: flex;
-    font-size: 16px;
-    line-height: 24px;
     text-align: left;
+    .col {
+        width: 33.333%;
+        padding: 0 15px;
+    }
+    p {
+        font-size: 18px;
+        margin: 0;
+    }
+    ul {
+        margin: 0 0 12px;
+        font-size: 18px;
+        // line-height: 28px;
+    }
 }
 .icon {
     height: 80px;
     width: auto;
+    margin-bottom: 10px;
 }
 
-.col {
-    padding-right: 30px;
+.industries
+
+.button {
+    border-radius: 4px;
+    background: $green;
+    color: $white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    line-height: 48px;
 }
 
 
