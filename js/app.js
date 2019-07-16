@@ -1,5 +1,11 @@
 $( document ).ready(function() {
 
+    // Hero
+
+    $('.down-arrow').on('click', function () {
+        $.scrollify.next();
+    });
+
     // Founders
     $('.founder-card-small.michael-small').on('click', function(){
         $('.founders').addClass('founders-active michael-active');

@@ -226,6 +226,9 @@ nav li a.active:after {
     background: url('../img/icon-down-arrow.svg') center center no-repeat;
     height: 40px;
     width: 40px;
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 
