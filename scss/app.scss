@@ -597,6 +597,7 @@ nav li a.active:after {
             padding: 5px 24px;
             margin: 0 10px;
             font-size: 18px;
+            transition: all 0.3s ease;
             &.active {
                 background: $green;
                 color: $white;
@@ -605,6 +606,12 @@ nav li a.active:after {
                 font-weight: normal;
             }
         }
+    }
+    &.healthcare .healthcare-button,
+    &.technology .technology-button,
+    &.special .special-button {
+        color: $white;
+        background: $green;
     }
     .transactions-grid {
         display: flex;
@@ -618,34 +625,42 @@ nav li a.active:after {
         border-radius: 8px;
         box-shadow: 0 6px 10px rgba($black, .1);
         transform: translateY(30px);
+        animation-fill-mode: forwards;
         transition: all 0.3s ease;
         opacity: 0;
-        &:nth-child(1) {
-            transition-delay: .1s;
+        .logo-top {
+            position: absolute;
+            top: 10px;
+            left: calc(50% - 75px);
         }
-        &:nth-child(2) {
-            transition-delay: .2s;
+        .logo-bottom {
+            position: absolute;
+            bottom: 10px;
+            left: calc(50% - 75px);
         }
-        &:nth-child(3) {
-            transition-delay: .3s;
+        // Down Arrow
+        &:after {
+            content: '';
+            position: absolute;
+            height: 21px;
+            left: 0;
+            right: 0;
+            top: calc(50% - 15px);
+            background: url('../img/transaction-arrow.svg') no-repeat;
+            background-size: 100% 21px;
         }
-        &:nth-child(4) {
-            transition-delay: .4s;
+        .info {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 40px;
+            height: 40px;
+            text-indent: 100%;
+            overflow: hidden;
+            background: url('../img/icon-circle-i.svg') no-repeat center center;
         }
-        &:nth-child(5) {
-            transition-delay: .5s;
-        }
-        &:nth-child(6) {
-            transition-delay: .6s;
-        }
-        &:nth-child(7) {
-            transition-delay: .7s;
-        }
-        &:nth-child(8) {
-            transition-delay: .8s;
-        }
-        &:nth-child(9) {
-            transition-delay: .9s;
+        &:nth-child(n+1) {
+            transition-delay: 0;
         }
     }
 }
@@ -657,6 +672,33 @@ nav li a.active:after {
         .transaction {
             transform: translateY(0);
             opacity: 1;
+            &:nth-child(1) {
+                transition-delay: .1s;
+            }
+            &:nth-child(2) {
+                transition-delay: .2s;
+            }
+            &:nth-child(3) {
+                transition-delay: .3s;
+            }
+            &:nth-child(4) {
+                transition-delay: .4s;
+            }
+            &:nth-child(5) {
+                transition-delay: .5s;
+            }
+            &:nth-child(6) {
+                transition-delay: .6s;
+            }
+            &:nth-child(7) {
+                transition-delay: .7s;
+            }
+            &:nth-child(8) {
+                transition-delay: .8s;
+            }
+            &:nth-child(9) {
+                transition-delay: .9s;
+            }
         }
     }
     .transactions-categories {

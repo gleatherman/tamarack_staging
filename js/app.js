@@ -35,14 +35,24 @@ $( document ).ready(function() {
     // Transactions
     $('.card').on('click', function(){
         $('.transactions').addClass('transactions-active');
+        $('.transactions-display').addClass($(this).attr('data-category'));
         return false;
     });
 
     $('.close').on('click', function(){
+        // $('.transactions-nav a').removeClass('active');
         $('.transactions').removeClass('transactions-active');
+        $('.transactions-display').attr('class', 'transactions-display');
         return false;
     });
 
+    $('.transactions-nav a').not('.close').on('click', function(){
+        // $('.transactions-nav a').removeClass('active');
+        $('.transactions-display').attr('class', 'transactions-display');
+        $('.transactions-display').addClass($(this).attr('data-category'));
+        // $(this).addClass('active');
+        return false;
+    });
 
     // Scrollify
     $.scrollify({
