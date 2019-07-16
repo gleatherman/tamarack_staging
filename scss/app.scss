@@ -504,6 +504,167 @@ nav li a.active:after {
 }
 
 
+// Transactions
+.transactions {
+
+}
+
+.transactions-categories {
+    transition: all 0.3s ease;
+    display: flex;
+    margin: 20px 0;
+    // opacity: 0;
+    // visibility: hidden;
+    .card {
+        margin: 10px;
+        background: $white;
+        border-radius: 8px;
+        width: 100%;
+        padding: 30px;
+        text-align: left;
+        box-shadow: 0 6px 10px rgba($black, .1);
+        display: flex;
+        flex-direction: column;
+        .icon-small {
+            margin: 120px 0 12px;
+            width: 30px;
+            height: auto;
+        }
+        h4 {
+            margin: 0;
+            font-size: 30px;
+            letter-spacing: -0.5px;
+        }
+        p {
+            font-size: 18px;
+            line-height: 24px;
+        }
+        .button {
+            display: block;
+            background: $green;
+            color: $white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            border-radius: 4px;
+            line-height: 48px;
+            padding-left: 15px;
+            margin: 20px -15px -15px;
+            position: relative;
+            &:after {
+                content: '';
+                background: url('../img/icon-right-arrow-white.svg');
+                width: 14px;
+                height: 15px;
+                text-align: right;
+                position: absolute;
+                right: 20px;
+                top: 17px;
+                transition: all 0.1s ease;
+            }
+        }
+
+        // Hover on the card
+        &:hover {
+            cursor: pointer;
+            .button:after {
+                right: 15px;
+            }
+        }
+    }
+}
+
+.transactions-display {
+    // outline: 1px solid red;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    position: absolute;
+    top: 160px;
+    left: 30px;
+    right: 30px;
+    .transactions-nav {
+        display: flex;
+        margin-bottom: 10px;
+        justify-content: center;
+        a {
+            background: $white;
+            border-radius: 8px;
+            box-shadow: 0 6px 10px rgba($black, .1);
+            font-weight: bold;
+            text-decoration: none;
+            line-height: 48px;
+            padding: 5px 24px;
+            margin: 0 10px;
+            font-size: 18px;
+            &.active {
+                background: $green;
+                color: $white;
+            }
+            &.close {
+                font-weight: normal;
+            }
+        }
+    }
+    .transactions-grid {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .transaction {
+        height: 140px;
+        width: calc(33.33333% - 20px);
+        margin: 10px;
+        background: $white;
+        border-radius: 8px;
+        box-shadow: 0 6px 10px rgba($black, .1);
+        transform: translateY(30px);
+        transition: all 0.3s ease;
+        opacity: 0;
+        &:nth-child(1) {
+            transition-delay: .1s;
+        }
+        &:nth-child(2) {
+            transition-delay: .2s;
+        }
+        &:nth-child(3) {
+            transition-delay: .3s;
+        }
+        &:nth-child(4) {
+            transition-delay: .4s;
+        }
+        &:nth-child(5) {
+            transition-delay: .5s;
+        }
+        &:nth-child(6) {
+            transition-delay: .6s;
+        }
+        &:nth-child(7) {
+            transition-delay: .7s;
+        }
+        &:nth-child(8) {
+            transition-delay: .8s;
+        }
+        &:nth-child(9) {
+            transition-delay: .9s;
+        }
+    }
+}
+
+.transactions-active {
+    .transactions-display {
+        opacity: 1;
+        visibility: visible;
+        .transaction {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    .transactions-categories {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
 // Sunbursts
 
 .sunburst-green {

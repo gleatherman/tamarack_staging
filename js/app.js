@@ -32,6 +32,17 @@ $( document ).ready(function() {
         return false;
     });
 
+    // Transactions
+    $('.card').on('click', function(){
+        $('.transactions').addClass('transactions-active');
+        return false;
+    });
+
+    $('.close').on('click', function(){
+        $('.transactions').removeClass('transactions-active');
+        return false;
+    });
+
 
     // Scrollify
     $.scrollify({
