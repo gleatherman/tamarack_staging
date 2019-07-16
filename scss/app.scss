@@ -233,6 +233,20 @@ nav li a.active:after {
 
 .founders {}
 
+.top {
+    z-index: 5 !important;
+}
+.founders-alternate {
+    background: url('../img/founders-alternate.jpg') center center;
+    background-size: cover;
+}
+.wrapper {
+    z-index: 20 !important;
+}
+.sunburst-gold {
+    z-index: 1 !important;
+}
+
 .two-halves {
     display: flex;
     .col {
