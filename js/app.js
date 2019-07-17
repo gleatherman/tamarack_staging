@@ -49,6 +49,7 @@ $( document ).ready(function() {
         // $('.transactions-nav a').removeClass('active');
         $('.transactions').removeClass('transactions-active');
         $('.transactions-display').attr('class', 'transactions-display');
+        $('.is-flipped').removeClass('is-flipped');
         return false;
     });
 
@@ -57,6 +58,16 @@ $( document ).ready(function() {
         // $(this).addClass('active');
         $('.transactions-display').attr('class', 'transactions-display');
         $('.transactions-display').addClass($(this).attr('data-category'));
+        return false;
+    });
+
+    $('.info').on('click', function(){
+        $(this).closest('.transaction').addClass('is-flipped');
+        return false;
+    });
+
+    $('.info-close').on('click', function(){
+        $(this).closest('.transaction').removeClass('is-flipped');
         return false;
     });
 
