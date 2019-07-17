@@ -46,17 +46,24 @@ $( document ).ready(function() {
     });
 
     $('.close').on('click', function(){
-        // $('.transactions-nav a').removeClass('active');
+        // Hide transactions
         $('.transactions').removeClass('transactions-active');
-        $('.transactions-display').attr('class', 'transactions-display');
+
+        // Strip is-flipped from transactions
         $('.is-flipped').removeClass('is-flipped');
+
+        // Reset classes
+        $('.transactions-display').attr('class', 'transactions-display');
+        $('.transaction').attr('class', 'transaction');
         return false;
     });
 
     $('.transactions-nav a').not('.close').on('click', function(){
-        // $('.transactions-nav a').removeClass('active');
-        // $(this).addClass('active');
+        // Reset classes
         $('.transactions-display').attr('class', 'transactions-display');
+        $('.transaction').attr('class', 'transaction');
+
+        // Set active class on nav
         $('.transactions-display').addClass($(this).attr('data-category'));
         return false;
     });
@@ -67,7 +74,7 @@ $( document ).ready(function() {
     });
 
     $('.info-close').on('click', function(){
-        $(this).closest('.transaction').removeClass('is-flipped');
+        $(this).closest('.transaction').removeClass('is-flipped').addClass('no-delay');
         return false;
     });
 
