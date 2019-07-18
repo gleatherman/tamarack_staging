@@ -594,7 +594,6 @@ nav li a.active:after {
 }
 
 .transactions-display {
-    // outline: 1px solid red;
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
@@ -626,12 +625,14 @@ nav li a.active:after {
             }
         }
     }
-    &.healthcare .healthcare-button,
-    &.technology .technology-button,
-    &.special .special-button {
+    // Active state
+    &.healthcare-active .healthcare-button,
+    &.technology-active .technology-button,
+    &.special-active .special-button {
         color: $white;
         background: $green;
     }
+
     .transactions-grid {
         display: flex;
         flex-wrap: wrap;
@@ -640,6 +641,8 @@ nav li a.active:after {
         left: 0;
         right: 0;
     }
+
+    // Transaction Card
     .transaction {
         position: relative;
         height: 120px;
@@ -716,54 +719,55 @@ nav li a.active:after {
         }
     }
 }
-.healthcare-grid,
-.technology-grid,
-.special-grid {
-    opacity: 0;
-    visibility: hidden;
-}
 
+
+//
+// Activated when clicking one of the 3 category cards
+//
 .transactions-active {
+
+    // Hide 3 category cards
+    .transactions-categories {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    // Show nav & transactions grid
     .transactions-display {
         opacity: 1;
         visibility: visible;
-        &.healthcare .healthcare-grid,
-        &.technology .technology-grid,
-        &.special .special-grid {
+
+        // Individual grids are hidden by default
+        .healthcare-grid,
+        .technology-grid,
+        .special-grid {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        // Category class determines which grid then is shown
+        &.healthcare-active .healthcare-grid,
+        &.technology-active .technology-grid,
+        &.special-active .special-grid {
             opacity: 1;
             visibility: visible;
 
+            // Animate all of the individual cards in
             .transaction {
                 transform: translateY(0);
                 transition: all 0.3s ease;
                 opacity: 1;
-                &:nth-child(1) {
-                    transition-delay: .1s;
-                }
-                &:nth-child(2) {
-                    transition-delay: .2s;
-                }
-                &:nth-child(3) {
-                    transition-delay: .3s;
-                }
-                &:nth-child(4) {
-                    transition-delay: .4s;
-                }
-                &:nth-child(5) {
-                    transition-delay: .5s;
-                }
-                &:nth-child(6) {
-                    transition-delay: .6s;
-                }
-                &:nth-child(7) {
-                    transition-delay: .7s;
-                }
-                &:nth-child(8) {
-                    transition-delay: .8s;
-                }
-                &:nth-child(9) {
-                    transition-delay: .9s;
-                }
+
+                // Slight delay on every card
+                &:nth-child(1) {transition-delay: .1s;}
+                &:nth-child(2) {transition-delay: .2s;}
+                &:nth-child(3) {transition-delay: .3s;}
+                &:nth-child(4) {transition-delay: .4s;}
+                &:nth-child(5) {transition-delay: .5s;}
+                &:nth-child(6) {transition-delay: .6s;}
+                &:nth-child(7) {transition-delay: .7s;}
+                &:nth-child(8) {transition-delay: .8s;}
+                &:nth-child(9) {transition-delay: .9s;}
 
                 // Flipped card
                 &.is-flipped {
@@ -776,10 +780,6 @@ nav li a.active:after {
                 }
             }
         }
-    }
-    .transactions-categories {
-        opacity: 0;
-        visibility: hidden;
     }
 }
 
