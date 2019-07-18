@@ -783,6 +783,48 @@ nav li a.active:after {
     }
 }
 
+
+
+// Contact us
+
+.contact-us {
+    flex-direction: row;
+}
+
+.half {
+    width: 50%;
+    position: relative;
+    flex-direction: column;
+    z-index: 5;
+}
+#map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.left {
+    display: flex;
+    // align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.half-wrapper {
+    max-width: 600px;
+    padding: 0 30px;
+    margin-left: auto;
+    width: 100%;
+}
+.half-top {
+    padding-top: 15vh;
+    opacity: 0.5;
+}
+.half-bottom {
+    padding-bottom: 40px;
+}
+
 // Sunbursts
 
 .sunburst-green {

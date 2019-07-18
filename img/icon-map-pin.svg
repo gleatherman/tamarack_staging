@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="54px" height="66px" viewBox="0 0 54 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>icon-map-pin</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Round-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home-alternate-state" transform="translate(-1049.000000, -7925.000000)" fill="#96C121">
+            <g id="Contact-Us" transform="translate(0.000000, 7487.000000)">
+                <g id="Map">
+                    <path d="M1076,438 C1090.91169,438 1103,450.088312 1103,465 L1103,492 L1076,492 C1061.08831,492 1049,479.911688 1049,465 C1049,450.088312 1061.08831,438 1076,438 Z" id="icon-map-pin" transform="translate(1076.000000, 465.000000) rotate(45.000000) translate(-1076.000000, -465.000000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
