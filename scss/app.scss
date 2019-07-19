@@ -805,6 +805,17 @@ nav li a.active:after {
     left: 0;
     right: 0;
     bottom: 0;
+    background: url('../img/map.png') center center no-repeat;
+    background-size: cover;
+}
+a.pin {
+    position: absolute;
+    z-index: 5;
+    top: calc(50% - 33px);
+    left: calc(50% - 27px);
+    width: 54px;
+    height: 66px;
+    background: url('../img/icon-map-pin.svg');
 }
 
 .left {
