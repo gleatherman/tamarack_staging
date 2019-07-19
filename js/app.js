@@ -168,6 +168,11 @@ function init() {
         position: new google.maps.LatLng(44.9779031, -93.2728441),
         map: map,
         icon: '../img/icon-map-pin.svg',
-        title: 'Snazzy!'
+        url: 'https://www.google.com/maps/place/60+South+6th+St+%232625,+Minneapolis,+MN+55402/@44.9779031,-93.2728494,17z/data=!3m1!4b1!4m5!3m4!1s0x52b3329a75fc44b3:0xaf78993ea69052e!8m2!3d44.9778993!4d-93.2706554',
+        title: 'Tarmarack Partners'
+    });
+
+    google.maps.event.addListener(marker, 'click', function() {
+        window.location.href = this.url;
     });
 }
