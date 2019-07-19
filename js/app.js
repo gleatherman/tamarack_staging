@@ -148,8 +148,12 @@ function init() {
         // How zoomed in you want the map to start at (always required)
         zoom: 16,
 
+        draggable: false,
+
+        zoomControl: false,
+
         // The latitude and longitude to center the map (always required)
-        center: new google.maps.LatLng(44.9779031, -93.2728441), // New York
+        center: new google.maps.LatLng(44.9779031, -93.2728441),
 
         // How you would like to style the map.
         // This is where you would paste any style found on Snazzy Maps.
