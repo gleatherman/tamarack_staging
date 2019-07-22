@@ -354,13 +354,38 @@ nav li a.active:after {
     padding: 60px 120px 30px 30px;
     display: flex;
     .card-info {
-        // width: 40%;
         min-width: 280px;
         margin-right: 30px;
         text-align: center;
         p {
             margin: 0;
             font-size: 18px;
+        }
+    }
+    .card-content {
+        position: relative;
+        width: 100%;
+        .work-content,
+        .play-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            transition: all 0.3s ease;
+        }
+        .play-content {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+    &.play-active {
+        .work-content {
+            opacity: 0;
+            visibility: hidden;
+        }
+        .play-content {
+            opacity: 1;
+            visibility: visible;
         }
     }
     h4 {
