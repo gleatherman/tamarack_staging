@@ -118,6 +118,23 @@ ul {
 
 // Navigation
 
+#logo {
+    position: relative;
+}
+.blocker {
+    content: '';
+    background-image: radial-gradient(50% 100%, #F6FAEC 50%, rgba(246,250,236,0.79) 70%, rgba(246,250,236,0.00) 100%);
+    position: absolute;
+    top: -30px;
+    left: 30px;
+    right: 30px;
+    bottom: -15px;
+    z-index: -5;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    visibility: visible;
+}
+
 .logo {
     width: 200px;
     height: 152px;
@@ -193,20 +210,24 @@ nav li a.active:after {
 /* Collapsed Nav */
 .collapsed {
     padding: 15px 0;
-    // background: rgba(246,250,236,0.90);
-    background: $offwhite;
+    background: rgba(246,250,236,0.90);
+    // background: $offwhite;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-}
-.collapsed .logo {
-    width: 100px;
-    height: 75px;
-    margin: 0 70px;
-}
-.collapsed li a {
-    padding: 20px 25px;
-    &:after {
-        bottom: 10px;
+    .logo {
+        width: 100px;
+        height: 75px;
+        margin: 0 70px;
+    }
+    .blocker {
+        opacity: 1;
+        visibility: visible;
+    }
+    li a {
+        padding: 20px 25px;
+        &:after {
+            bottom: 10px;
+        }
     }
 }
 
