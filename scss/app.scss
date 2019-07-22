@@ -392,6 +392,13 @@ nav li a.active:after {
         font-size: 24px;
         margin: 0;
     }
+    .vcard {
+        // outline: 1px solid red;
+        display: inline-block;
+        padding: 0px 0px 0px 32px;
+        text-decoration: none;
+        background: url('../img/icon-vcard.svg') no-repeat left 10px;
+    }
     .founder-photo {
         margin: 20px 0;
     }
