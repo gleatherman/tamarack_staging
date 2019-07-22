@@ -232,6 +232,19 @@ nav li a.active:after {
         cursor: pointer;
     }
 }
+.about-tamaracks {
+    text-align: center;
+    display: inline-block;
+    background: rgba($white, .6);
+    padding: 5px 5px 8px;
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 560px;
+    border-radius: 2px;
+    position: absolute;
+    bottom: 8vh;
+    left: calc(50% - 280px);
+}
 
 
 // Founders
@@ -393,7 +406,6 @@ nav li a.active:after {
         margin: 0;
     }
     .vcard {
-        // outline: 1px solid red;
         display: inline-block;
         padding: 0px 0px 0px 32px;
         text-decoration: none;
@@ -852,15 +864,15 @@ a.pin {
 
 .left {
     display: flex;
-    // align-items: center;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
 }
 .half-wrapper {
     max-width: 600px;
     padding: 0 30px;
     margin-left: auto;
     width: 100%;
+    align-self: center;
 }
 .half-top {
     padding-top: 15vh;
@@ -868,6 +880,10 @@ a.pin {
 }
 .half-bottom {
     padding-bottom: 40px;
+    font-size: 16px;
+    align-self: flex-end;
+    position: absolute;
+    bottom: 0;
 }
 
 // Sunbursts
