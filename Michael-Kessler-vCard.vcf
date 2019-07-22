@@ -1,0 +1,17 @@
+BEGIN:VCARD
+VERSION:3.0
+PRODID:-//Apple Inc.//Mac OS X 10.14.5//EN
+N:Kessler;Michael;;;
+FN:Michael Kessler
+ORG:Tamarack Parners;
+TITLE:Partner
+EMAIL;type=INTERNET;type=HOME;type=pref:mkessler@tamarackpartners.net
+TEL;type=WORK;type=VOICE;type=pref:612.685.8936
+ADR;type=WORK;type=pref:;;60 South 6th St.\, Suite 2625;Minneapolis;Minnesota;55402;United States
+item1.URL;type=pref:https://tamarackpartners.net
+item1.X-ABLabel:_$!<HomePage>!$_
+item2.URL:https://www.linkedin.com/in/michaelkessler-tamarackpartners/
+item2.X-ABLabel:LinkedIn
+UID:fec25edc-5c12-4cc9-bd7c-2f4aa84c01d8
+X-ABUID:CB46178F-BC8C-4A27-87DF-D97547F4A686:ABPerson
+END:VCARD

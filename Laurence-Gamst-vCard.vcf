@@ -1,0 +1,25 @@
+BEGIN:VCARD
+VERSION:3.0
+PRODID:-//Apple Inc.//Mac OS X 10.14.5//EN
+N:Gamst;Laurence;;;
+FN:Laurence Gamst
+ORG:Tamarack Partners;
+TITLE:Partner
+EMAIL;type=INTERNET;type=WORK;type=pref:lgamst@tamarackpartners.net
+TEL;type=WORK;type=VOICE;type=pref:(612) 361-2060
+TEL;type=CELL;type=VOICE:(612) 747-7942
+ADR;type=HOME;type=pref:;;60 South 6th St.\, Suite 2625;Minneapolis;Minnesota;55402;United States
+X-SOCIALPROFILE;type=linkedin:https://www.linkedin.com/in/laurence-gamst-6ab574187
+item1.URL;type=pref:http://www.tamarackpartners.net
+item1.X-ABLabel:_$!<HomePage>!$_
+UID:47290608-5be2-424d-9cb4-432800157d5f
+X-ABUID:43AFCB7F-406C-4817-B7A0-FA7FFAB7EEFE:ABPerson
+X-FC-TAGS:23dc7031-8032-11e9-bfa9-96fda8c6d35f|d58afd2c-81b5-11e9-8935-5247
+ 97c784c1|af7c6954-8086-11e9-bfa9-96fda8c6d35f|715962af-8179-11e9-9ef2-ee04
+ be9e5a5d
+X-FCEXTENDED-X-FC-STASH-GDATA1136061466106:tel:+1-612-747-7942
+X-FCEXTENDED-X-FC-STASH-GDATA-1135401538506:tel:+1-612-361-2060
+X-FC-LIST-ID:e09314f31186a16a3b743cdf0a494a54ebb7e2b2
+X-ETAG:fffffe94aa0c887d87663059df180ff329393967471493be9af1e89b
+X-ID:60ee025c2d4e45de8840c46bb1125278
+END:VCARD
