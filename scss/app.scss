@@ -721,11 +721,13 @@ nav li a.active:after {
         opacity: 0;
         .front,
         .back {
+            -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
             background: $white;
             border-radius: 8px;
             box-shadow: 0 6px 10px rgba($black, .05);
             position: absolute;
+            z-index: 0;
             top: 0;
             left: 0;
             right: 0;
@@ -733,7 +735,7 @@ nav li a.active:after {
         }
         .back {
             transform: rotateY(180deg);
-            z-index: 0;
+            z-index: 1;
             display: flex;
             align-items: center;
             p {
