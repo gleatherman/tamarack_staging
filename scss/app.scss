@@ -717,11 +717,11 @@ nav li a.active:after {
         margin: 10px;
         transform: translateY(30px);
         transform-style: preserve-3d;
-        backface-visibility: hidden;
         animation-fill-mode: forwards;
         opacity: 0;
         .front,
         .back {
+            backface-visibility: hidden;
             background: $white;
             border-radius: 8px;
             box-shadow: 0 6px 10px rgba($black, .05);
@@ -733,7 +733,7 @@ nav li a.active:after {
         }
         .back {
             transform: rotateY(180deg);
-            z-index: -1;
+            z-index: 0;
             display: flex;
             align-items: center;
             p {
@@ -777,6 +777,9 @@ nav li a.active:after {
             text-indent: 100%;
             overflow: hidden;
             background: url('../img/icon-circle-i.svg') no-repeat center center;
+            &:hover {
+                cursor: pointer;
+            }
         }
         .info-close {
             background-image: url('../img/icon-circle-x.svg');
