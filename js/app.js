@@ -90,7 +90,7 @@ $( document ).ready(function() {
         sectionName : "section-name",
         interstitialSection : "",
         easing: "easeOutExpo",
-        scrollSpeed: 1200,
+        scrollSpeed: 2000,
         offset : 0,
         scrollbars: true,
         standardScrollElements: "",
