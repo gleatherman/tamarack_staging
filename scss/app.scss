@@ -18,6 +18,24 @@ $freight-display:   "freight-display-pro", Georgia, serif;
 $freight-sans:      "freight-sans-pro", "Helvetica Neue", Arial sans-serif;
 
 
+// Mixins
+
+@mixin breakpoint($point) {
+  @if $point == large {
+    @media (max-width: 1000px) { @content; }
+  }
+  @else if $point == medium {
+    @media (max-width: 768px) { @content; }
+  }
+  @else if $point == small {
+    @media (max-width: 600px)  { @content; }
+  }
+  // For custom breakpoint sizes
+  @else if $point > 0 {
+    @media (max-width: #{$point}px)  { @content; }
+  }
+}
+
 // Layout
 
 html {
@@ -147,11 +165,18 @@ ul {
     margin: 0 40px 0 0;
     transition: all 0.3s ease;
 }
-nav {
+.nav-wrapper {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    z-index: 30;
+    padding: 0 30px;
+}
+nav {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     z-index: 30;
     display: flex;
     align-items: center;
@@ -159,74 +184,122 @@ nav {
     padding: 30px 0;
     background-image: linear-gradient(180deg, rgba(246,250,236,0.79) 33%, rgba(246,250,236,0.00) 99%);
     transition: all 0.3s ease;
-}
-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    display: flex;
-    list-style-image: none;
-}
-nav li a {
-    position: relative;
-    display: inline-block;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 2px;
-    font-size: 14px;
-    padding: 55px 25px;
-    text-decoration: none;
-    line-height: 36px;
-    transition: color 0.1s ease, padding 0.3s ease;
-    &:hover {
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        list-style-image: none;
+        width: 100%;
+        li {
+            flex-grow: 1;
+            padding: 0;
+        }
+    }
+    li a {
+        position: relative;
+        display: inline-block;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 2px;
+        font-size: 14px;
+        padding: 55px 0;
+        width: 100%;
+        text-decoration: none;
+        line-height: 36px;
+        text-align: center;
+        transition: color 0.1s ease, padding 0.3s ease;
+        &:hover {
+            color: $gold;
+        }
+    }
+    li.active a,
+    li a.active {
         color: $gold;
     }
-}
-nav li.active a,
-nav li a.active {
-    color: $gold;
-}
-nav li a:after {
-    transform: translateY(10px);
-    transition: transform 0.1s ease, opacity 0.1s ease, bottom 0.3s ease;
-    content: '';
-    position: absolute;
-    bottom: 40px;
-    left: calc(50% - 5px);
-    width: 10px;
-    height: 10px;
-    background: $gold;
-    border-radius: 20px;
-    opacity: 0;
-    visibility: hidden;
-}
-nav li.active a:after,
-nav li a.active:after {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0px);
+    li a:after {
+        transform: translateY(10px);
+        transition: transform 0.1s ease, opacity 0.1s ease, bottom 0.3s ease;
+        content: '';
+        position: absolute;
+        bottom: 40px;
+        left: calc(50% - 5px);
+        width: 10px;
+        height: 10px;
+        background: $gold;
+        border-radius: 20px;
+        opacity: 0;
+        visibility: hidden;
+    }
+    li.active a:after,
+    li a.active:after {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0px);
+    }
+    .menu-button {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: url('../img/icon-menu.svg') no-repeat center center;
+        width: 120px;
+        height: 106px;
+        &:hover {
+            cursor: pointer;
+        }
+        .menu-active & {
+            background-image: url('../img/icon-menu-close.svg');
+        }
+    }
 }
 
 /* Collapsed Nav */
 .collapsed {
-    padding: 15px 0;
-    background: rgba(246,250,236,0.90);
-    // background: $offwhite;
+    background: rgba($offwhite,0.90);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
+    nav {
+        background: none;
+        padding: 15px 0;
+    }
     .logo {
         width: 100px;
         height: 75px;
-        margin: 0 70px;
+        margin: 0 70px 0 0;
     }
     .blocker {
         opacity: 1;
         visibility: visible;
+        left: -30px;
     }
     li a {
-        padding: 20px 25px;
+        padding: 20px 0;
         &:after {
             bottom: 10px;
+        }
+    }
+}
+
+@include breakpoint(large) {
+    nav,
+    .collapsed nav {
+        padding: 15px 0;
+        ul {
+            display: none;
+        }
+        .menu-button {
+            opacity: 1;
+            visibility: visible;
+        }
+        .logo {
+            margin: 0;
+            width: 100px;
+            height: 75px;
+        }
+        .blocker {
+            right: -30px;
         }
     }
 }

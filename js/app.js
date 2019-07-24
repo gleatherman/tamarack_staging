@@ -1,5 +1,11 @@
 $( document ).ready(function() {
 
+    // Mobile Menu
+
+    $('.menu-button').on('click', function(){
+        $('body').toggleClass('menu-active');
+    });
+
     // Hero
 
     $('.down-arrow').on('click', function () {
@@ -131,9 +137,9 @@ $(window).scroll(function() {
 
     // Collapse nav when not at the top
     if ( $(window).scrollTop() > 150 ) {
-        $("nav").addClass('collapsed');
+        $(".nav-wrapper").addClass('collapsed');
     } else {
-        $("nav").removeClass('collapsed');
+        $(".nav-wrapper").removeClass('collapsed');
     }
 
 });
