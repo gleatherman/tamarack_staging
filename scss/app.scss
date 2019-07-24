@@ -177,7 +177,7 @@ ul {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 30;
+    z-index: 40;
     padding: 0 30px;
 }
 nav {
@@ -311,6 +311,44 @@ nav {
     }
 }
 
+// Mobile Menu
+
+.menu-active {
+    overflow: hidden;
+    #mobile-nav {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+#mobile-nav {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    position: fixed;
+    background: $offwhite;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 30;
+    flex-direction: column;
+    justify-items: center;
+    flex: 1;
+    display: flex;
+    padding-top: 106px;
+    a {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        text-decoration: none;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+}
 
 // Top Section
 

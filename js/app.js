@@ -125,6 +125,19 @@ $( document ).ready(function() {
         return false;
     });
 
+    // Scroll to mobile nav items
+    $("#mobile-nav a").on("click",function() {
+        // Dismiss mobile nav
+        $('body').removeClass('menu-active');
+        // Get target & chop off # from anchor
+        var nav_target = $(this).attr("href").substring(1);
+        // Animate scrolling to the matching section
+        $('html, body').animate({
+            scrollTop: $('section[data-section-name=' + nav_target + ']').offset().top
+        }, 750, 'swing');
+        return false;
+    });
+
     if (window.matchMedia('(max-width: 1024px)').matches) {
         // functionality for screens smaller than 1024px
         $.scrollify.disable();
