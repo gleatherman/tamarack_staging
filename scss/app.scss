@@ -22,7 +22,7 @@ $freight-sans:      "freight-sans-pro", "Helvetica Neue", Arial sans-serif;
 
 @mixin breakpoint($point) {
   @if $point == large {
-    @media (max-width: 1000px) { @content; }
+    @media (max-width: 1024px) { @content; }
   }
   @else if $point == medium {
     @media (max-width: 768px) { @content; }
@@ -71,6 +71,13 @@ section {
     overflow: hidden;
 }
 
+@include breakpoint(large) {
+    section {
+        height: auto;
+        padding: 200px 0;
+    }
+}
+
 
 // Typography
 
@@ -85,7 +92,7 @@ h2 {
     font-family: $freight-display;
     font-weight: 900;
     font-size: 50px;
-    line-height: 64px;
+    line-height: 60px;
     margin: 0;
     max-width: 840px;
 }
@@ -267,7 +274,7 @@ nav {
     .logo {
         width: 100px;
         height: 75px;
-        margin: 0 70px 0 0;
+        margin: 0 30px 0 0;
     }
     .blocker {
         opacity: 1;
@@ -314,6 +321,12 @@ nav {
     -webkit-clip-path: polygon(0px 0, 100% 0%, 100% calc(100% - 7vh), 0 100%);
     clip-path: polygon(0px 0, 100% 0%, 100% calc(100% - 7vh), 0 100%);
     margin-bottom: -7vh;
+}
+@include breakpoint(large) {
+    .top {
+        -webkit-clip-path: polygon(0px 0, 100% 0%, 100% calc(100% - 3vh), 0 100%);
+        clip-path: polygon(0px 0, 100% 0%, 100% calc(100% - 3vh), 0 100%);
+    }
 }
 .down-arrow {
     position: absolute;
@@ -528,7 +541,7 @@ nav {
 }
 
 .switch {
-    width: 160px;
+    width: 130px;
     height: 48px;
     border: 1px solid $green;
     border-radius: 48px;
@@ -597,7 +610,7 @@ nav {
             visibility: visible;
         }
         .knob {
-            transform: translateX(-110px);
+            transform: translateX(-80px);
             background: $gold;
         }
     }
@@ -638,7 +651,7 @@ nav {
     }
 }
 .icon {
-    height: 80px;
+    height: 60px;
     width: auto;
     margin-bottom: 10px;
 }
@@ -671,7 +684,7 @@ nav {
 .transactions-categories {
     transition: all 0.3s ease;
     display: flex;
-    margin: 20px 0;
+    margin: 20px -10px;
     // opacity: 0;
     // visibility: hidden;
     .card {
@@ -739,8 +752,8 @@ nav {
     transition: all 0.3s ease;
     position: absolute;
     top: 90px;
-    left: 30px;
-    right: 30px;
+    left: 20px;
+    right: 20px;
     .transactions-nav {
         display: flex;
         margin-bottom: 10px;
@@ -934,6 +947,7 @@ nav {
 
 .contact-us {
     flex-direction: row;
+    padding: 0;
 }
 
 .half {
@@ -965,6 +979,7 @@ a.pin {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 200px 0;
 }
 .half-wrapper {
     max-width: 600px;
@@ -1031,16 +1046,31 @@ a.pin {
     background-size: cover;
     background-position: center center;
     position: relative;
-    z-index: 5;
+    z-index: 10;
     margin: -7vh 0;
     left: 0;
     right: 0;
     height: 600px;
-    -webkit-clip-path: polygon(0px 100px, 100% 0%, 100% calc(100% - 100px), 0 100%);
-    clip-path: polygon(0px 100px, 100% 0%, 100% calc(100% - 100px), 0 100%);
+    -webkit-clip-path: polygon(0px 7vh, 100% 0%, 100% calc(100% - 7vh), 0 100%);
+    clip-path: polygon(0px 7vh, 100% 0%, 100% calc(100% - 7vh), 0 100%);
 }
 .parallax-mirror {
     -webkit-clip-path: polygon(0px 7vh, 100% 0%, 100% calc(100% - 7vh), 0 100%);
     clip-path: polygon(0px 7vh, 100% 0%, 100% calc(100% - 7vh), 0 100%);
     z-index: 10 !important;
+}
+
+@include breakpoint(large) {
+    .parallax-window,
+    .full-photo {
+        margin: -3vh 0;
+        height: 350px;
+        -webkit-clip-path: polygon(0px 3vh, 100% 0%, 100% calc(100% - 3vh), 0 100%);
+        clip-path: polygon(0px 3vh, 100% 0%, 100% calc(100% - 3vh), 0 100%);
+    }
+    .parallax-mirror {
+        -webkit-clip-path: polygon(0px 3vh, 100% 0%, 100% calc(100% - 3vh), 0 100%);
+        clip-path: polygon(0px 3vh, 100% 0%, 100% calc(100% - 3vh), 0 100%);
+        z-index: 10 !important;
+    }
 }

@@ -100,7 +100,7 @@ $( document ).ready(function() {
         offset : 0,
         scrollbars: true,
         standardScrollElements: "",
-        setHeights: true,
+        setHeights: false,
         overflowScroll: true,
         updateHash: false,
         touchScroll:true,
@@ -125,6 +125,11 @@ $( document ).ready(function() {
         return false;
     });
 
+    if (window.matchMedia('(max-width: 1024px)').matches) {
+        // functionality for screens smaller than 1024px
+        $.scrollify.disable();
+    }
+
 });
 
 // Scroll-based effects
@@ -142,4 +147,15 @@ $(window).scroll(function() {
         $(".nav-wrapper").removeClass('collapsed');
     }
 
+});
+
+
+$(window).resize(function() {
+    var width = $(window).width();
+    if (width > 1024){
+        $.scrollify.enable();
+    }
+    if (width < 1024){
+        $.scrollify.disable();
+    }
 });
