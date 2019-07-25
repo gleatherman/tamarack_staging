@@ -24,6 +24,7 @@ $( document ).ready(function() {
     $('.michael-large').on('click', function(){
         $('.founders').addClass('michael-active').removeClass('larry-active');
     });
+
     $('.larry-large').on('click', function(){
         $('.founders').addClass('larry-active').removeClass('michael-active');
     });

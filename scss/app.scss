@@ -478,6 +478,27 @@ nav {
         }
     }
 }
+
+@include breakpoint(large) {
+    .founder-card-small {
+        min-height: 160px;
+        padding-left: 150px;
+        .founder-photo {
+            height: 100px;
+            width: 100px;
+        }
+        h5 {
+            margin-top: 0;
+        }
+        a {
+            word-break: break-all;
+        }
+        .arrow-right {
+            width: 50px;
+        }
+    }
+}
+
 .founders-cards-large-container {
     transition: opacity 0.3s ease;
     opacity: 0;
@@ -779,6 +800,17 @@ nav {
             cursor: pointer;
             .button:after {
                 right: 15px;
+            }
+        }
+    }
+}
+
+@include breakpoint(large) {
+    .transactions-categories {
+        .card {
+            padding: 20px;
+            .button {
+                margin: 0;
             }
         }
     }
