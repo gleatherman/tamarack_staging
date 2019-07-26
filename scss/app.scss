@@ -609,7 +609,7 @@ nav {
         transform: translateX(0);
     }
     .larry-active & {
-        transform: translateX(-780px);
+        transform: translateX(-65vw);
     }
 }
 
@@ -664,7 +664,13 @@ nav {
         display: inline-block;
         padding: 0px 0px 0px 32px;
         text-decoration: none;
-        background: url('../img/icon-vcard.svg') no-repeat left 10px;
+        background: url('../img/icon-vcard.svg') no-repeat left 9px;
+    }
+    .linkedin {
+        vertical-align: -6px;
+        margin-left: 10px;
+        margin-bottom: -6px;
+        display: inline-block;
     }
     .founder-photo {
         margin: 20px 0;
@@ -768,6 +774,138 @@ nav {
 .michael-active .larry-large {
     transition: all 0.3s ease;
     opacity: 0.5;
+}
+
+@include breakpoint(large) {
+    .founder-card-large {
+        padding-right: 30px;
+        .close-x {
+            height: 60px;
+            width: 60px;
+        }
+    }
+}
+@include breakpoint(medium) {
+    .founders-cards-large-container {
+        width: calc(100% - 40px);
+        transition: opacity .3 ease !important;
+        transform: translateX(0);
+        top: 60px;
+    }
+    .founder-card-large {
+        flex-direction: column;
+        padding: 30px;
+        height: auto;
+        margin: 0 !important;
+        .card-info {
+            text-align: left;
+            min-width: auto;
+            margin-right: 0;
+            padding-left: 120px;
+            padding-bottom: 12px;
+            padding: 12px 0 24px 140px;
+            a {
+                word-break: break-all;
+            }
+        }
+        .founder-photo {
+            margin: 0;
+            width: 100px;
+            position: absolute;
+            top: 40px;
+            left: 40px;
+        }
+        .card-content {
+            .work-content,
+            .play-content {
+                position: relative;
+                transition: none;
+            }
+            .play-content {
+                display: none;
+            }
+        }
+        &.play-active {
+            .work-content {
+                display: none;
+            }
+            .play-content {
+                display: block;
+            }
+        }
+    }
+    .switch {
+        position: absolute;
+        top: 155px;
+        left: 45px;
+        margin: 0;
+        height: 30px;
+        width: 90px;
+        .knob {
+            width: 20px;
+            height: 20px;
+        }
+        &.play .knob {
+            transform: translateX(-60px);
+        }
+        &:before {
+            padding-left: 12px;
+            font-size: 12px;
+            line-height: 26px;
+        }
+        &:after {
+            padding-right: 12px;
+            font-size: 12px;
+            line-height: 26px;
+        }
+    }
+    .michael-active {
+        .larry-large {
+            display: none;
+        }
+        .michael-large {
+            opacity: 1;
+            visibility: visible;
+        }
+        .founders-cards-large-container {
+            transform: translateX(0);
+        }
+    }
+    .larry-active {
+        .michael-large {
+            display: none;
+        }
+        .larry-large {
+            opacity: 1;
+            visibility: visible;
+            margin-left: 0;
+        }
+        .founders-cards-large-container {
+            transform: translateX(0);
+        }
+    }
+}
+
+@include breakpoint(small) {
+    .founders-cards-large-container {
+        margin: 0 -20px;
+        width: 100%;
+    }
+    .founder-card-large {
+        padding: 20px;
+        .founder-photo {
+            width: 80px;
+            left: 25px;
+            top: 30px;
+        }
+        .card-info {
+            padding-left: 110px;
+        }
+        .switch {
+            left: 20px;
+            top: 130px;
+        }
+    }
 }
 
 /* Why Tamarack */
