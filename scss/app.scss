@@ -906,6 +906,11 @@ nav {
             height: auto;
             top: 15px;
             left: calc(50% - 60px);
+            &.burchfield {
+                width: 160px;
+                left: calc(50% - 80px);
+                top: 5px;
+            }
         }
         .logo-bottom {
             position: absolute;
@@ -1018,6 +1023,7 @@ nav {
 .contact-us {
     flex-direction: row;
     padding: 0;
+    height: 100vh;
 }
 
 .half {
