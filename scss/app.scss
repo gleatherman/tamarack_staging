@@ -25,7 +25,7 @@ $freight-sans:      "freight-sans-pro", "Helvetica Neue", Arial sans-serif;
     @media (max-width: 1024px) { @content; }
   }
   @else if $point == medium {
-    @media (max-width: 768px) { @content; }
+    @media (max-width: 800px) { @content; }
   }
   @else if $point == small {
     @media (max-width: 600px)  { @content; }
@@ -75,7 +75,12 @@ section {
 @include breakpoint(large) {
     section {
         height: auto;
-        padding: 200px 0;
+        padding: 150px 0;
+    }
+}
+@include breakpoint(medium) {
+    .wrapper {
+        padding: 0 20px;
     }
 }
 
@@ -142,6 +147,31 @@ ul {
     }
 }
 
+@include breakpoint(medium) {
+    h2 {
+        font-size: 40px;
+        line-height: 48px;
+    }
+    blockquote {
+        margin-top: 0;
+    }
+}
+
+@include breakpoint(small) {
+    h2 {
+        font-size: 30px;
+        line-height: 36px;
+        br {
+            display: none;
+        }
+    }
+    blockquote {
+        font-size: 24px;
+        line-height: 28px;
+        padding-left: 20px;
+    }
+}
+
 // Navigation
 
 #logo {
@@ -167,6 +197,7 @@ ul {
     display: block;
     background-image: url('../img/tamarack-logo.svg');
     background-size: 100%;
+    background-repeat: no-repeat;
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
@@ -312,6 +343,22 @@ nav {
         }
     }
 }
+@include breakpoint(medium) {
+    nav,
+    .collapsed nav {
+        padding: 10px 0;
+        .logo {
+            width: 70px;
+            height: 53px;
+        }
+        .blocker {
+            bottom: -10px;
+        }
+        .menu-button {
+            height: 73px;
+        }
+    }
+}
 
 // Mobile Menu
 
@@ -351,6 +398,11 @@ nav {
         letter-spacing: 1px;
     }
 }
+@include breakpoint(medium) {
+    #mobile-nav {
+        padding-top: 73px;
+    }
+}
 
 // Top Section
 
@@ -361,12 +413,6 @@ nav {
     -webkit-clip-path: polygon(0px 0, 100% 0%, 100% calc(100% - 7vh), 0 100%);
     clip-path: polygon(0px 0, 100% 0%, 100% calc(100% - 7vh), 0 100%);
     margin-bottom: -7vh;
-}
-@include breakpoint(large) {
-    .top {
-        -webkit-clip-path: polygon(0px 0, 100% 0%, 100% calc(100% - 3vh), 0 100%);
-        clip-path: polygon(0px 0, 100% 0%, 100% calc(100% - 3vh), 0 100%);
-    }
 }
 .down-arrow {
     position: absolute;
@@ -391,6 +437,24 @@ nav {
     position: absolute;
     bottom: 8vh;
     left: calc(50% - 290px);
+}
+
+@include breakpoint(large) {
+    .top {
+        -webkit-clip-path: polygon(0px 0, 100% 0%, 100% calc(100% - 3vh), 0 100%);
+        clip-path: polygon(0px 0, 100% 0%, 100% calc(100% - 3vh), 0 100%);
+    }
+}
+@include breakpoint(medium) {
+    .top {
+        height: auto;
+        p {
+            line-height: 24px;
+        }
+    }
+    .down-arrow {
+        bottom: 40px;
+    }
 }
 
 
@@ -421,6 +485,17 @@ nav {
         }
     }
 }
+@include breakpoint(medium) {
+    .two-halves {
+        flex-direction: column;
+        .col {
+            width: 100%;
+            &:first-child {
+                padding: 0 0 20px;
+            }
+        }
+    }
+}
 .founders-content {
     transition: all 0.2s ease;
     .founders-active & {
@@ -441,7 +516,7 @@ nav {
     padding: 30px;
     width: 100%;
     position: relative;
-    padding: 30px 30px 30px 220px;
+    padding: 30px 70px 30px 220px;
     min-height: 220px;
     border-radius: 4px;
     box-shadow: 0 6px 12px 0 rgba($black,0.07);
@@ -485,6 +560,7 @@ nav {
     .founder-card-small {
         min-height: 160px;
         padding-left: 150px;
+        padding-right: 50px;
         .founder-photo {
             height: 100px;
             width: 100px;
@@ -497,6 +573,17 @@ nav {
         }
         .arrow-right {
             width: 50px;
+        }
+    }
+}
+@include breakpoint(medium) {
+    .founders-cards {
+        flex-direction: column;
+    }
+    .founder-card-small {
+        &:first-child,
+        &:last-child {
+            margin: 0 0 20px;
         }
     }
 }
@@ -834,6 +921,13 @@ nav {
     .transactions-categories {
         .card {
             padding: 20px;
+            h4 {
+                font-size: 24px;
+            }
+            p {
+                font-size: 16px;
+                margin: 10px 0 20px;
+            }
             .button {
                 margin: 0;
             }
@@ -1100,6 +1194,37 @@ a.pin {
     position: absolute;
     bottom: 0;
 }
+
+@include breakpoint(medium) {
+    .contact-us {
+        flex-direction: column-reverse;
+        height: auto;
+    }
+    .half {
+        width: 100%;
+    }
+    .half-wrapper {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+    .left {
+        padding: 60px 0 0;
+    }
+    .right {
+        height: 300px;
+    }
+    .half-bottom {
+        position: relative;
+        padding: 30px 15px;
+    }
+}
+
+@include breakpoint(small) {
+    .right {
+        height: 200px;
+    }
+}
+
 
 // Sunbursts
 
