@@ -935,10 +935,6 @@ nav {
 }
 
 
-/* Transactions */
-.transactions {}
-
-
 // Industries
 
 .industries {
@@ -984,6 +980,7 @@ nav {
 
 
 // Transactions
+
 .transactions {
     .transactions-content {
         transition: all 0.3s ease;
@@ -1068,6 +1065,22 @@ nav {
             }
             .button {
                 margin: 0;
+            }
+        }
+    }
+}
+@include breakpoint(medium) {
+    .transactions-categories {
+        flex-direction: column;
+        .card {
+            width: auto;
+            position: relative;
+            padding-left: 80px;
+            .icon-small {
+                position: absolute;
+                top: 25px;
+                left: 25px;
+                margin: 0 0 10px;
             }
         }
     }
@@ -1210,7 +1223,6 @@ nav {
     }
 }
 
-
 //
 // Activated when clicking one of the 3 category cards
 //
@@ -1273,6 +1285,59 @@ nav {
     }
 }
 
+@include breakpoint(medium) {
+    .transactions-display {
+        position: relative;
+        display: none;
+        top: 0;
+        left: 0;
+        .transactions-nav {
+            flex-wrap: wrap;
+            a {
+                font-size: 14px;
+                line-height: 36px;
+                margin: 0 5px 10px;
+            }
+        }
+        .transactions-grid {
+            position: relative;
+            top: 0;
+            .transaction {
+                width: calc(50% - 20px);
+            }
+        }
+    }
+    .transactions-active {
+        .transactions-content {
+            display: none;
+        }
+        .transactions-display {
+            display: block;
+            &.healthcare-active .healthcare-grid,
+            &.technology-active .technology-grid,
+            &.special-active .special-grid {
+                display: flex;
+            }
+        }
+        .healthcare-grid,
+        .technology-grid,
+        .special-grid {
+            display: none;
+        }
+
+    }
+}
+
+@include breakpoint(small) {
+    .transactions-display {
+        .transactions-grid {
+            .transaction {
+                width: 100%;
+                margin: 0 0 15px;
+            }
+        }
+    }
+}
 
 
 // Contact us
