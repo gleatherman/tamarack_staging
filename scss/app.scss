@@ -1194,12 +1194,12 @@ nav {
         .front:after {
             content: '';
             position: absolute;
-            height: 21px;
+            height: 32px;
             left: 0;
             right: 0;
             top: calc(50% - 15px);
             background: url('../img/transaction-arrow.svg') no-repeat;
-            background-size: 100% 21px;
+            background-size: 100%;
         }
         .info,
         .info-close {
