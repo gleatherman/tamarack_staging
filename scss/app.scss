@@ -589,7 +589,7 @@ nav {
 }
 
 .founders-cards-large-container {
-    transition: opacity 0.3s ease;
+    transition: opacity 0.1s ease;
     opacity: 0;
     visibility: hidden;
     // transform: translateY(60px);
@@ -1376,10 +1376,10 @@ a.pin {
     height: 1077px;
     z-index: -1;
     &.big {
-        width: 1400px;
-        height: 1400px;
-        bottom: calc( -1400px / 2);
-        right: calc( -1400px / 2);
+        width: 1200px;
+        height: 1200px;
+        bottom: calc( -1200px / 2);
+        right: calc( -1200px / 2);
     }
 }
 .sunburst-gold {
@@ -1392,10 +1392,10 @@ a.pin {
     height: 1077px;
     z-index: -1;
     &.big {
-        width: 1400px;
-        height: 1400px;
-        bottom: calc( -1400px / 2);
-        left: calc( -1400px / 2);
+        width: 1200px;
+        height: 1200px;
+        bottom: calc( -1200px / 2);
+        left: calc( -1200px / 2);
     }
 }
 

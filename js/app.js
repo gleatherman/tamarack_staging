@@ -13,24 +13,26 @@ $( document ).ready(function() {
     });
 
     // Founders
-    $('.founder-card-small.michael-small').on('click', function(){
+    $('.founder-card-small.michael-small .arrow-right').on('click', function(){
         $('.founders').addClass('founders-active michael-active');
     });
 
-    $('.founder-card-small.larry-small').on('click', function(){
+    $('.founder-card-small.larry-small .arrow-right').on('click', function(){
         $('.founders').addClass('founders-active larry-active');
     });
 
-    $('.michael-large').on('click', function(){
+    $('.michael-large').on('click', function(e){
         $('.founders').addClass('michael-active').removeClass('larry-active');
     });
 
-    $('.larry-large').on('click', function(){
+    $('.larry-large').on('click', function(e){
         $('.founders').addClass('larry-active').removeClass('michael-active');
     });
 
     $('.close-x').on('click', function(){
         $('.founders').removeClass('founders-active');
+        $('.play-active').removeClass('play-active');
+        $('.play').removeClass('play');
         setTimeout(function(){
             $('.founders').removeClass('michael-active larry-active');
         }, 300);
