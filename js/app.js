@@ -129,7 +129,7 @@ $( document ).ready(function() {
     });
 
     // Scroll to mobile nav items
-    $("#mobile-nav a").on("click",function() {
+    $("#mobile-nav a, #logo").on("click",function() {
         // Dismiss mobile nav
         $('body').removeClass('menu-active');
         // Get target & chop off # from anchor

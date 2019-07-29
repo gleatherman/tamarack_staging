@@ -1005,8 +1005,8 @@ nav {
         flex-direction: column;
         .icon-small {
             margin: 110px 0 16px;
-            width: 36px;
-            height: auto;
+            height: 36px;
+            width: 42px;
         }
         h4 {
             margin: 0;
@@ -1129,6 +1129,7 @@ nav {
     .transactions-grid {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         position: absolute;
         top: 68px;
         left: 0;
@@ -1469,6 +1470,7 @@ a.pin {
 .parallax-window,
 .full-photo {
     /* background: url('../img/needles.jpg'); */
+    // background: url('../img/needles.jpg');
     /* position: absolute; */
     /* bottom: -300px; */
     background-attachment: fixed;
@@ -1488,6 +1490,11 @@ a.pin {
     clip-path: polygon(0px 7vh, 100% 0%, 100% calc(100% - 7vh), 0 100%);
     z-index: 10 !important;
 }
+
+.photo-1 { background-image: url('../img/needles.jpg'); }
+.photo-2 { background-image: url('../img/tamarack-needles-2.jpg');}
+.photo-3 { background-image: url('../img/tamarack-needles.jpg');}
+.photo-4 { background-image: url('../img/tamarack-full-color.jpg');}
 
 @include breakpoint(large) {
     .parallax-window,
