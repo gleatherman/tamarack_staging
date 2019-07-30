@@ -114,9 +114,24 @@ $( document ).ready(function() {
             $("#main-nav .active").removeClass("active");
             $("#main-nav").find("a[href=\"#" + ref + "\"]").addClass("active");
 
+            // Wait a half second and reset Founders
+            setTimeout(function(){
+                $('.founders').removeClass('founders-active');
+                $('.play-active').removeClass('play-active');
+                $('.play').removeClass('play');
+                $('.founders').removeClass('michael-active larry-active');
+            }, 500);
+
+            // Wait a half second and reset Transactions
+            setTimeout(function(){
+                $('.transactions').removeClass('transactions-active');
+                $('.is-flipped').removeClass('is-flipped');
+                $('.transactions-display').attr('class', 'transactions-display');
+                $('.transaction').attr('class', 'transaction');
+            }, 500);
+
         },
-        after:function() {
-        },
+        after:function() {},
         afterResize:function() {},
         afterRender:function() {}
     });

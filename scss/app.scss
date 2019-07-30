@@ -413,6 +413,12 @@ nav {
     -webkit-clip-path: polygon(0px 0, 100% 0%, 100% calc(100% - 7vh), 0 100%);
     clip-path: polygon(0px 0, 100% 0%, 100% calc(100% - 7vh), 0 100%);
     margin-bottom: -7vh;
+    p {
+        max-width: 740px;
+    }
+    h2 {
+        margin-bottom: 18px;
+    }
 }
 .down-arrow {
     position: absolute;
