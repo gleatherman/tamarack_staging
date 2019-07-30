@@ -312,7 +312,7 @@ nav {
         opacity: 1;
         visibility: visible;
         left: -30px;
-        right: -20px;
+        right: -5px;
     }
     li a {
         padding: 20px 0;
@@ -716,7 +716,7 @@ nav {
         line-height: 44px;
         letter-spacing: 1px;
         text-align: left;
-        width: 160px;
+        width: 130px;
         padding-left: 20px;
         color: $black;
         transition: all 0.3s ease;
@@ -735,7 +735,7 @@ nav {
         line-height: 44px;
         letter-spacing: 1px;
         text-align: right;
-        width: 160px;
+        width: 130px;
         padding-right: 20px;
         color: $black;
         transition: all 0.3s ease;
@@ -764,7 +764,7 @@ nav {
             visibility: visible;
         }
         .knob {
-            transform: translateX(-80px);
+            transform: translateX(-82px);
             background: $gold;
         }
     }
