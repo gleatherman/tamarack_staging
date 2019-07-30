@@ -1503,10 +1503,17 @@ a.pin {
         height: 350px;
         -webkit-clip-path: polygon(0px 3vh, 100% 0%, 100% calc(100% - 3vh), 0 100%);
         clip-path: polygon(0px 3vh, 100% 0%, 100% calc(100% - 3vh), 0 100%);
+        background-attachment: scroll;
     }
     .parallax-mirror {
         -webkit-clip-path: polygon(0px 3vh, 100% 0%, 100% calc(100% - 3vh), 0 100%);
         clip-path: polygon(0px 3vh, 100% 0%, 100% calc(100% - 3vh), 0 100%);
         z-index: 10 !important;
+    }
+}
+
+@supports (-webkit-overflow-scrolling: touch) {
+    .full-photo {
+        background-attachment: scroll;
     }
 }
