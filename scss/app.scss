@@ -197,6 +197,9 @@ ul {
 
 #logo {
     position: relative;
+    &:focus {
+        outline: none;
+    }
 }
 .blocker {
     content: '';
@@ -271,6 +274,9 @@ nav {
         transition: color 0.1s ease, padding 0.3s ease;
         &:hover {
             color: $gold;
+        }
+        &:focus {
+            outline: none;
         }
     }
     li.active a,
@@ -1240,6 +1246,9 @@ nav {
             background: url('../img/icon-circle-i.svg') no-repeat center center;
             &:hover {
                 cursor: pointer;
+            }
+            &:focus {
+                outline: none;
             }
         }
         .info-close {
