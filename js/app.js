@@ -12,15 +12,20 @@ $( document ).ready(function() {
         $.scrollify.next();
     });
 
+    // Handle scrolling to a specific section
+    function scrollTo(section) {
+        $('html, body').animate({
+                scrollTop: $('section[data-section-name=' + section + ']').offset().top
+        }, 750, 'swing');
+    }
+
     // Founders
     $('.founder-card-small.michael-small .arrow-right').on('click', function(){
         $('.founders').addClass('founders-active michael-active');
 
         // If on mobile, scroll up to top of Founders
         if (window.matchMedia('(max-width: 1024px)').matches) {
-            $('html, body').animate({
-                scrollTop: $('section[data-section-name="founders"]').offset().top
-            }, 750, 'swing');
+            scrollTo('founders');
         }
     });
 
@@ -29,9 +34,7 @@ $( document ).ready(function() {
 
         // If on mobile, scroll up to top of Founders
         if (window.matchMedia('(max-width: 1024px)').matches) {
-            $('html, body').animate({
-                scrollTop: $('section[data-section-name="founders"]').offset().top
-            }, 750, 'swing');
+            scrollTo('founders');
         }
     });
 
@@ -67,6 +70,12 @@ $( document ).ready(function() {
     $('.card').on('click', function(){
         $('.transactions').addClass('transactions-active');
         $('.transactions-display').addClass($(this).attr('data-category') + '-active');
+
+        // If on mobile, scroll up to top of Founders
+        if (window.matchMedia('(max-width: 1024px)').matches) {
+            scrollTo('transactions');
+        }
+
         return false;
     });
 
@@ -164,9 +173,7 @@ $( document ).ready(function() {
         // Get target & chop off # from anchor
         var nav_target = $(this).attr("href").substring(1);
         // Animate scrolling to the matching section
-        $('html, body').animate({
-            scrollTop: $('section[data-section-name=' + nav_target + ']').offset().top
-        }, 750, 'swing');
+        scrollTo(nav_target);
         return false;
     });
 
@@ -177,9 +184,7 @@ $( document ).ready(function() {
         // Down arrow on mobile
         $(".down-arrow").on("click",function() {
             // Animate scrolling to founders
-            $('html, body').animate({
-                scrollTop: $('section[data-section-name="founders"]').offset().top
-            }, 750, 'swing');
+            scrollTo('founders');
             return false;
         });
 
