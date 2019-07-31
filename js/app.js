@@ -15,10 +15,24 @@ $( document ).ready(function() {
     // Founders
     $('.founder-card-small.michael-small .arrow-right').on('click', function(){
         $('.founders').addClass('founders-active michael-active');
+
+        // If on mobile, scroll up to top of Founders
+        if (window.matchMedia('(max-width: 1024px)').matches) {
+            $('html, body').animate({
+                scrollTop: $('section[data-section-name="founders"]').offset().top
+            }, 750, 'swing');
+        }
     });
 
     $('.founder-card-small.larry-small .arrow-right').on('click', function(){
         $('.founders').addClass('founders-active larry-active');
+
+        // If on mobile, scroll up to top of Founders
+        if (window.matchMedia('(max-width: 1024px)').matches) {
+            $('html, body').animate({
+                scrollTop: $('section[data-section-name="founders"]').offset().top
+            }, 750, 'swing');
+        }
     });
 
     $('.michael-large').on('click', function(e){
