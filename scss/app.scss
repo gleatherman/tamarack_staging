@@ -12,10 +12,31 @@ $green:     #96C121;
 $gold:      darken(#FFCF42, 10);
 
 
-// Font Families
+// Fonts
 
-$freight-display:   "freight-display-pro", Georgia, serif;
-$freight-sans:      "freight-sans-pro", "Helvetica Neue", Arial sans-serif;
+@font-face {
+    font-family: 'FreightSansPro';
+    src: url('../fonts/39DE24_2_0.eot');
+    src: url('../fonts/39DE24_2_0.eot?#iefix') format('embedded-opentype'),url('../fonts/39DE24_2_0.woff2') format('woff2'),url('../fonts/39DE24_2_0.woff') format('woff'),url('../fonts/39DE24_2_0.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'FreightSansPro';
+    src: url('../fonts/39DE24_0_0.eot');
+    src: url('../fonts/39DE24_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/39DE24_0_0.woff2') format('woff2'),url('../fonts/39DE24_0_0.woff') format('woff'),url('../fonts/39DE24_0_0.ttf') format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'FreightDispPro';
+    src: url('../fonts/39DE24_1_0.eot');
+    src: url('../fonts/39DE24_1_0.eot?#iefix') format('embedded-opentype'),url('../fonts/39DE24_1_0.woff2') format('woff2'),url('../fonts/39DE24_1_0.woff') format('woff'),url('../fonts/39DE24_1_0.ttf') format('truetype');
+    font-weight: bold;
+}
+
+$freight-display:   "FreightDispPro", Georgia, serif;
+$freight-sans:      "FreightSansPro", "Helvetica Neue", Arial sans-serif;
 
 
 // Mixins
