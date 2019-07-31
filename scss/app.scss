@@ -104,6 +104,11 @@ section {
         padding: 0 20px;
     }
 }
+@include breakpoint(small) {
+    section {
+        padding: 80px 0;
+    }
+}
 
 
 // Typography
@@ -440,6 +445,7 @@ nav {
     -webkit-clip-path: polygon(0px 0, 100% 0%, 100% calc(100% - 7vh), 0 100%);
     clip-path: polygon(0px 0, 100% 0%, 100% calc(100% - 7vh), 0 100%);
     margin-bottom: -7vh;
+    z-index: 5;
     p {
         max-width: 740px;
     }
@@ -481,6 +487,7 @@ nav {
 @include breakpoint(medium) {
     .top {
         height: auto;
+        margin-bottom: 0;
         p {
             line-height: 24px;
         }
@@ -495,9 +502,6 @@ nav {
 
 .founders {}
 
-.top {
-    z-index: 5 !important;
-}
 .founders-alternate {
     background: url('../img/founders-alternate.jpg') center center;
     background-size: cover;
