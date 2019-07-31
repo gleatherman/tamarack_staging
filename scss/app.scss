@@ -1331,6 +1331,35 @@ nav {
     }
 }
 
+// Short displays but still wide
+@media screen and (max-width: 1400px) and (max-height: 800px) {
+    .transactions-categories {
+        .card {
+            h4 {
+                font-size: 24px;
+            }
+            .icon-small {
+                margin-top: 20px;
+            }
+            .button {
+                margin-top: 10px;
+            }
+        }
+    }
+    .transactions-display {
+        .transaction {
+            height: 110px;
+            width: calc(25% - 20px);
+            .logo-top {
+                top: 7px;
+            }
+            .logo-bottom {
+                bottom: 7px;
+            }
+        }
+    }
+}
+
 @include breakpoint(large) {
     .transactions-display {
         .transaction .back p {
