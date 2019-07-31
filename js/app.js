@@ -159,6 +159,16 @@ $( document ).ready(function() {
     if (window.matchMedia('(max-width: 1024px)').matches) {
         // functionality for screens smaller than 1024px
         $.scrollify.disable();
+
+        // Down arrow on mobile
+        $(".down-arrow").on("click",function() {
+            // Animate scrolling to founders
+            $('html, body').animate({
+                scrollTop: $('section[data-section-name="founders"]').offset().top
+            }, 750, 'swing');
+            return false;
+        });
+
     }
 
 });
