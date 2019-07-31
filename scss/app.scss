@@ -1292,6 +1292,15 @@ nav {
     }
 }
 
+@include breakpoint(large) {
+    .transactions-display {
+        .transaction .back p {
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+}
+
 @include breakpoint(medium) {
     .transactions-display {
         position: relative;
