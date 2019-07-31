@@ -1356,6 +1356,10 @@ nav {
             .logo-bottom {
                 bottom: 7px;
             }
+            .back p {
+                font-size: 16px;
+                line-height: 18px;
+            }
         }
     }
 }
@@ -1423,6 +1427,26 @@ nav {
     }
 }
 
+// IE 11 fixes
+@media all and (-ms-high-contrast:none) {
+    .transaction {
+        transition: none !important;
+    }
+    .transaction.is-flipped {
+        transform: rotateY(0deg) !important;
+        .front {
+            opacity: 0;
+            visibility: hidden;
+            transform: rotateY(0deg);
+
+        }
+        .back {
+            opacity: 1;
+            visibility: visible;
+            transform: rotateY(0deg);
+        }
+    }
+}
 
 // Contact us
 
