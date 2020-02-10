@@ -24,7 +24,7 @@ $( document ).ready(function() {
         $('.founders').addClass('founders-active michael-active');
 
         // If on mobile, scroll up to top of Founders
-        if (window.matchMedia('(max-width: 1024px)').matches) {
+        if (window.matchMedia('(max-width: 1100px)').matches) {
             scrollTo('founders');
         }
     });
@@ -33,7 +33,7 @@ $( document ).ready(function() {
         $('.founders').addClass('founders-active larry-active');
 
         // If on mobile, scroll up to top of Founders
-        if (window.matchMedia('(max-width: 1024px)').matches) {
+        if (window.matchMedia('(max-width: 1100px)').matches) {
             scrollTo('founders');
         }
     });
@@ -72,7 +72,7 @@ $( document ).ready(function() {
         $('.transactions-display').addClass($(this).attr('data-category') + '-active');
 
         // If on mobile, scroll up to top of Founders
-        if (window.matchMedia('(max-width: 1024px)').matches) {
+        if (window.matchMedia('(max-width: 1100px)').matches) {
             scrollTo('transactions');
         }
 
@@ -177,8 +177,8 @@ $( document ).ready(function() {
         return false;
     });
 
-    if (window.matchMedia('(max-width: 1024px)').matches) {
-        // functionality for screens smaller than 1024px
+    if (window.matchMedia('(max-width: 1100px)').matches) {
+        // functionality for screens smaller than 1100px
         $.scrollify.disable();
 
         // Down arrow on mobile
@@ -212,10 +212,10 @@ $(window).scroll(function() {
 
 $(window).resize(function() {
     var width = $(window).width();
-    if (width > 1024){
+    if (width > 1100){
         $.scrollify.enable();
     }
-    if (width < 1024){
+    if (width < 1100){
         $.scrollify.disable();
     }
 });
