@@ -172,6 +172,9 @@ ul {
         padding-left: 6px;
     }
 }
+ul.double-col {
+    columns: 100px 2;
+}
 
 @include breakpoint(medium) {
     h2 {
