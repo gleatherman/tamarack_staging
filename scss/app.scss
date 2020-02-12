@@ -151,6 +151,10 @@ h3 {
     font-size: 16px;
     font-weight: 900;
     margin: 12px 0 12px;
+
+    &.is-tight {
+        margin: 12px 0 -12px 0;
+    }
 }
 h5 {
     font-size: 20px;
@@ -997,6 +1001,14 @@ nav {
     .details {
         font-size: 16px;
         line-height: 24px;
+    }
+}
+.partners-dial {
+    text-align: center;
+
+    img {
+        width: 250px;
+        height: 250px;
     }
 }
 
