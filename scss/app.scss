@@ -52,7 +52,7 @@ $freight-sans:      "FreightSansPro", "Helvetica Neue", Arial sans-serif;
     @media (max-width: 600px) { @content; }
   }
   @else if $point == short {
-    @media (min-width: 1100px) and (max-height: 800px) { @content; }
+    @media (min-width: 1100px) and (max-height: 850px) { @content; }
   }
   // For custom breakpoint sizes
   @else if $point > 0 {
@@ -1002,27 +1002,27 @@ nav {
     border-radius: 8px;
     box-shadow: 0 6px 10px rgba($black, .1);
     background: $white;
-    padding: 18px 0;
+    padding: 14px 0 7px 0;
     margin-bottom: 15px;
     position: relative;
 
     .industry_item {
         position: relative;
-        padding: 0 18px 9px 100px;
+        padding: 0 18px 9px 72px;
     }
     .icon {
-        width: 50px;
+        width: 36px;
         height: auto;
         position: absolute;
-        top: 12px;
-        left: 27px;
+        top: 2px;
+        left: 19px;
     }
     p {
         margin: 0;
+        line-height: 24px;
     }
     .details {
         font-size: 16px;
-        line-height: 24px;
     }
 }
 .partners-dial {
@@ -1034,6 +1034,16 @@ nav {
     }
 }
 
+@include breakpoint(short) {
+    .industry {
+        padding: 9px 0 3px 0;
+        margin-bottom: 9px;
+
+        .icon {
+            top: 6px;
+        }
+    }
+}
 
 // Industries
 
