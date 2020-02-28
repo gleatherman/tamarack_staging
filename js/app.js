@@ -171,6 +171,7 @@ $(window).scroll(function() {
 });
 
 
+// Window Resize Disables Scrollify
 $(window).resize(function() {
     var width = $(window).width();
     if (width > 1100){
@@ -179,4 +180,10 @@ $(window).resize(function() {
     if (width < 1100){
         $.scrollify.disable();
     }
+});
+
+// Initialize Slick JS
+$('.transactions-slider').slick({
+    slidesToShow: 3,
+    dots: true
 });

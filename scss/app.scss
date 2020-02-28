@@ -1085,27 +1085,17 @@ nav {
 }
 
 // Transactions
-.transactions-display {
-    top: 90px;
-    left: 20px;
-    right: 20px;
-}
-
-.transactions-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    top: 68px;
-    left: 0;
-    right: 0;
+.transactions-group {
+    height: 500px;
+    padding: 20px 10px 0 10px;
+    outline: none;
 }
 
 // Transaction Card
 .transaction {
     position: relative;
     height: 140px;
-    width: calc(33.33333% - 20px);
-    margin: 10px;
+    width: 100%;
     transform-style: preserve-3d;
     transform: rotateY(0deg);
     transition: transform .3s ease;
@@ -1113,6 +1103,7 @@ nav {
     animation-fill-mode: forwards;
     background: $white;
     border-radius: 8px;
+    margin: 0 0 20px 0;
 
     .front,
     .back {
@@ -1207,7 +1198,6 @@ nav {
 @include breakpoint(short) {
     .transaction {
         height: 110px;
-        width: calc(25% - 20px);
         .logo-top {
             top: 7px;
         }
@@ -1264,7 +1254,6 @@ nav {
 
 @include breakpoint(small) {
     .transaction {
-        width: 100%;
         margin: 0 0 15px;
     }
 }
