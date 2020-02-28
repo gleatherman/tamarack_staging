@@ -65,45 +65,6 @@ $( document ).ready(function() {
     });
 
     // Transactions
-
-    // Clicking category cards hides cards & shows matching set of transactions
-    $('.card').on('click', function(){
-        $('.transactions').addClass('transactions-active');
-        $('.transactions-display').addClass($(this).attr('data-category') + '-active');
-
-        // If on mobile, scroll up to top of Founders
-        if (window.matchMedia('(max-width: 1100px)').matches) {
-            scrollTo('transactions');
-        }
-
-        return false;
-    });
-
-    // Hide transactions grid & show category cards. Also, reset classes
-    $('.close').on('click', function(){
-        // Hide transactions
-        $('.transactions').removeClass('transactions-active');
-
-        // Strip is-flipped from all transactions
-        $('.is-flipped').removeClass('is-flipped');
-
-        // Reset classes
-        $('.transactions-display').attr('class', 'transactions-display');
-        $('.transaction').attr('class', 'transaction');
-        return false;
-    });
-
-    // Transactions nav strips classes & switches to new category
-    $('.transactions-nav a').not('.close').on('click', function(){
-        // Reset classes
-        $('.transactions-display').attr('class', 'transactions-display');
-        $('.transaction').attr('class', 'transaction');
-
-        // Set active class on nav
-        $('.transactions-display').addClass($(this).attr('data-category') + '-active');
-        return false;
-    });
-
     // Flip transaction card over
     $('.info').on('click', function(){
         $(this).closest('.transaction').addClass('is-flipped');

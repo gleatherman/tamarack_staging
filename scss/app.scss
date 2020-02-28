@@ -996,8 +996,6 @@ nav {
 }
 
 /* Why Tamarack */
-.why-tamarack {}
-
 .industry {
     border-radius: 8px;
     box-shadow: 0 6px 10px rgba($black, .1);
@@ -1071,8 +1069,6 @@ nav {
     margin-bottom: 10px;
 }
 
-.industries
-
 .button {
     border-radius: 4px;
     background: $green;
@@ -1088,374 +1084,155 @@ nav {
     line-height: 48px;
 }
 
-
 // Transactions
-
-.transactions {
-    .transactions-content {
-        transition: all 0.3s ease;
-    }
-}
-
-.transactions-categories {
-    transition: all 0.3s ease;
-    display: flex;
-    margin: 20px -10px;
-    // opacity: 0;
-    // visibility: hidden;
-    .card {
-        margin: 10px;
-        background: $white;
-        border-radius: 8px;
-        width: 100%;
-        padding: 30px;
-        text-align: left;
-        box-shadow: 0 6px 10px rgba($black, .1);
-        display: flex;
-        flex-direction: column;
-        .icon-small {
-            margin: 110px 0 16px;
-            height: 36px;
-            width: 42px;
-        }
-        h4 {
-            margin: 0;
-            font-size: 30px;
-            letter-spacing: -0.5px;
-        }
-        p {
-            font-size: 18px;
-            line-height: 24px;
-        }
-        .button {
-            display: block;
-            background: $green;
-            color: $white;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 16px;
-            border-radius: 4px;
-            line-height: 48px;
-            padding-left: 15px;
-            margin: 20px -15px -15px;
-            position: relative;
-            &:after {
-                content: '';
-                background: url('../img/icon-right-arrow-white.svg');
-                width: 14px;
-                height: 15px;
-                text-align: right;
-                position: absolute;
-                right: 20px;
-                top: 17px;
-                transition: all 0.1s ease;
-            }
-        }
-
-        // Hover on the card
-        &:hover {
-            cursor: pointer;
-            .button:after {
-                right: 15px;
-            }
-        }
-    }
-}
-
-@include breakpoint(large) {
-    .transactions-categories {
-        .card {
-            padding: 20px;
-            h4 {
-                font-size: 24px;
-            }
-            p {
-                font-size: 16px;
-                margin: 10px 0 20px;
-            }
-            .button {
-                margin: 0;
-            }
-        }
-    }
-}
-@include breakpoint(medium) {
-    .transactions-categories {
-        flex-direction: column;
-        .card {
-            width: auto;
-            position: relative;
-            padding-left: 80px;
-            .icon-small {
-                position: absolute;
-                top: 25px;
-                left: 25px;
-                margin: 0 0 10px;
-            }
-        }
-    }
-}
-
 .transactions-display {
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    position: absolute;
     top: 90px;
     left: 20px;
     right: 20px;
-    .transactions-nav {
-        display: flex;
-        margin-bottom: 10px;
-        justify-content: center;
-        a {
-            background: $white;
-            border-radius: 8px;
-            box-shadow: 0 6px 10px rgba($black, .1);
-            font-weight: bold;
-            text-decoration: none;
-            line-height: 48px;
-            padding: 5px 24px;
-            margin: 0 10px;
-            font-size: 18px;
-            transition: all 0.2s ease;
-            &.active {
-                background: $green;
-                color: $white;
-            }
-            &.close {
-                font-weight: normal;
-            }
-        }
-    }
-    // Active state
-    &.healthcare-active .healthcare-button,
-    &.technology-active .technology-button,
-    &.special-active .special-button {
-        color: $white;
-        background: $green;
-    }
+}
 
-    .transactions-grid {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+.transactions-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    top: 68px;
+    left: 0;
+    right: 0;
+}
+
+// Transaction Card
+.transaction {
+    position: relative;
+    height: 140px;
+    width: calc(33.33333% - 20px);
+    margin: 10px;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    transition: transform .3s ease;
+    transition-delay: 0s!important;
+    animation-fill-mode: forwards;
+    background: $white;
+    border-radius: 8px;
+
+    .front,
+    .back {
+        transform: rotateY(0deg);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        background: $white;
+        border-radius: 8px;
+        box-shadow: 0 6px 10px rgba($black, .05);
         position: absolute;
-        top: 68px;
+        z-index: 0;
+        top: 0;
         left: 0;
         right: 0;
+        bottom: 0;
     }
-
-    // Transaction Card
-    .transaction {
-        position: relative;
-        height: 140px;
-        width: calc(33.33333% - 20px);
-        margin: 10px;
-        transform: translateY(30px);
-        transform-style: preserve-3d;
-        animation-fill-mode: forwards;
+    .back {
+        transform: rotateY(180deg);
+        z-index: 1;
+        display: flex;
+        align-items: center;
         opacity: 0;
-        .front,
-        .back {
-            -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-            background: $white;
-            border-radius: 8px;
-            box-shadow: 0 6px 10px rgba($black, .05);
-            position: absolute;
-            z-index: 0;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-        }
-        .back {
-            transform: rotateY(180deg);
-            z-index: 1;
-            display: flex;
-            align-items: center;
-            p {
-                padding: 0 20px;
-                font-size: 18px;
-                line-height: 24px;
-            }
-        }
-        .logo-top {
-            position: absolute;
-            width: 120px;
-            height: auto;
-            top: 15px;
-            left: calc(50% - 60px);
-            &.burchfield {
-                width: 160px;
-                left: calc(50% - 80px);
-                top: 5px;
-            }
-        }
-        .logo-bottom {
-            position: absolute;
-            bottom: 15px;
-            width: 120px;
-            height: auto;
-            left: calc(50% - 60px);
-        }
-        // Down Arrow
-        .front:after {
-            content: '';
-            position: absolute;
-            height: 32px;
-            left: 0;
-            right: 0;
-            top: calc(50% - 15px);
-            background: url('../img/transaction-arrow.svg') no-repeat;
-            background-size: 100%;
-        }
-        .info,
-        .info-close {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            width: 40px;
-            height: 40px;
-            text-indent: 100%;
-            overflow: hidden;
-            background: url('../img/icon-circle-i.svg') no-repeat center center;
-            font-size: 0;
-            &:hover {
-                cursor: pointer;
-            }
-            &:focus {
-                outline: none;
-            }
-        }
-        .info-close {
-            background-image: url('../img/icon-circle-x.svg');
-        }
-        &:nth-child(n+1) {
-            transition-delay: 0;
+        transition: opacity 1s ease;
+        p {
+            padding: 0 20px;
+            font-size: 18px;
+            line-height: 24px;
         }
     }
-}
-
-//
-// Activated when clicking one of the 3 category cards
-//
-.transactions-active {
-
-    // Hide 3 category cards
-    .transactions-content {
-        opacity: 0;
-        visibility: hidden;
-    }
-
-    // Show nav & transactions grid
-    .transactions-display {
-        opacity: 1;
-        visibility: visible;
-
-        // Individual grids are hidden by default
-        .healthcare-grid,
-        .technology-grid,
-        .special-grid {
-            opacity: 0;
-            visibility: hidden;
+    .logo-top {
+        position: absolute;
+        width: 120px;
+        height: auto;
+        top: 15px;
+        left: calc(50% - 60px);
+        &.burchfield {
+            width: 160px;
+            left: calc(50% - 80px);
+            top: 5px;
         }
+    }
+    .logo-bottom {
+        position: absolute;
+        bottom: 15px;
+        width: 120px;
+        height: auto;
+        left: calc(50% - 60px);
+    }
+    // Down Arrow
+    .front:after {
+        content: '';
+        position: absolute;
+        height: 32px;
+        left: 0;
+        right: 0;
+        top: calc(50% - 15px);
+        background: url('../img/transaction-arrow.svg') no-repeat;
+        background-size: 100%;
+    }
+    .info,
+    .info-close {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 40px;
+        height: 40px;
+        text-indent: 100%;
+        overflow: hidden;
+        background: url('../img/icon-circle-i.svg') no-repeat center center;
+        font-size: 0;
+        &:hover {
+            cursor: pointer;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+    .info-close {
+        background-image: url('../img/icon-circle-x.svg');
+    }
+    &.is-flipped {
+        transform: rotateY(180deg);
 
-        // Category class determines which grid then is shown
-        &.healthcare-active .healthcare-grid,
-        &.technology-active .technology-grid,
-        &.special-active .special-grid {
+        .back {
             opacity: 1;
-            visibility: visible;
-
-            // Animate all of the individual cards in
-            .transaction {
-                transform: translateY(0);
-                transition: all 0.3s ease;
-                opacity: 1;
-
-                // Slight delay on every card
-                &:nth-child(1) {transition-delay: .1s;}
-                &:nth-child(2) {transition-delay: .2s;}
-                &:nth-child(3) {transition-delay: .3s;}
-                &:nth-child(4) {transition-delay: .4s;}
-                &:nth-child(5) {transition-delay: .5s;}
-                &:nth-child(6) {transition-delay: .6s;}
-                &:nth-child(7) {transition-delay: .7s;}
-                &:nth-child(8) {transition-delay: .8s;}
-                &:nth-child(9) {transition-delay: .9s;}
-
-                // Flipped card
-                &.is-flipped {
-                    transition: transform .5s ease;
-                    transform: rotateY(180deg);
-                    transition-delay: 0s !important;
-                }
-                &.no-delay {
-                    transition-delay: 0s !important;
-                }
-            }
         }
     }
 }
+
 
 // Short displays but still wide
 @include breakpoint(short) {
-    .transactions-categories {
-        .card {
-            h4 {
-                font-size: 24px;
-            }
-            .icon-small {
-                margin-top: 10px;
-            }
-            .button {
-                margin-top: 10px;
-            }
+    .transaction {
+        height: 110px;
+        width: calc(25% - 20px);
+        .logo-top {
+            top: 7px;
         }
-    }
-    .transactions-display {
-        .transaction {
-            height: 110px;
-            width: calc(25% - 20px);
-            .logo-top {
-                top: 7px;
-            }
-            .logo-bottom {
-                bottom: 7px;
-            }
-            .back p {
-                font-size: 16px;
-                line-height: 18px;
-            }
+        .logo-bottom {
+            bottom: 7px;
+        }
+        .back p {
+            font-size: 16px;
+            line-height: 18px;
         }
     }
 }
 
 @include breakpoint(large) {
-    .transactions-display {
-        .transaction .back p {
-            font-size: 16px;
-            line-height: 20px;
-        }
+    .transaction .back p {
+        font-size: 16px;
+        line-height: 20px;
     }
 }
 
 @include breakpoint(medium) {
     .transactions-display {
         position: relative;
-        display: none;
         top: 0;
         left: 0;
-        .transactions-nav {
-            flex-wrap: wrap;
-            a {
-                font-size: 14px;
-                line-height: 36px;
-                margin: 0 5px 10px;
-            }
-        }
         .transactions-grid {
             position: relative;
             top: 0;
@@ -1486,13 +1263,9 @@ nav {
 }
 
 @include breakpoint(small) {
-    .transactions-display {
-        .transactions-grid {
-            .transaction {
-                width: 100%;
-                margin: 0 0 15px;
-            }
-        }
+    .transaction {
+        width: 100%;
+        margin: 0 0 15px;
     }
 }
 
@@ -1516,6 +1289,14 @@ nav {
         }
     }
 }
+
+
+
+
+
+
+
+
 
 // Contact us
 
