@@ -185,5 +185,16 @@ $(window).resize(function() {
 // Initialize Slick JS
 $('.transactions-slider').slick({
     slidesToShow: 3,
-    dots: true
+    dots: true,
+    responsive: [
+        {
+          breakpoint: 800,
+          settings: {
+            slidesToShow: 2,
+          }
+        },{
+          breakpoint: 480,
+          settings: "unslick"
+        }
+    ]
 });

@@ -1133,25 +1133,21 @@ nav {
             line-height: 24px;
         }
     }
-    .logo-top {
-        position: absolute;
-        width: 120px;
-        height: auto;
-        top: 15px;
-        left: calc(50% - 60px);
-        &.burchfield {
-            width: 160px;
-            left: calc(50% - 80px);
-            top: 5px;
-        }
-    }
+    .logo-top,
     .logo-bottom {
         position: absolute;
-        bottom: 15px;
-        width: 120px;
-        height: auto;
-        left: calc(50% - 60px);
+        top: 15px;
+        left: 50%;
+        width: auto;
+        max-width: 160px;
+        max-height: 45px;
+        transform: translateX(-50%);
     }
+    .logo-bottom {
+        top: auto;
+        bottom: 15px;
+    }
+
     // Down Arrow
     .front:after {
         content: '';
@@ -1255,6 +1251,9 @@ nav {
 @include breakpoint(small) {
     .transaction {
         margin: 0 0 15px;
+    }
+    .transactions-group {
+        height: 465px;
     }
 }
 
