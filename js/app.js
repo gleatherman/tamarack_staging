@@ -108,9 +108,7 @@ $( document ).ready(function() {
 
             // Wait a half second and reset Transactions
             setTimeout(function(){
-                $('.transactions').removeClass('transactions-active');
                 $('.is-flipped').removeClass('is-flipped');
-                $('.transactions-display').attr('class', 'transactions-display');
                 $('.transaction').attr('class', 'transaction');
             }, 500);
 

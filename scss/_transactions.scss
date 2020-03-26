@@ -1,3 +1,4 @@
+
 // Transactions
 .transactions-group {
   height: 500px;
@@ -10,43 +11,46 @@
   position: relative;
   height: 140px;
   width: 100%;
-  transform-style: preserve-3d;
+  margin: 10px;
   transform: rotateY(0deg);
-  transition: transform .3s ease;
-  transition-delay: 0s!important;
+  transition: transform 1s;
+  transform-style: preserve-3d;
   animation-fill-mode: forwards;
-  background: $white;
-  border-radius: 8px;
-  margin: 0 0 20px 0;
+
+
+  &.is-flipped {
+    transform: rotateY(180deg);
+  }
 
   .front,
   .back {
-      transform: rotateY(0deg);
-      -webkit-backface-visibility: hidden;
-      backface-visibility: hidden;
-      background: $white;
-      border-radius: 8px;
-      box-shadow: 0 6px 10px rgba($black, .05);
-      position: absolute;
-      z-index: 0;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    background: $white;
+    border-radius: 8px;
+    box-shadow: 0 6px 10px rgba($black, .05);
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
   .back {
-      transform: rotateY(180deg);
-      z-index: 1;
-      display: flex;
-      align-items: center;
-      opacity: 0;
-      transition: opacity 1s ease;
-      p {
-          padding: 0 20px;
-          font-size: 18px;
-          line-height: 24px;
-      }
+    transform: rotateY(180deg);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    p {
+        padding: 0 20px;
+        font-size: 18px;
+        line-height: 24px;
+    }
   }
+}
+
+.transaction {
   .logo-top,
   .logo-bottom {
       position: absolute;
@@ -61,7 +65,26 @@
       top: auto;
       bottom: 15px;
   }
-
+  .info,
+  .info-close {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 40px;
+      height: 40px;
+      text-indent: 100%;
+      font-size: 0;
+      background: url('../img/icon-circle-i.svg') no-repeat center center;
+      &:hover {
+          cursor: pointer;
+      }
+      &:focus {
+          outline: none;
+      }
+  }
+  .info-close {
+      background-image: url('../img/icon-circle-x.svg');
+  }
   // Down Arrow
   .front:after {
       content: '';
@@ -73,92 +96,30 @@
       background: url('../img/transaction-arrow.svg') no-repeat;
       background-size: 100%;
   }
-  .info,
-  .info-close {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 40px;
-      height: 40px;
-      text-indent: 100%;
-      overflow: hidden;
-      background: url('../img/icon-circle-i.svg') no-repeat center center;
-      font-size: 0;
-      &:hover {
-          cursor: pointer;
-      }
-      &:focus {
-          outline: none;
-      }
-  }
-  .info-close {
-      background-image: url('../img/icon-circle-x.svg');
-  }
-  &.is-flipped {
-      transform: rotateY(180deg);
 
-      .back {
-          opacity: 1;
-      }
-  }
 }
-
 
 // Short displays but still wide
 @include breakpoint(short) {
   .transaction {
-      height: 110px;
-      .logo-top {
-          top: 7px;
-      }
-      .logo-bottom {
-          bottom: 7px;
-      }
-      .back p {
-          font-size: 16px;
-          line-height: 18px;
-      }
+    height: 110px;
+    .logo-top {
+      top: 7px;
+    }
+    .logo-bottom {
+      bottom: 7px;
+    }
+    .back p {
+      font-size: 16px;
+      line-height: 18px;
+    }
   }
 }
 
 @include breakpoint(large) {
   .transaction .back p {
-      font-size: 16px;
-      line-height: 20px;
-  }
-}
-
-@include breakpoint(medium) {
-  .transactions-display {
-      position: relative;
-      top: 0;
-      left: 0;
-      .transactions-grid {
-          position: relative;
-          top: 0;
-          .transaction {
-              width: calc(50% - 20px);
-          }
-      }
-  }
-  .transactions-active {
-      .transactions-content {
-          display: none;
-      }
-      .transactions-display {
-          display: block;
-          &.healthcare-active .healthcare-grid,
-          &.technology-active .technology-grid,
-          &.special-active .special-grid {
-              display: flex;
-          }
-      }
-      .healthcare-grid,
-      .technology-grid,
-      .special-grid {
-          display: none;
-      }
-
+    font-size: 16px;
+    line-height: 20px;
   }
 }
 
@@ -174,21 +135,19 @@
 // IE 11 fixes
 @media all and (-ms-high-contrast:none) {
   .transaction {
-      transition: none !important;
+    transition: none !important;
   }
   .transaction.is-flipped {
-      transform: rotateY(0deg) !important;
-      .front {
-          opacity: 0;
-          visibility: hidden;
-          transform: rotateY(0deg);
-
-      }
-      .back {
-          opacity: 1;
-          visibility: visible;
-          transform: rotateY(0deg);
-      }
+    transform: rotateY(0deg) !important;
+    .front {
+      opacity: 0;
+      visibility: hidden;
+      transform: rotateY(0deg);
+    }
+    .back {
+      opacity: 1;
+      visibility: visible;
+      transform: rotateY(0deg);
+    }
   }
 }
-
