@@ -26,7 +26,7 @@
   .back {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    transform-style: preserve-3d;
+    transform-style: preserve-3d; /* preserve-3d also needed here for chrome first flip hidden bug */
     background: $white;
     border-radius: 8px;
     box-shadow: 0 6px 10px rgba($black, .05);
