@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon-technology</title>
+    <g id="icon-technology" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="Group-57" transform="translate(2.000000, 2.000000)" stroke="#FFFFFF" stroke-width="3">
+            <path d="M59.5801189,64 L15.4195774,64 C12.9788019,64 11,62.0358644 11,59.6128778 L11,16.3868207 C11,13.9641356 12.9788019,12 15.4195774,12 L59.5801189,12 C62.0208943,12 64,13.9641356 64,16.3868207 L64,59.6128778 C64,62.0358644 62.0208943,64 59.5801189,64 Z" id="Stroke-1"></path>
+            <line x1="46.5" y1="7" x2="46.5" y2="0" id="Stroke-3"></line>
+            <line x1="38" y1="7" x2="38" y2="0" id="Stroke-5"></line>
+            <line x1="29" y1="7" x2="29" y2="0" id="Stroke-7"></line>
+            <line x1="21.5" y1="7" x2="21.5" y2="0" id="Stroke-9"></line>
+            <line x1="55" y1="7" x2="55" y2="0" id="Stroke-11"></line>
+            <line x1="46.5" y1="76" x2="46.5" y2="68" id="Stroke-13"></line>
+            <line x1="38.5" y1="76" x2="38.5" y2="68" id="Stroke-16"></line>
+            <line x1="28.5" y1="76" x2="28.5" y2="68" id="Stroke-19"></line>
+            <line x1="21.5" y1="76" x2="21.5" y2="68" id="Stroke-22"></line>
+            <line x1="54.5" y1="76" x2="54.5" y2="68" id="Stroke-25"></line>
+            <line x1="68" y1="46.5" x2="76" y2="46.5" id="Stroke-28"></line>
+            <line x1="68" y1="37.5" x2="76" y2="37.5" id="Stroke-31"></line>
+            <line x1="68" y1="28.5" x2="76" y2="28.5" id="Stroke-34"></line>
+            <line x1="68" y1="20.5" x2="76" y2="20.5" id="Stroke-37"></line>
+            <line x1="68" y1="54.5" x2="76" y2="54.5" id="Stroke-40"></line>
+            <line x1="0" y1="46.5" x2="7" y2="46.5" id="Stroke-43"></line>
+            <line x1="0" y1="37.5" x2="7" y2="37.5" id="Stroke-45"></line>
+            <line x1="0" y1="29" x2="7" y2="29" id="Stroke-47"></line>
+            <line x1="0" y1="20.5" x2="7" y2="20.5" id="Stroke-49"></line>
+            <line x1="0" y1="55" x2="7" y2="55" id="Stroke-51"></line>
+            <path d="M21,54 L21,21.7569317 C21,20.7864535 21.7682437,20 22.7155854,20 L38,20" id="Stroke-53"></path>
+            <line x1="45" y1="21" x2="52" y2="21" id="Stroke-55"></line>
+        </g>
+    </g>
+</svg>

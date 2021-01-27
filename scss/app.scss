@@ -1155,6 +1155,95 @@ nav {
     line-height: 48px;
 }
 
+.sector-grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 20px auto 0;
+    max-width: 1140px;
+    .item {
+        width: calc(33% - 20px);
+        margin: 10px;
+        background: $white;
+        border-radius: 4px;
+        text-align: center;
+        padding: 40px 30px 30px;
+        box-shadow: 0 5px 12px rgba(0,0,0,.2);
+        img {
+            margin-bottom: 20px;
+            width: 60px;
+            height: 60px;
+        }
+        h4 {
+            margin: 0;
+            font-size: 16px;
+            line-height: 24px;
+            // font-weight: normal;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid $green;
+        }
+        p {
+            font-size: 16px;
+            margin: 0;
+            line-height: 24px;
+        }
+        &:nth-child(even) {
+            background: $black;
+            color: $white;
+        }
+    }
+}
+
+@include breakpoint(short) {
+    .sector-grid {
+        .item {
+            padding: 20px 30px;
+            img {
+                width: 40px;
+                margin-bottom: 0;
+                height: 40px;
+            }
+        }
+    }
+}
+
+
+@include breakpoint(medium) {
+    .sector-grid {
+        .item {
+            width: 100%;
+            padding: 20px 20px 20px 70px;
+            position: relative;
+            text-align: left;
+            line-height: 24px;
+            margin: 0 20px 15px;
+            img {
+                position: absolute;
+                width: 32px;
+                height: 32px;
+                top: 25px;
+                left: 20px;
+            }
+            h4 {
+                border-bottom: none;
+                margin: 0;
+                padding-bottom: 0;
+                font-size: 18px;
+            }
+            p {
+                display: inline;
+                line-height: 24px;
+                &:after {
+                    content: ',';
+                }
+                &:last-child:after {
+                    content: '';
+                }
+            }
+        }
+    }
+}
 
 @import '_transactions.scss';
 
