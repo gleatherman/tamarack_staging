@@ -591,7 +591,7 @@ nav {
     margin: 36px 0;
 }
 .founder-photo {
-    width: 160px;
+    width: 100px;
     border-radius: 80px;
 }
 .founder-card-small {
@@ -599,7 +599,7 @@ nav {
     padding: 30px;
     width: 100%;
     position: relative;
-    padding: 30px 70px 30px 220px;
+    padding: 120px 70px 30px 30px;
     min-height: 220px;
     border-radius: 4px;
     box-shadow: 0 6px 12px 0 rgba($black,0.07);
@@ -642,7 +642,7 @@ nav {
 @include breakpoint(large) {
     .founder-card-small {
         min-height: 160px;
-        padding-left: 150px;
+        // padding-left: 150px;
         padding-right: 50px;
         .founder-photo {
             height: 100px;
@@ -664,10 +664,8 @@ nav {
         flex-direction: column;
     }
     .founder-card-small {
-        &:first-child,
-        &:last-child {
-            margin: 0 0 20px;
-        }
+        margin: 0 0 20px !important;
+        padding: 30px 70px 30px 150px;
     }
 }
 
@@ -680,7 +678,7 @@ nav {
     transform: translateX(-390px);
     position: absolute;
     top: 90px;
-    width: 160%;
+    width: 240%;
     display: flex;
     .founders-active & {
         opacity: 1;
@@ -692,7 +690,10 @@ nav {
         transform: translateX(0);
     }
     .larry-active & {
-        transform: translateX(-65vw);
+        transform: translateX(-30%);
+    }
+    .jd-active & {
+        transform: translateX(-60%);
     }
 }
 
@@ -864,7 +865,11 @@ nav {
 }
 
 .larry-active .michael-large,
-.michael-active .larry-large {
+.larry-active .jd-large,
+.michael-active .larry-large,
+.michael-active .jd-large,
+.jdel-active .michael-large,
+.jd-active .larry-large {
     transition: all 0.3s ease;
     opacity: 0.5;
 }
@@ -954,7 +959,8 @@ nav {
         }
     }
     .michael-active {
-        .larry-large {
+        .larry-large,
+        .jd-large {
             display: none;
         }
         .michael-large {
@@ -966,7 +972,22 @@ nav {
         }
     }
     .larry-active {
-        .michael-large {
+        .michael-large,
+        .jd-large {
+            display: none;
+        }
+        .larry-large {
+            opacity: 1;
+            visibility: visible;
+            margin-left: 0;
+        }
+        .founders-cards-large-container {
+            transform: translateX(0);
+        }
+    }
+    .jd-active {
+        .michael-large,
+        .larry-large {
             display: none;
         }
         .larry-large {

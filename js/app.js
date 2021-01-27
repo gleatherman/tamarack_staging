@@ -38,12 +38,25 @@ $( document ).ready(function() {
         }
     });
 
+    $('.founder-card-small.jd-small .arrow-right').on('click', function(){
+        $('.founders').addClass('founders-active jd-active');
+
+        // If on mobile, scroll up to top of Founders
+        if (window.matchMedia('(max-width: 1100px)').matches) {
+            scrollTo('founders');
+        }
+    });
+
     $('.michael-large').on('click', function(e){
-        $('.founders').addClass('michael-active').removeClass('larry-active');
+        $('.founders').addClass('michael-active').removeClass('larry-active jd-active');
     });
 
     $('.larry-large').on('click', function(e){
-        $('.founders').addClass('larry-active').removeClass('michael-active');
+        $('.founders').addClass('larry-active').removeClass('michael-active jd-active');
+    });
+
+    $('.jd-large').on('click', function(e){
+        $('.founders').addClass('jd-active').removeClass('larry-active michael-active');
     });
 
     $('.close-x').on('click', function(){
@@ -51,7 +64,7 @@ $( document ).ready(function() {
         $('.play-active').removeClass('play-active');
         $('.play').removeClass('play');
         setTimeout(function(){
-            $('.founders').removeClass('michael-active larry-active');
+            $('.founders').removeClass('michael-active larry-active jd-active');
         }, 300);
         return false;
     });

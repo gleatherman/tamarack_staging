@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+PRODID:-//Apple Inc.//iPhone OS 14.2.1//EN
+N:Blank;J.D.;;;
+FN:J.D. Blank
+ORG:Tamarack Partners;
+TITLE:Vice President
+EMAIL;type=INTERNET;type=WORK;type=pref:jblank@tamarackpartners.net
+TEL;type=CELL;type=VOICE;type=pref:(952) 807-1483
+ADR;type=WORK;type=pref:;;60 South 6th St.\, Suite 2625;Minneapolis;Minnesota;55402;United States
+X-SOCIALPROFILE;type=linkedin:https://www.linkedin.com/in/jeffrey-blank
+END:VCARD
