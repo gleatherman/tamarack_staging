@@ -207,6 +207,16 @@ ul.double-col {
     columns: 100px 2;
 }
 
+.text-green {
+    color: $green;
+}
+.text-gold {
+    color: $gold;
+}
+.text-black {
+    color: $black;
+}
+
 @include breakpoint(short) {
     p {
         margin: 9px 0;
@@ -1023,7 +1033,7 @@ nav {
     }
 }
 
-/* Why Tamarack */
+/* Indusry Partners */
 .industry {
     border-radius: 8px;
     box-shadow: 0 6px 10px rgba($black, .1);
@@ -1051,13 +1061,42 @@ nav {
         font-size: 16px;
     }
 }
+.partner-logos {
+    display: block;
+    margin: 20px auto 0;
+    max-width: 100%;
+    height: auto;
+}
 .partners-dial {
     text-align: center;
 
     img {
-        width: 250px;
-        height: 250px;
+        width: 300px;
+        height: 300px;
     }
+}
+
+.partners-columns {
+    text-align: center;
+}
+
+.first-col,
+.last-col {
+    padding-top: 90px;
+}
+
+@include breakpoint(small) {
+.partners-columns {
+    text-align: unset;
+    .col {
+        margin: 0 0 10px !important;
+    }
+}
+
+.first-col,
+.last-col {
+    padding-top: 0;
+}
 }
 
 @include breakpoint(short) {
@@ -1068,6 +1107,10 @@ nav {
         .icon {
             top: 6px;
         }
+    }
+    .partners-dial img {
+        width: 200px;
+        height: 200px;
     }
 }
 
