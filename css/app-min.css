@@ -166,6 +166,8 @@ ul li {
 }
 
 ul.double-col {
+  -webkit-columns: 100px 2;
+  -moz-columns: 100px 2;
   columns: 100px 2;
 }
 
@@ -1193,6 +1195,7 @@ nav .menu-button:hover {
   transform: rotateY(0deg);
   transition: transform 0.5s;
   transform-style: preserve-3d;
+  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 .transaction.is-flipped {
