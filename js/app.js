@@ -70,7 +70,7 @@ $(document).ready(function() {
     });
 
 
-    // Work / Play Switch
+    // FOUNDER Work / Play Switch
     $('.switch').on('click', function() {
         $(this).toggleClass('play');
         $(this).closest('.founder-card-large').toggleClass('play-active');
@@ -128,12 +128,12 @@ $(document).ready(function() {
     });
 
 
-    // Work / Play Switch
-    $('.switch').on('click', function() {
-        $(this).toggleClass('play');
-        $(this).closest('.partner-card-large').toggleClass('play-active');
-        return false;
-    });
+    // PARTNERS Work / Play Switch
+    // $('.switch').on('click', function() {
+    //     $(this).toggleClass('play');
+    //     $(this).closest('.partner-card-large').toggleClass('play-active');
+    //     return false;
+    // });
 
     // Transactions
     // Flip transaction card over

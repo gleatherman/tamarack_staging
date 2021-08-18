@@ -2,11 +2,11 @@
 // Tamarack Partners
 //
 // Colors
-$white : #FFFFFF;
-$offwhite : #F6FAEC;
-$black : #414731;
-$green : #96C121;
-$gold : darken(#FFCF42, 10);
+$white: #FFFFFF;
+$offwhite: #F6FAEC;
+$black: #414731;
+$green: #96C121;
+$gold: darken(#FFCF42, 10);
 // Fonts
 @font-face {
     font-family: 'FreightSansPro';
@@ -29,10 +29,10 @@ $gold : darken(#FFCF42, 10);
     font-weight: bold;
 }
 
-$freight-display : "FreightDispPro",
+$freight-display: "FreightDispPro",
 Georgia,
 serif;
-$freight-sans : "FreightSansPro",
+$freight-sans: "FreightSansPro",
 "Helvetica Neue",
 Arial sans-serif;
 // Mixins
@@ -1318,92 +1318,6 @@ nav {
     .partner-card-large {
         min-height: 470px;
     }
-}
-
-.switch {
-    width: 130px;
-    height: 48px;
-    border: 1px solid $green;
-    border-radius: 48px;
-    margin: 20px auto 0;
-    position: relative;
-    &:hover {
-        cursor: pointer;
-    }
-    &:before {
-        content: "work";
-        position: absolute;
-        display: block;
-        top: 0;
-        left: 0;
-        text-transform: uppercase;
-        font-weight: bold;
-        font-size: 16px;
-        line-height: 44px;
-        letter-spacing: 1px;
-        text-align: left;
-        width: 130px;
-        padding-left: 20px;
-        color: $black;
-        transition: all 0.3s ease;
-    }
-    &:after {
-        content: "play";
-        position: absolute;
-        display: block;
-        opacity: 0;
-        visibility: hidden;
-        top: 0;
-        right: 0;
-        text-transform: uppercase;
-        font-weight: bold;
-        font-size: 16px;
-        line-height: 44px;
-        letter-spacing: 1px;
-        text-align: right;
-        width: 130px;
-        padding-right: 20px;
-        color: $black;
-        transition: all 0.3s ease;
-    }
-    // Switch Knob
-    .knob {
-        transition: all 0.3s ease;
-        content: '';
-        position: absolute;
-        top: 4px;
-        right: 4px;
-        height: 38px;
-        width: 38px;
-        border-radius: 40px;
-        background: $green;
-        z-index: 5;
-    }
-    &.play {
-        border-color: $gold;
-        &:before {
-            opacity: 0;
-            visibility: hidden;
-        }
-        &:after {
-            opacity: 1;
-            visibility: visible;
-        }
-        .knob {
-            transform: translateX(-82px);
-            background: $gold;
-        }
-    }
-}
-
-.larry-active .michael-large,
-.larry-active .jd-large,
-.michael-active .larry-large,
-.michael-active .jd-large,
-.jdel-active .michael-large,
-.jd-active .larry-large {
-    transition: all 0.3s ease;
-    opacity: 0.5;
 }
 
 @include breakpoint(large) {
