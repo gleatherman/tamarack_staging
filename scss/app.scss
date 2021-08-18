@@ -1,72 +1,79 @@
-
 //
 // Tamarack Partners
 //
-
 // Colors
-
-$white:     #FFFFFF;
-$offwhite:  #F6FAEC;
-$black:     #414731;
-$green:     #96C121;
-$gold:      darken(#FFCF42, 10);
-
-
+$white : #FFFFFF;
+$offwhite : #F6FAEC;
+$black : #414731;
+$green : #96C121;
+$gold : darken(#FFCF42, 10);
 // Fonts
-
 @font-face {
     font-family: 'FreightSansPro';
     src: url('../fonts/39DE24_2_0.eot');
-    src: url('../fonts/39DE24_2_0.eot?#iefix') format('embedded-opentype'),url('../fonts/39DE24_2_0.woff2') format('woff2'),url('../fonts/39DE24_2_0.woff') format('woff'),url('../fonts/39DE24_2_0.ttf') format('truetype');
+    src: url('../fonts/39DE24_2_0.eot?#iefix') format('embedded-opentype'), url('../fonts/39DE24_2_0.woff2') format('woff2'), url('../fonts/39DE24_2_0.woff') format('woff'), url('../fonts/39DE24_2_0.ttf') format('truetype');
     font-weight: normal;
 }
 
 @font-face {
     font-family: 'FreightSansPro';
     src: url('../fonts/39DE24_0_0.eot');
-    src: url('../fonts/39DE24_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/39DE24_0_0.woff2') format('woff2'),url('../fonts/39DE24_0_0.woff') format('woff'),url('../fonts/39DE24_0_0.ttf') format('truetype');
+    src: url('../fonts/39DE24_0_0.eot?#iefix') format('embedded-opentype'), url('../fonts/39DE24_0_0.woff2') format('woff2'), url('../fonts/39DE24_0_0.woff') format('woff'), url('../fonts/39DE24_0_0.ttf') format('truetype');
     font-weight: bold;
 }
 
 @font-face {
     font-family: 'FreightDispPro';
     src: url('../fonts/39DE24_1_0.eot');
-    src: url('../fonts/39DE24_1_0.eot?#iefix') format('embedded-opentype'),url('../fonts/39DE24_1_0.woff2') format('woff2'),url('../fonts/39DE24_1_0.woff') format('woff'),url('../fonts/39DE24_1_0.ttf') format('truetype');
+    src: url('../fonts/39DE24_1_0.eot?#iefix') format('embedded-opentype'), url('../fonts/39DE24_1_0.woff2') format('woff2'), url('../fonts/39DE24_1_0.woff') format('woff'), url('../fonts/39DE24_1_0.ttf') format('truetype');
     font-weight: bold;
 }
 
-$freight-display:   "FreightDispPro", Georgia, serif;
-$freight-sans:      "FreightSansPro", "Helvetica Neue", Arial sans-serif;
-
-
+$freight-display : "FreightDispPro",
+Georgia,
+serif;
+$freight-sans : "FreightSansPro",
+"Helvetica Neue",
+Arial sans-serif;
 // Mixins
-
 @mixin breakpoint($point) {
-  @if $point == large {
-    @media (max-width: 1100px) { @content; }
-  }
-  @else if $point == medium {
-    @media (max-width: 800px) { @content; }
-  }
-  @else if $point == small {
-    @media (max-width: 600px) { @content; }
-  }
-  @else if $point == short {
-    @media (min-width: 1100px) and (max-height: 850px) { @content; }
-  }
-  // For custom breakpoint sizes
-  @else if $point > 0 {
-    @media (max-width: #{$point}px)  { @content; }
-  }
+    @if $point==large {
+        @media (max-width: 1100px) {
+            @content;
+        }
+    }
+    @else if $point==medium {
+        @media (max-width: 800px) {
+            @content;
+        }
+    }
+    @else if $point==small {
+        @media (max-width: 600px) {
+            @content;
+        }
+    }
+    @else if $point==short {
+        @media (min-width: 1100px) and (max-height: 850px) {
+            @content;
+        }
+    }
+    // For custom breakpoint sizes
+    @else if $point>0 {
+        @media (max-width: #{$point}px) {
+            @content;
+        }
+    }
 }
 
 // Layout
-
 html {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
-*, *:before, *:after {
-  box-sizing: inherit;
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
 }
 
 body {
@@ -79,6 +86,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
 .wrapper {
     width: 100%;
     max-width: 1200px;
@@ -86,6 +94,7 @@ body {
     padding: 0 30px;
     position: relative;
 }
+
 section {
     // height: calc(100vh + 100px);
     height: 100vh;
@@ -95,6 +104,7 @@ section {
     position: relative;
     overflow: hidden;
 }
+
 .grid {
     display: flex;
     .col {
@@ -117,17 +127,20 @@ section {
         line-height: 24px;
     }
 }
+
 @include breakpoint(large) {
     section {
         height: auto;
         padding: 150px 0;
     }
 }
+
 @include breakpoint(medium) {
     .wrapper {
         padding: 0 20px;
     }
 }
+
 @include breakpoint(small) {
     section {
         padding: 80px 0;
@@ -137,16 +150,16 @@ section {
     }
 }
 
-
 // Typography
-
 p {
     margin: 12px 0;
     max-width: 880px;
 }
+
 .indented {
     text-indent: 30px;
 }
+
 h2 {
     font-family: $freight-display;
     font-weight: 900;
@@ -155,6 +168,7 @@ h2 {
     margin: 0;
     max-width: 840px;
 }
+
 h3 {
     color: $green;
     text-transform: uppercase;
@@ -162,11 +176,11 @@ h3 {
     font-size: 16px;
     font-weight: 900;
     margin: 12px 0 12px;
-
     &.is-tight {
         margin: 12px 0 -12px 0;
     }
 }
+
 h5 {
     font-size: 20px;
     font-weight: bold;
@@ -178,6 +192,7 @@ a:visited {
     text-decoration: underline;
     color: $black;
 }
+
 blockquote {
     font-weight: bold;
     font-style: italic;
@@ -188,9 +203,11 @@ blockquote {
     padding: 12px 0 12px 40px;
     border-left: 2px solid $green;
 }
+
 .centered {
     text-align: center;
 }
+
 .centered h2,
 .centered p {
     margin: 12px auto;
@@ -203,6 +220,7 @@ ul {
         padding-left: 6px;
     }
 }
+
 ul.double-col {
     columns: 100px 2;
 }
@@ -210,9 +228,11 @@ ul.double-col {
 .text-green {
     color: $green;
 }
+
 .text-gold {
     color: $gold;
 }
+
 .text-black {
     color: $black;
 }
@@ -222,6 +242,7 @@ ul.double-col {
         margin: 9px 0;
     }
 }
+
 @include breakpoint(medium) {
     h2 {
         font-size: 40px;
@@ -248,7 +269,7 @@ ul.double-col {
 }
 
 // Icons
-.icon-inline  {
+.icon-inline {
     position: relative;
     top: 1px;
     height: 12px;
@@ -257,16 +278,16 @@ ul.double-col {
 }
 
 // Navigation
-
 #logo {
     position: relative;
     &:focus {
         outline: none;
     }
 }
+
 .blocker {
     content: '';
-    background-image: radial-gradient(50% 100%, #F6FAEC 50%, rgba(246,250,236,0.79) 70%, rgba(246,250,236,0.00) 100%);
+    background-image: radial-gradient(50% 100%, #F6FAEC 50%, rgba(246, 250, 236, 0.79) 70%, rgba(246, 250, 236, 0.00) 100%);
     position: absolute;
     top: -30px;
     left: 30px;
@@ -291,6 +312,7 @@ ul.double-col {
     margin: 0 40px 0 0;
     transition: all 0.3s ease;
 }
+
 .nav-wrapper {
     position: fixed;
     top: 0;
@@ -299,6 +321,7 @@ ul.double-col {
     z-index: 40;
     padding: 0 30px;
 }
+
 nav {
     width: 100%;
     max-width: 1200px;
@@ -308,7 +331,7 @@ nav {
     align-items: center;
     justify-content: center;
     padding: 30px 0;
-    background-image: linear-gradient(180deg, rgba(246,250,236,0.79) 33%, rgba(246,250,236,0.00) 99%);
+    background-image: linear-gradient(180deg, rgba(246, 250, 236, 0.79) 33%, rgba(246, 250, 236, 0.00) 99%);
     transition: all 0.3s ease;
     ul {
         margin: 0;
@@ -384,9 +407,11 @@ nav {
     }
 }
 
+
 /* Collapsed Nav */
+
 .collapsed {
-    background: rgba($offwhite,0.90);
+    background: rgba($offwhite, 0.90);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     nav {
@@ -433,6 +458,7 @@ nav {
         }
     }
 }
+
 @include breakpoint(medium) {
     nav,
     .collapsed nav {
@@ -451,7 +477,6 @@ nav {
 }
 
 // Mobile Menu
-
 .menu-active {
     overflow: hidden;
     #mobile-nav {
@@ -459,6 +484,7 @@ nav {
         visibility: visible;
     }
 }
+
 #mobile-nav {
     opacity: 0;
     visibility: hidden;
@@ -488,6 +514,7 @@ nav {
         letter-spacing: 1px;
     }
 }
+
 @include breakpoint(medium) {
     #mobile-nav {
         padding-top: 73px;
@@ -495,7 +522,6 @@ nav {
 }
 
 // Top Section
-
 .top {
     background: url('../img/hero.jpg') top center no-repeat $offwhite;
     background-size: cover;
@@ -511,6 +537,7 @@ nav {
         margin-bottom: 18px;
     }
 }
+
 .down-arrow {
     position: absolute;
     bottom: 100px;
@@ -522,6 +549,7 @@ nav {
         cursor: pointer;
     }
 }
+
 .about-tamaracks {
     text-align: center;
     display: inline-block;
@@ -542,6 +570,7 @@ nav {
         clip-path: polygon(0px 0, 100% 0%, 100% calc(100% - 3vh), 0 100%);
     }
 }
+
 @include breakpoint(medium) {
     .top {
         height: auto;
@@ -555,16 +584,16 @@ nav {
     }
 }
 
-
 // Founders
-
 .founders-alternate {
     background: url('../img/founders-alternate.jpg') center center;
     background-size: cover;
 }
+
 .wrapper {
     z-index: 20 !important;
 }
+
 .sunburst-gold {
     z-index: 1 !important;
 }
@@ -578,6 +607,7 @@ nav {
         }
     }
 }
+
 @include breakpoint(medium) {
     .two-halves {
         flex-direction: column;
@@ -589,6 +619,7 @@ nav {
         }
     }
 }
+
 .founders-content {
     transition: all 0.2s ease;
     .founders-active & {
@@ -596,14 +627,17 @@ nav {
         visibility: hidden;
     }
 }
+
 .founders-cards {
     display: flex;
     margin: 36px 0;
 }
+
 .founder-photo {
     width: 100px;
     border-radius: 80px;
 }
+
 .founder-card-small {
     background: $white;
     padding: 30px;
@@ -612,7 +646,7 @@ nav {
     padding: 120px 70px 30px 30px;
     min-height: 220px;
     border-radius: 4px;
-    box-shadow: 0 6px 12px 0 rgba($black,0.07);
+    box-shadow: 0 6px 12px 0 rgba($black, 0.07);
     // &:hover {
     //     cursor: pointer;
     // }
@@ -669,6 +703,7 @@ nav {
         }
     }
 }
+
 @include breakpoint(medium) {
     .founders-cards {
         flex-direction: column;
@@ -712,7 +747,7 @@ nav {
     background: $white;
     width: 100%;
     min-height: 500px;
-    box-shadow: 0 6px 12px 0 rgba($black,0.07);
+    box-shadow: 0 6px 12px 0 rgba($black, 0.07);
     padding: 40px 120px 30px 30px;
     display: flex;
     .card-info {
@@ -792,6 +827,7 @@ nav {
         }
     }
 }
+
 @include breakpoint(short) {
     .founder-card-large {
         min-height: 470px;
@@ -894,6 +930,7 @@ nav {
         }
     }
 }
+
 @include breakpoint(medium) {
     .founders-cards-large-container {
         width: calc(100% - 40px);
@@ -1033,7 +1070,495 @@ nav {
     }
 }
 
+// Partners cards
+.partners-alternate {
+    background: url('../img/partners-alternate.jpg') center center;
+    background-size: cover;
+}
+
+.wrapper {
+    z-index: 20 !important;
+}
+
+.sunburst-gold {
+    z-index: 1 !important;
+}
+
+.two-halves {
+    display: flex;
+    .col {
+        width: 50%;
+        &:first-child {
+            padding-right: 40px;
+        }
+    }
+}
+
+@include breakpoint(medium) {
+    .two-halves {
+        flex-direction: column;
+        .col {
+            width: 100%;
+            &:first-child {
+                padding: 0 0 20px;
+            }
+        }
+    }
+}
+
+.partners-content {
+    transition: all 0.2s ease;
+    .partners-active & {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.partners-cards {
+    display: flex;
+    margin: 36px 0;
+}
+
+.partner-photo {
+    width: 100px;
+    border-radius: 80px;
+}
+
+.partner-card-small {
+    background: $white;
+    padding: 30px;
+    width: 100%;
+    position: relative;
+    padding: 120px 70px 30px 30px;
+    min-height: 220px;
+    border-radius: 4px;
+    box-shadow: 0 6px 12px 0 rgba($black, 0.07);
+    // &:hover {
+    //     cursor: pointer;
+    // }
+    &:first-child {
+        margin-right: 15px;
+    }
+    &:last-child {
+        margin-left: 15px;
+    }
+    h5 {
+        margin-top: 25px;
+    }
+    p {
+        margin: 0;
+        font-size: 18px;
+    }
+    .partner-photo {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+    }
+    .arrow-right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 70px;
+        margin: 30px 0;
+        border-left: 1px solid rgba($black, .1);
+        background: url('../img/icon-right-arrow.svg') center center no-repeat;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+@include breakpoint(large) {
+    .partner-card-small {
+        min-height: 160px;
+        // padding-left: 150px;
+        padding-right: 50px;
+        .partner-photo {
+            height: 100px;
+            width: 100px;
+        }
+        h5 {
+            margin-top: 0;
+        }
+        a {
+            word-break: break-all;
+        }
+        .arrow-right {
+            width: 50px;
+        }
+    }
+}
+
+@include breakpoint(medium) {
+    .partners-cards {
+        flex-direction: column;
+    }
+    .partner-card-small {
+        margin: 0 0 20px !important;
+        padding: 30px 70px 30px 150px;
+    }
+}
+
+.partners-cards-large-container {
+    transition: opacity 0.1s ease;
+    opacity: 0;
+    visibility: hidden;
+    // transform: translateY(60px);
+    // transform: translate(-390px,60px);
+    transform: translateX(-390px);
+    position: absolute;
+    top: 90px;
+    width: 240%;
+    display: flex;
+    .partners-active & {
+        opacity: 1;
+        visibility: visible;
+        transition: all 0.3s ease;
+        transform: translateY(0);
+    }
+    .michael-active & {
+        transform: translateX(0);
+    }
+    .larry-active & {
+        transform: translateX(-30%);
+    }
+    .jd-active & {
+        transform: translateX(-60%);
+    }
+}
+
+.partner-card-large {
+    position: relative;
+    background: $white;
+    width: 100%;
+    min-height: 500px;
+    box-shadow: 0 6px 12px 0 rgba($black, 0.07);
+    padding: 40px 120px 30px 30px;
+    display: flex;
+    .card-info {
+        min-width: 280px;
+        margin-right: 30px;
+        text-align: center;
+        p {
+            margin: 0;
+            font-size: 18px;
+        }
+    }
+    .card-content {
+        position: relative;
+        width: 100%;
+        .work-content,
+        .play-content {
+            // position: absolute;
+            // top: 0;
+            // left: 0;
+            // right: 0;
+            transition: all 0.3s ease;
+            display: block;
+        }
+        .play-content {
+            // opacity: 0;
+            // visibility: hidden;
+            display: none;
+        }
+    }
+    &.play-active {
+        .work-content {
+            // opacity: 0;
+            // visibility: hidden;
+            display: none;
+        }
+        .play-content {
+            // opacity: 1;
+            // visibility: visible;
+            display: block;
+        }
+    }
+    h4 {
+        font-size: 24px;
+        margin: 0;
+    }
+    .vcard {
+        display: inline-block;
+        padding: 0px 0px 0px 32px;
+        line-height: 32px;
+        text-decoration: none;
+        background: url('../img/icon-vcard.svg') no-repeat left 9px;
+    }
+    .linkedin {
+        vertical-align: -6px;
+        margin-left: 10px;
+        margin-bottom: -6px;
+        display: inline-block;
+    }
+    .partner-photo {
+        margin: 20px 0;
+    }
+    &:first-child {
+        margin-right: 15px;
+    }
+    &:last-child {
+        margin-left: 15px;
+    }
+    .close-x {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 120px;
+        height: 100px;
+        background: url(../img/icon-close-x.svg) center center no-repeat;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+@include breakpoint(short) {
+    .partner-card-large {
+        min-height: 470px;
+    }
+}
+
+.switch {
+    width: 130px;
+    height: 48px;
+    border: 1px solid $green;
+    border-radius: 48px;
+    margin: 20px auto 0;
+    position: relative;
+    &:hover {
+        cursor: pointer;
+    }
+    &:before {
+        content: "work";
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 44px;
+        letter-spacing: 1px;
+        text-align: left;
+        width: 130px;
+        padding-left: 20px;
+        color: $black;
+        transition: all 0.3s ease;
+    }
+    &:after {
+        content: "play";
+        position: absolute;
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        top: 0;
+        right: 0;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 44px;
+        letter-spacing: 1px;
+        text-align: right;
+        width: 130px;
+        padding-right: 20px;
+        color: $black;
+        transition: all 0.3s ease;
+    }
+    // Switch Knob
+    .knob {
+        transition: all 0.3s ease;
+        content: '';
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        height: 38px;
+        width: 38px;
+        border-radius: 40px;
+        background: $green;
+        z-index: 5;
+    }
+    &.play {
+        border-color: $gold;
+        &:before {
+            opacity: 0;
+            visibility: hidden;
+        }
+        &:after {
+            opacity: 1;
+            visibility: visible;
+        }
+        .knob {
+            transform: translateX(-82px);
+            background: $gold;
+        }
+    }
+}
+
+.larry-active .michael-large,
+.larry-active .jd-large,
+.michael-active .larry-large,
+.michael-active .jd-large,
+.jdel-active .michael-large,
+.jd-active .larry-large {
+    transition: all 0.3s ease;
+    opacity: 0.5;
+}
+
+@include breakpoint(large) {
+    .partner-card-large {
+        padding-right: 30px;
+        min-height: auto;
+        .close-x {
+            height: 60px;
+            width: 60px;
+        }
+    }
+}
+
+@include breakpoint(medium) {
+    .partners-cards-large-container {
+        width: calc(100% - 40px);
+        transition: opacity .3 ease !important;
+        transform: translateX(0);
+        top: 60px;
+    }
+    .partner-card-large {
+        flex-direction: column;
+        padding: 30px;
+        height: auto;
+        margin: 0 !important;
+        .card-info {
+            text-align: left;
+            min-width: auto;
+            margin-right: 0;
+            padding-left: 120px;
+            padding-bottom: 12px;
+            padding: 12px 0 24px 140px;
+            a {
+                word-break: break-all;
+            }
+        }
+        .partner-photo {
+            margin: 0;
+            width: 100px;
+            position: absolute;
+            top: 40px;
+            left: 40px;
+        }
+        .card-content {
+            .work-content,
+            .play-content {
+                position: relative;
+                transition: none;
+            }
+            .play-content {
+                display: none;
+            }
+        }
+        &.play-active {
+            .work-content {
+                display: none;
+            }
+            .play-content {
+                display: block;
+            }
+        }
+    }
+    .switch {
+        position: absolute;
+        top: 155px;
+        left: 45px;
+        margin: 0;
+        height: 30px;
+        width: 90px;
+        .knob {
+            width: 20px;
+            height: 20px;
+        }
+        &.play .knob {
+            transform: translateX(-60px);
+        }
+        &:before {
+            padding-left: 12px;
+            font-size: 12px;
+            line-height: 26px;
+        }
+        &:after {
+            padding-right: 12px;
+            font-size: 12px;
+            line-height: 26px;
+        }
+    }
+    .michael-active {
+        .larry-large,
+        .jd-large {
+            display: none;
+        }
+        .michael-large {
+            opacity: 1;
+            visibility: visible;
+        }
+        .partners-cards-large-container {
+            transform: translateX(0);
+        }
+    }
+    .larry-active {
+        .michael-large,
+        .jd-large {
+            display: none;
+        }
+        .larry-large {
+            opacity: 1;
+            visibility: visible;
+            margin-left: 0;
+        }
+        .partners-cards-large-container {
+            transform: translateX(0);
+        }
+    }
+    .jd-active {
+        .michael-large,
+        .larry-large {
+            display: none;
+        }
+        .larry-large {
+            opacity: 1;
+            visibility: visible;
+            margin-left: 0;
+        }
+        .partners-cards-large-container {
+            transform: translateX(0);
+        }
+    }
+}
+
+@include breakpoint(small) {
+    .partners-cards-large-container {
+        margin: 0 -20px;
+        width: 100%;
+    }
+    .partner-card-large {
+        padding: 20px;
+        .partner-photo {
+            width: 80px;
+            left: 25px;
+            top: 30px;
+        }
+        .card-info {
+            padding-left: 110px;
+        }
+        .switch {
+            left: 20px;
+            top: 130px;
+        }
+    }
+}
+
+
 /* Indusry Partners */
+
 .industry {
     border-radius: 8px;
     box-shadow: 0 6px 10px rgba($black, .1);
@@ -1041,7 +1566,6 @@ nav {
     padding: 14px 0 7px 0;
     margin-bottom: 15px;
     position: relative;
-
     .industry_item {
         position: relative;
         padding: 0 18px 9px 72px;
@@ -1061,15 +1585,16 @@ nav {
         font-size: 16px;
     }
 }
+
 .partner-logos {
     display: block;
     margin: 20px auto 0;
     max-width: 100%;
     height: auto;
 }
+
 .partners-dial {
     text-align: center;
-
     img {
         width: 300px;
         height: 300px;
@@ -1086,24 +1611,22 @@ nav {
 }
 
 @include breakpoint(small) {
-.partners-columns {
-    text-align: unset;
-    .col {
-        margin: 0 0 10px !important;
+    .partners-columns {
+        text-align: unset;
+        .col {
+            margin: 0 0 10px !important;
+        }
     }
-}
-
-.first-col,
-.last-col {
-    padding-top: 0;
-}
+    .first-col,
+    .last-col {
+        padding-top: 0;
+    }
 }
 
 @include breakpoint(short) {
     .industry {
         padding: 9px 0 3px 0;
         margin-bottom: 9px;
-
         .icon {
             top: 6px;
         }
@@ -1115,7 +1638,6 @@ nav {
 }
 
 // Industries
-
 .industries {
     padding-top: 36px;
     display: flex;
@@ -1134,6 +1656,7 @@ nav {
         // line-height: 28px;
     }
 }
+
 .icon {
     height: 60px;
     width: auto;
@@ -1168,7 +1691,7 @@ nav {
         border-radius: 4px;
         text-align: center;
         padding: 30px 30px 30px;
-        box-shadow: 0 5px 12px rgba(0,0,0,.2);
+        box-shadow: 0 5px 12px rgba(0, 0, 0, .2);
         img {
             margin-bottom: 5px;
             width: 48px;
@@ -1208,7 +1731,6 @@ nav {
     }
 }
 
-
 @include breakpoint(medium) {
     .sector-grid {
         .item {
@@ -1246,11 +1768,7 @@ nav {
 }
 
 @import '_transactions.scss';
-
-
-
 // Contact us
-
 .contact-us {
     flex-direction: row;
     padding: 0;
@@ -1263,6 +1781,7 @@ nav {
     flex-direction: column;
     z-index: 5;
 }
+
 #map {
     position: absolute;
     top: 0;
@@ -1272,6 +1791,7 @@ nav {
     background: url('../img/map.png') center center no-repeat;
     background-size: cover;
 }
+
 a.pin {
     position: absolute;
     z-index: 5;
@@ -1288,6 +1808,7 @@ a.pin {
     justify-content: center;
     padding: 200px 0;
 }
+
 .half-wrapper {
     max-width: 600px;
     padding: 0 30px;
@@ -1295,10 +1816,12 @@ a.pin {
     width: 100%;
     align-self: center;
 }
+
 .half-top {
     padding-top: 15vh;
     opacity: 0.5;
 }
+
 .half-bottom {
     padding-bottom: 40px;
     font-size: 16px;
@@ -1337,9 +1860,7 @@ a.pin {
     }
 }
 
-
 // Sunbursts
-
 .sunburst-green {
     position: absolute;
     bottom: calc( -1077px / 2);
@@ -1356,6 +1877,7 @@ a.pin {
         right: calc( -1200px / 2);
     }
 }
+
 .sunburst-gold {
     position: absolute;
     bottom: calc( -1077px / 2);
@@ -1374,7 +1896,6 @@ a.pin {
 }
 
 // Parallax
-
 .parallax-window,
 .full-photo {
     /* background: url('../img/needles.jpg'); */
@@ -1393,16 +1914,28 @@ a.pin {
     -webkit-clip-path: polygon(0px 7vh, 100% 0%, 100% calc(100% - 7vh), 0 100%);
     clip-path: polygon(0px 7vh, 100% 0%, 100% calc(100% - 7vh), 0 100%);
 }
+
 .parallax-mirror {
     -webkit-clip-path: polygon(0px 7vh, 100% 0%, 100% calc(100% - 7vh), 0 100%);
     clip-path: polygon(0px 7vh, 100% 0%, 100% calc(100% - 7vh), 0 100%);
     z-index: 10 !important;
 }
 
-.photo-1 { background-image: url('../img/needles.jpg'); }
-.photo-2 { background-image: url('../img/tamarack-needles-2.jpg');}
-.photo-3 { background-image: url('../img/tamarack-needles.jpg');}
-.photo-4 { background-image: url('../img/tamarack-full-color.jpg');}
+.photo-1 {
+    background-image: url('../img/needles.jpg');
+}
+
+.photo-2 {
+    background-image: url('../img/tamarack-needles-2.jpg');
+}
+
+.photo-3 {
+    background-image: url('../img/tamarack-needles.jpg');
+}
+
+.photo-4 {
+    background-image: url('../img/tamarack-full-color.jpg');
+}
 
 @include breakpoint(large) {
     .parallax-window,

@@ -1,26 +1,26 @@
-$( document ).ready(function() {
+$(document).ready(function() {
 
     // Mobile Menu
 
-    $('.menu-button').on('click', function(){
+    $('.menu-button').on('click', function() {
         $('body').toggleClass('menu-active');
     });
 
     // Hero
 
-    $('.down-arrow').on('click', function () {
+    $('.down-arrow').on('click', function() {
         $.scrollify.next();
     });
 
     // Handle scrolling to a specific section
     function scrollTo(section) {
         $('html, body').animate({
-                scrollTop: $('section[data-section-name=' + section + ']').offset().top
+            scrollTop: $('section[data-section-name=' + section + ']').offset().top
         }, 750, 'swing');
     }
 
     // Founders
-    $('.founder-card-small.michael-small .arrow-right').on('click', function(){
+    $('.founder-card-small.michael-small .arrow-right').on('click', function() {
         $('.founders').addClass('founders-active michael-active');
 
         // If on mobile, scroll up to top of Founders
@@ -29,7 +29,7 @@ $( document ).ready(function() {
         }
     });
 
-    $('.founder-card-small.larry-small .arrow-right').on('click', function(){
+    $('.founder-card-small.larry-small .arrow-right').on('click', function() {
         $('.founders').addClass('founders-active larry-active');
 
         // If on mobile, scroll up to top of Founders
@@ -38,7 +38,7 @@ $( document ).ready(function() {
         }
     });
 
-    $('.founder-card-small.jd-small .arrow-right').on('click', function(){
+    $('.founder-card-small.jd-small .arrow-right').on('click', function() {
         $('.founders').addClass('founders-active jd-active');
 
         // If on mobile, scroll up to top of Founders
@@ -47,23 +47,23 @@ $( document ).ready(function() {
         }
     });
 
-    $('.michael-large').on('click', function(e){
+    $('.michael-large').on('click', function(e) {
         $('.founders').addClass('michael-active').removeClass('larry-active jd-active');
     });
 
-    $('.larry-large').on('click', function(e){
+    $('.larry-large').on('click', function(e) {
         $('.founders').addClass('larry-active').removeClass('michael-active jd-active');
     });
 
-    $('.jd-large').on('click', function(e){
+    $('.jd-large').on('click', function(e) {
         $('.founders').addClass('jd-active').removeClass('larry-active michael-active');
     });
 
-    $('.close-x').on('click', function(){
+    $('.close-x').on('click', function() {
         $('.founders').removeClass('founders-active');
         $('.play-active').removeClass('play-active');
         $('.play').removeClass('play');
-        setTimeout(function(){
+        setTimeout(function() {
             $('.founders').removeClass('michael-active larry-active jd-active');
         }, 300);
         return false;
@@ -71,40 +71,98 @@ $( document ).ready(function() {
 
 
     // Work / Play Switch
-    $('.switch').on('click', function(){
+    $('.switch').on('click', function() {
         $(this).toggleClass('play');
         $(this).closest('.founder-card-large').toggleClass('play-active');
         return false;
     });
 
+    // Partners
+    $('.partner-card-small.michael-small .arrow-right').on('click', function() {
+        $('.partners').addClass('partners-active michael-active');
+
+        // If on mobile, scroll up to top of Founders
+        if (window.matchMedia('(max-width: 1100px)').matches) {
+            scrollTo('partners');
+        }
+    });
+
+    $('.partner-card-small.larry-small .arrow-right').on('click', function() {
+        $('.partners').addClass('partners-active larry-active');
+
+        // If on mobile, scroll up to top of Founders
+        if (window.matchMedia('(max-width: 1100px)').matches) {
+            scrollTo('partners');
+        }
+    });
+
+    $('.partner-card-small.jd-small .arrow-right').on('click', function() {
+        $('.partners').addClass('partners-active jd-active');
+
+        // If on mobile, scroll up to top of Founders
+        if (window.matchMedia('(max-width: 1100px)').matches) {
+            scrollTo('partners');
+        }
+    });
+
+    $('.michael-large').on('click', function(e) {
+        $('.partners').addClass('michael-active').removeClass('larry-active jd-active');
+    });
+
+    $('.larry-large').on('click', function(e) {
+        $('.partners').addClass('larry-active').removeClass('michael-active jd-active');
+    });
+
+    $('.jd-large').on('click', function(e) {
+        $('.partners').addClass('jd-active').removeClass('larry-active michael-active');
+    });
+
+    $('.close-x').on('click', function() {
+        $('.partners').removeClass('partners-active');
+        $('.play-active').removeClass('play-active');
+        $('.play').removeClass('play');
+        setTimeout(function() {
+            $('.partners').removeClass('michael-active larry-active jd-active');
+        }, 300);
+        return false;
+    });
+
+
+    // Work / Play Switch
+    $('.switch').on('click', function() {
+        $(this).toggleClass('play');
+        $(this).closest('.partner-card-large').toggleClass('play-active');
+        return false;
+    });
+
     // Transactions
     // Flip transaction card over
-    $('.info').on('click', function(){
+    $('.info').on('click', function() {
         $(this).closest('.transaction').addClass('is-flipped');
         return false;
     });
 
     // Flip transaction card back
-    $('.info-close').on('click', function(){
+    $('.info-close').on('click', function() {
         $(this).closest('.transaction').removeClass('is-flipped').addClass('no-delay');
         return false;
     });
 
     // Scrollify
     $.scrollify({
-        section : ".section",
-        sectionName : "section-name",
-        interstitialSection : "",
+        section: ".section",
+        sectionName: "section-name",
+        interstitialSection: "",
         easing: "easeOutExpo",
         scrollSpeed: 2000,
-        offset : 0,
+        offset: 0,
         scrollbars: true,
         standardScrollElements: "",
         setHeights: false,
         overflowScroll: true,
         updateHash: false,
-        touchScroll:true,
-        before:function(i,panels) {
+        touchScroll: true,
+        before: function(i, panels) {
 
             // Update active nav items
             var ref = panels[i].attr("data-section-name");
@@ -112,7 +170,7 @@ $( document ).ready(function() {
             $("#main-nav").find("a[href=\"#" + ref + "\"]").addClass("active");
 
             // Wait a half second and reset Founders
-            setTimeout(function(){
+            setTimeout(function() {
                 $('.founders').removeClass('founders-active');
                 $('.play-active').removeClass('play-active');
                 $('.play').removeClass('play');
@@ -120,26 +178,26 @@ $( document ).ready(function() {
             }, 500);
 
             // Wait a half second and reset Transactions
-            setTimeout(function(){
+            setTimeout(function() {
                 $('.is-flipped').removeClass('is-flipped');
                 $('.transaction').attr('class', 'transaction');
             }, 500);
 
         },
-        after:function() {},
-        afterResize:function() {},
-        afterRender:function() {}
+        after: function() {},
+        afterResize: function() {},
+        afterRender: function() {}
     });
 
 
     // Smooth scroll when clicking nav items / logo
-    $("#main-nav a, #logo").on("click",function() {
+    $("#main-nav a, #logo").on("click", function() {
         $.scrollify.move($(this).attr("href"));
         return false;
     });
 
     // Scroll to mobile nav items
-    $("#mobile-nav a, #logo").on("click",function() {
+    $("#mobile-nav a, #logo").on("click", function() {
         // Dismiss mobile nav
         $('body').removeClass('menu-active');
         // Get target & chop off # from anchor
@@ -154,7 +212,7 @@ $( document ).ready(function() {
         $.scrollify.disable();
 
         // Down arrow on mobile
-        $(".down-arrow").on("click",function() {
+        $(".down-arrow").on("click", function() {
             // Animate scrolling to founders
             scrollTo('founders');
             return false;
@@ -173,7 +231,7 @@ $(window).scroll(function() {
     $('.sunburst-gold').css({ transform: 'rotate(' + theta + 'rad)' });
 
     // Collapse nav when not at the top
-    if ( $(window).scrollTop() > 150 ) {
+    if ($(window).scrollTop() > 150) {
         $(".nav-wrapper").addClass('collapsed');
     } else {
         $(".nav-wrapper").removeClass('collapsed');
@@ -185,10 +243,10 @@ $(window).scroll(function() {
 // Window Resize Disables Scrollify
 $(window).resize(function() {
     var width = $(window).width();
-    if (width > 1100){
+    if (width > 1100) {
         $.scrollify.enable();
     }
-    if (width < 1100){
+    if (width < 1100) {
         $.scrollify.disable();
     }
 });
@@ -197,15 +255,13 @@ $(window).resize(function() {
 $('.transactions-slider').slick({
     slidesToShow: 3,
     dots: true,
-    responsive: [
-        {
-          breakpoint: 800,
-          settings: {
+    responsive: [{
+        breakpoint: 800,
+        settings: {
             slidesToShow: 2,
-          }
-        },{
-          breakpoint: 480,
-          settings: "unslick"
         }
-    ]
+    }, {
+        breakpoint: 480,
+        settings: "unslick"
+    }]
 });
