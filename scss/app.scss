@@ -914,8 +914,9 @@ nav {
 .larry-active .jd-large,
 .michael-active .larry-large,
 .michael-active .jd-large,
-.jdel-active .michael-large,
-.jd-active .larry-large {
+.jd-active .michael-large,
+.jd-active .larry-large,
+{
     transition: all 0.3s ease;
     opacity: 0.5;
 }
@@ -1217,13 +1218,13 @@ nav {
         transition: all 0.3s ease;
         transform: translateY(0);
     }
-    .michael-active & {
+    .jimb-active & {
         transform: translateX(0);
     }
-    .larry-active & {
+    .tomb-active & {
         transform: translateX(-30%);
     }
-    .jd-active & {
+    .dougc-active & {
         transform: translateX(-60%);
     }
 }
@@ -1405,12 +1406,12 @@ nav {
             line-height: 26px;
         }
     }
-    .michael-active {
-        .larry-large,
-        .jd-large {
+    .jimb-active {
+        .tomb-large,
+        .dougc-large {
             display: none;
         }
-        .michael-large {
+        .jimb-large {
             opacity: 1;
             visibility: visible;
         }
@@ -1418,12 +1419,12 @@ nav {
             transform: translateX(0);
         }
     }
-    .larry-active {
-        .michael-large,
-        .jd-large {
+    .tomb-active {
+        .jimb-large,
+        .dougc-large {
             display: none;
         }
-        .larry-large {
+        .tomb-large {
             opacity: 1;
             visibility: visible;
             margin-left: 0;
@@ -1432,12 +1433,12 @@ nav {
             transform: translateX(0);
         }
     }
-    .jd-active {
-        .michael-large,
-        .larry-large {
+    .dougc-active {
+        .jimb-large,
+        .tomb-large {
             display: none;
         }
-        .larry-large {
+        .tomb-large {
             opacity: 1;
             visibility: visible;
             margin-left: 0;
@@ -1470,6 +1471,17 @@ nav {
     }
 }
 
+.tomb-active .jimb-large,
+.tomb-active .dougc-large,
+.jimb-active .tomb-large,
+.jimb-active .dougc-large,
+.dougc-active .jimb-large,
+.dougc-active .tomb-large,
+{
+    transition: all 0.3s ease;
+    opacity: 0.5;
+}
+
 
 /* Indusry Partners */
 
@@ -1498,6 +1510,12 @@ nav {
     .details {
         font-size: 16px;
     }
+}
+
+.industry-type {
+    color: #96C121;
+    text-transform: uppercase;
+    padding-top: 1em;
 }
 
 .partner-logos {

@@ -78,8 +78,8 @@ $(document).ready(function() {
     });
 
     // Partners
-    $('.partner-card-small.michael-small .arrow-right').on('click', function() {
-        $('.partners').addClass('partners-active michael-active');
+    $('.partner-card-small.jimb-small .arrow-right').on('click', function() {
+        $('.partners').addClass('partners-active jimb-active');
 
         // If on mobile, scroll up to top of Founders
         if (window.matchMedia('(max-width: 1100px)').matches) {
@@ -87,8 +87,8 @@ $(document).ready(function() {
         }
     });
 
-    $('.partner-card-small.larry-small .arrow-right').on('click', function() {
-        $('.partners').addClass('partners-active larry-active');
+    $('.partner-card-small.tomb-small .arrow-right').on('click', function() {
+        $('.partners').addClass('partners-active tomb-active');
 
         // If on mobile, scroll up to top of Founders
         if (window.matchMedia('(max-width: 1100px)').matches) {
@@ -96,8 +96,8 @@ $(document).ready(function() {
         }
     });
 
-    $('.partner-card-small.jd-small .arrow-right').on('click', function() {
-        $('.partners').addClass('partners-active jd-active');
+    $('.partner-card-small.dougc-small .arrow-right').on('click', function() {
+        $('.partners').addClass('partners-active dougc-active');
 
         // If on mobile, scroll up to top of Founders
         if (window.matchMedia('(max-width: 1100px)').matches) {
@@ -105,16 +105,16 @@ $(document).ready(function() {
         }
     });
 
-    $('.michael-large').on('click', function(e) {
-        $('.partners').addClass('michael-active').removeClass('larry-active jd-active');
+    $('.jimb-large').on('click', function(e) {
+        $('.partners').addClass('jimb-active').removeClass('tomb-active dougc-active');
     });
 
-    $('.larry-large').on('click', function(e) {
-        $('.partners').addClass('larry-active').removeClass('michael-active jd-active');
+    $('.tomb-large').on('click', function(e) {
+        $('.partners').addClass('tomb-active').removeClass('jimb-active dougc-active');
     });
 
-    $('.jd-large').on('click', function(e) {
-        $('.partners').addClass('jd-active').removeClass('larry-active michael-active');
+    $('.dougc-large').on('click', function(e) {
+        $('.partners').addClass('dougc-active').removeClass('tomb-active jimb-active');
     });
 
     $('.close-x').on('click', function() {
@@ -122,7 +122,7 @@ $(document).ready(function() {
         $('.play-active').removeClass('play-active');
         $('.play').removeClass('play');
         setTimeout(function() {
-            $('.partners').removeClass('michael-active larry-active jd-active');
+            $('.partners').removeClass('jimb-active tomb-active dougc-active');
         }, 300);
         return false;
     });

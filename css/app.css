@@ -832,7 +832,7 @@ nav .menu-button:hover {
 .larry-active .jd-large,
 .michael-active .larry-large,
 .michael-active .jd-large,
-.jdel-active .michael-large,
+.jd-active .michael-large,
 .jd-active .larry-large {
   transition: all 0.3s ease;
   opacity: 0.5;
@@ -1120,13 +1120,13 @@ nav .menu-button:hover {
   transition: all 0.3s ease;
   transform: translateY(0);
 }
-.michael-active .partners-cards-large-container {
+.jimb-active .partners-cards-large-container {
   transform: translateX(0);
 }
-.larry-active .partners-cards-large-container {
+.tomb-active .partners-cards-large-container {
   transform: translateX(-30%);
 }
-.jd-active .partners-cards-large-container {
+.dougc-active .partners-cards-large-container {
   transform: translateX(-60%);
 }
 
@@ -1292,41 +1292,41 @@ nav .menu-button:hover {
     line-height: 26px;
   }
 
-  .michael-active .larry-large,
-.michael-active .jd-large {
+  .jimb-active .tomb-large,
+.jimb-active .dougc-large {
     display: none;
   }
-  .michael-active .michael-large {
+  .jimb-active .jimb-large {
     opacity: 1;
     visibility: visible;
   }
-  .michael-active .partners-cards-large-container {
+  .jimb-active .partners-cards-large-container {
     transform: translateX(0);
   }
 
-  .larry-active .michael-large,
-.larry-active .jd-large {
+  .tomb-active .jimb-large,
+.tomb-active .dougc-large {
     display: none;
   }
-  .larry-active .larry-large {
+  .tomb-active .tomb-large {
     opacity: 1;
     visibility: visible;
     margin-left: 0;
   }
-  .larry-active .partners-cards-large-container {
+  .tomb-active .partners-cards-large-container {
     transform: translateX(0);
   }
 
-  .jd-active .michael-large,
-.jd-active .larry-large {
+  .dougc-active .jimb-large,
+.dougc-active .tomb-large {
     display: none;
   }
-  .jd-active .larry-large {
+  .dougc-active .tomb-large {
     opacity: 1;
     visibility: visible;
     margin-left: 0;
   }
-  .jd-active .partners-cards-large-container {
+  .dougc-active .partners-cards-large-container {
     transform: translateX(0);
   }
 }
@@ -1352,6 +1352,16 @@ nav .menu-button:hover {
     top: 130px;
   }
 }
+.tomb-active .jimb-large,
+.tomb-active .dougc-large,
+.jimb-active .tomb-large,
+.jimb-active .dougc-large,
+.dougc-active .jimb-large,
+.dougc-active .tomb-large {
+  transition: all 0.3s ease;
+  opacity: 0.5;
+}
+
 /* Indusry Partners */
 .industry {
   border-radius: 8px;
@@ -1378,6 +1388,12 @@ nav .menu-button:hover {
 }
 .industry .details {
   font-size: 16px;
+}
+
+.industry-type {
+  color: #96C121;
+  text-transform: uppercase;
+  padding-top: 1em;
 }
 
 .partner-logos {
