@@ -1129,6 +1129,9 @@ nav .menu-button:hover {
 .dougc-active .partners-cards-large-container {
   transform: translateX(-60%);
 }
+.barryf-active .partners-cards-large-container {
+  transform: translateX(-60%);
+}
 
 .partner-card-large {
   position: relative;
@@ -1321,12 +1324,25 @@ nav .menu-button:hover {
 .dougc-active .tomb-large {
     display: none;
   }
-  .dougc-active .tomb-large {
+  .dougc-active .dougc-large {
     opacity: 1;
     visibility: visible;
     margin-left: 0;
   }
   .dougc-active .partners-cards-large-container {
+    transform: translateX(0);
+  }
+
+  .barryf-active .dougc-large,
+.barryf-active .johng-large {
+    display: none;
+  }
+  .barryf-active .barryf-large {
+    opacity: 1;
+    visibility: visible;
+    margin-left: 0;
+  }
+  .barryf-active .partners-cards-large-container {
     transform: translateX(0);
   }
 }
@@ -1357,7 +1373,9 @@ nav .menu-button:hover {
 .jimb-active .tomb-large,
 .jimb-active .dougc-large,
 .dougc-active .jimb-large,
-.dougc-active .tomb-large {
+.dougc-active .tomb-large,
+.barryf-active .dougc-large,
+.barryf-active .johng-large {
   transition: all 0.3s ease;
   opacity: 0.5;
 }

@@ -57,7 +57,7 @@ $(document).ready(function() {
     const cardIDs = ['michael-active', 'larry-active', 'jd-active'];
 
     $('.founder-card-large').on('click', function(e) {
-        const inactiveNames = cardIDs.filter(value => !this.id);
+        const inactiveNames = cardIDs.filter(value => value != this.id);
 
         const inactiveClasses = inactiveNames.join(' ');
 
