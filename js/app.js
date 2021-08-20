@@ -293,3 +293,20 @@ $('.transactions-slider').slick({
         settings: "unslick"
     }]
 });
+
+// Initialize Slick JS partner small cards
+$('.partners-cards').slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    dots: true,
+    responsive: [{
+        breakpoint: 800,
+        settings: {
+            slidesToShow: 2,
+        }
+    }, {
+        breakpoint: 480,
+        settings: "unslick"
+    }]
+});

@@ -1117,7 +1117,8 @@ nav {
 
 .partners-cards {
     display: flex;
-    margin: 36px 0;
+    margin: 0 -27px;
+    // margin: 36px 0;
 }
 
 .partner-photo {
@@ -1134,6 +1135,7 @@ nav {
     min-height: 220px;
     border-radius: 4px;
     box-shadow: 0 6px 12px 0 rgba($black, 0.07);
+    margin: 0 27px;
     // &:hover {
     //     cursor: pointer;
     // }
@@ -1149,6 +1151,8 @@ nav {
     p {
         margin: 0;
         font-size: 18px;
+        line-height: 1em;
+        height: 20px;
     }
     .partner-photo {
         position: absolute;
@@ -1498,6 +1502,14 @@ nav {
 .barryf-active .johng-large {
     transition: all 0.3s ease;
     opacity: 0.5;
+}
+
+.partners-cards .slick-list {
+    padding-left: 1em !important;
+}
+
+.partners-cards .slick-slide {
+    min-height: 250px;
 }
 
 
