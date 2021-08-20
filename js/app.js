@@ -20,44 +20,61 @@ $(document).ready(function() {
     }
 
     // Founders
-    $('.founder-card-small.michael-small .arrow-right').on('click', function() {
-        $('.founders').addClass('founders-active michael-active');
+    $('.founder-card-small .arrow-right').on('click', function() {
+        $('.founders').addClass('founders-active ' + this.id);
 
         // If on mobile, scroll up to top of Founders
         if (window.matchMedia('(max-width: 1100px)').matches) {
             scrollTo('founders');
         }
     });
+    // $('.founder-card-small.michael-small .arrow-right').on('click', function() {
+    //     $('.founders').addClass('founders-active michael-active');
 
-    $('.founder-card-small.larry-small .arrow-right').on('click', function() {
-        $('.founders').addClass('founders-active larry-active');
+    //     // If on mobile, scroll up to top of Founders
+    //     if (window.matchMedia('(max-width: 1100px)').matches) {
+    //         scrollTo('founders');
+    //     }
+    // });
 
-        // If on mobile, scroll up to top of Founders
-        if (window.matchMedia('(max-width: 1100px)').matches) {
-            scrollTo('founders');
-        }
+    // $('.founder-card-small.larry-small .arrow-right').on('click', function() {
+    //     $('.founders').addClass('founders-active larry-active');
+
+    //     // If on mobile, scroll up to top of Founders
+    //     if (window.matchMedia('(max-width: 1100px)').matches) {
+    //         scrollTo('founders');
+    //     }
+    // });
+
+    // $('.founder-card-small.jd-small .arrow-right').on('click', function() {
+    //     $('.founders').addClass('founders-active jd-active');
+
+    //     // If on mobile, scroll up to top of Founders
+    //     if (window.matchMedia('(max-width: 1100px)').matches) {
+    //         scrollTo('founders');
+    //     }
+    // });
+    const cardIDs = ['michael-active', 'larry-active', 'jd-active'];
+
+    $('.founder-card-large').on('click', function(e) {
+        const inactiveNames = cardIDs.filter(value => !this.id);
+
+        const inactiveClasses = inactiveNames.join(' ');
+
+        $('.founders').addClass(this.id).removeClass(inactiveClasses);
     });
 
-    $('.founder-card-small.jd-small .arrow-right').on('click', function() {
-        $('.founders').addClass('founders-active jd-active');
+    // $('.michael-large').on('click', function(e) {
+    //     $('.founders').addClass('michael-active').removeClass('larry-active jd-active');
+    // });
 
-        // If on mobile, scroll up to top of Founders
-        if (window.matchMedia('(max-width: 1100px)').matches) {
-            scrollTo('founders');
-        }
-    });
+    // $('.larry-large').on('click', function(e) {
+    //     $('.founders').addClass('larry-active').removeClass('michael-active jd-active');
+    // });
 
-    $('.michael-large').on('click', function(e) {
-        $('.founders').addClass('michael-active').removeClass('larry-active jd-active');
-    });
-
-    $('.larry-large').on('click', function(e) {
-        $('.founders').addClass('larry-active').removeClass('michael-active jd-active');
-    });
-
-    $('.jd-large').on('click', function(e) {
-        $('.founders').addClass('jd-active').removeClass('larry-active michael-active');
-    });
+    // $('.jd-large').on('click', function(e) {
+    //     $('.founders').addClass('jd-active').removeClass('larry-active michael-active');
+    // });
 
     $('.close-x').on('click', function() {
         $('.founders').removeClass('founders-active');
@@ -104,6 +121,14 @@ $(document).ready(function() {
             scrollTo('partners');
         }
     });
+    $('.partner-card-small.barryf-small .arrow-right').on('click', function() {
+        $('.partners').addClass('partners-active barryf-active');
+
+        // If on mobile, scroll up to top of Founders
+        if (window.matchMedia('(max-width: 1100px)').matches) {
+            scrollTo('partners');
+        }
+    });
 
     $('.jimb-large').on('click', function(e) {
         $('.partners').addClass('jimb-active').removeClass('tomb-active dougc-active');
@@ -115,6 +140,9 @@ $(document).ready(function() {
 
     $('.dougc-large').on('click', function(e) {
         $('.partners').addClass('dougc-active').removeClass('tomb-active jimb-active');
+    });
+    $('.barryf-large').on('click', function(e) {
+        $('.partners').addClass('barryf-active').removeClass('dougc-active johng-active');
     });
 
     $('.close-x').on('click', function() {
