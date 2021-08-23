@@ -95,60 +95,82 @@ $(document).ready(function() {
     });
 
     // Partners
-    $('.partner-card-small.jimb-small .arrow-right').on('click', function() {
-        $('.partners').addClass('partners-active jimb-active');
 
+    $('.partner-card-small .arrow-right').on('click', function() {
+        $('.partners').addClass('partners-active ' + this.id);
+        // $('.partners-cards').slick('unslick');
         // If on mobile, scroll up to top of Founders
         if (window.matchMedia('(max-width: 1100px)').matches) {
-            scrollTo('partners');
+            scrollTo('industry-partners');
         }
     });
 
-    $('.partner-card-small.tomb-small .arrow-right').on('click', function() {
-        $('.partners').addClass('partners-active tomb-active');
+    const partnerCardIDs = ['jimb-active', 'tomb-active', 'dougc-active'];
 
-        // If on mobile, scroll up to top of Founders
-        if (window.matchMedia('(max-width: 1100px)').matches) {
-            scrollTo('partners');
-        }
+    $('.partner-card-large').on('click', function(e) {
+        const inactivePNames = partnerCardIDs.filter(value => value != this.id);
+
+        const inactivePClasses = inactivePNames.join(' ');
+
+        $('.partners').addClass(this.id).removeClass(inactivePClasses);
     });
 
-    $('.partner-card-small.dougc-small .arrow-right').on('click', function() {
-        $('.partners').addClass('partners-active dougc-active');
+    //ORIGINAL CODE DEACTIAVTED
+    // $('.partner-card-small.jimb-small .arrow-right').on('click', function() {
+    //     $('.partners').addClass('partners-active jimb-active');
 
-        // If on mobile, scroll up to top of Founders
-        if (window.matchMedia('(max-width: 1100px)').matches) {
-            scrollTo('partners');
-        }
-    });
-    $('.partner-card-small.barryf-small .arrow-right').on('click', function() {
-        $('.partners').addClass('partners-active barryf-active');
+    //     // If on mobile, scroll up to top of Founders
+    //     if (window.matchMedia('(max-width: 1100px)').matches) {
+    //         scrollTo('partners');
+    //     }
+    // });
 
-        // If on mobile, scroll up to top of Founders
-        if (window.matchMedia('(max-width: 1100px)').matches) {
-            scrollTo('partners');
-        }
-    });
+    // $('.partner-card-small.tomb-small .arrow-right').on('click', function() {
+    //     $('.partners').addClass('partners-active tomb-active');
 
-    $('.jimb-large').on('click', function(e) {
-        $('.partners').addClass('jimb-active').removeClass('tomb-active dougc-active');
-    });
+    //     // If on mobile, scroll up to top of Founders
+    //     if (window.matchMedia('(max-width: 1100px)').matches) {
+    //         scrollTo('partners');
+    //     }
+    // });
 
-    $('.tomb-large').on('click', function(e) {
-        $('.partners').addClass('tomb-active').removeClass('jimb-active dougc-active');
-    });
+    // $('.partner-card-small.dougc-small .arrow-right').on('click', function() {
+    //     $('.partners').addClass('partners-active dougc-active');
 
-    $('.dougc-large').on('click', function(e) {
-        $('.partners').addClass('dougc-active').removeClass('tomb-active jimb-active');
-    });
-    $('.barryf-large').on('click', function(e) {
-        $('.partners').addClass('barryf-active').removeClass('dougc-active johng-active');
-    });
+    //     // If on mobile, scroll up to top of Founders
+    //     if (window.matchMedia('(max-width: 1100px)').matches) {
+    //         scrollTo('partners');
+    //     }
+    // });
+    // $('.partner-card-small.barryf-small .arrow-right').on('click', function() {
+    //     $('.partners').addClass('partners-active barryf-active');
+
+    //     // If on mobile, scroll up to top of Founders
+    //     if (window.matchMedia('(max-width: 1100px)').matches) {
+    //         scrollTo('partners');
+    //     }
+    // });
+
+    // $('.jimb-large').on('click', function(e) {
+    //     $('.partners').addClass('jimb-active').removeClass('tomb-active dougc-active');
+    // });
+
+    // $('.tomb-large').on('click', function(e) {
+    //     $('.partners').addClass('tomb-active').removeClass('jimb-active dougc-active');
+    // });
+
+    // $('.dougc-large').on('click', function(e) {
+    //     $('.partners').addClass('dougc-active').removeClass('tomb-active jimb-active');
+    // });
+    // $('.barryf-large').on('click', function(e) {
+    //     $('.partners').addClass('barryf-active').removeClass('dougc-active johng-active');
+    // });
 
     $('.close-x').on('click', function() {
         $('.partners').removeClass('partners-active');
         $('.play-active').removeClass('play-active');
         $('.play').removeClass('play');
+
         setTimeout(function() {
             $('.partners').removeClass('jimb-active tomb-active dougc-active');
         }, 300);
@@ -310,3 +332,20 @@ $('.partners-cards').slick({
         settings: "unslick"
     }]
 });
+// Initialize Slick JS partner small cards
+// $('.partners-cards-large-container').slick({
+//     infinite: false,
+//     centerMode: true,
+//     centerPadding: '60px',
+//     slidesToShow: 2,
+//     dots: false,
+//     responsive: [{
+//         breakpoint: 800,
+//         settings: {
+//             slidesToShow: 2,
+//         }
+//     }, {
+//         breakpoint: 480,
+//         settings: "unslick"
+//     }]
+// });

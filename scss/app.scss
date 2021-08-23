@@ -1211,7 +1211,7 @@ nav {
     visibility: hidden;
     // transform: translateY(60px);
     // transform: translate(-390px,60px);
-    transform: translateX(-390px);
+    // transform: translateX(-390px);
     position: absolute;
     top: 90px;
     width: 240%;
@@ -1226,13 +1226,13 @@ nav {
         transform: translateX(0);
     }
     .tomb-active & {
-        transform: translateX(-30%);
+        transform: translateX(-33%);
     }
     .dougc-active & {
-        transform: translateX(-60%);
+        transform: translateX(-66%);
     }
     .barryf-active & {
-        transform: translateX(-60%);
+        transform: translateX(-90%);
     }
 }
 
@@ -1386,31 +1386,6 @@ nav {
             .play-content {
                 display: block;
             }
-        }
-    }
-    .switch {
-        position: absolute;
-        top: 155px;
-        left: 45px;
-        margin: 0;
-        height: 30px;
-        width: 90px;
-        .knob {
-            width: 20px;
-            height: 20px;
-        }
-        &.play .knob {
-            transform: translateX(-60px);
-        }
-        &:before {
-            padding-left: 12px;
-            font-size: 12px;
-            line-height: 26px;
-        }
-        &:after {
-            padding-right: 12px;
-            font-size: 12px;
-            line-height: 26px;
         }
     }
     .jimb-active {

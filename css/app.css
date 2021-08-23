@@ -1111,7 +1111,6 @@ nav .menu-button:hover {
   transition: opacity 0.1s ease;
   opacity: 0;
   visibility: hidden;
-  transform: translateX(-390px);
   position: absolute;
   top: 90px;
   width: 240%;
@@ -1127,13 +1126,13 @@ nav .menu-button:hover {
   transform: translateX(0);
 }
 .tomb-active .partners-cards-large-container {
-  transform: translateX(-30%);
+  transform: translateX(-33%);
 }
 .dougc-active .partners-cards-large-container {
-  transform: translateX(-60%);
+  transform: translateX(-66%);
 }
 .barryf-active .partners-cards-large-container {
-  transform: translateX(-60%);
+  transform: translateX(-90%);
 }
 
 .partner-card-large {
@@ -1270,32 +1269,6 @@ nav .menu-button:hover {
   }
   .partner-card-large.play-active .play-content {
     display: block;
-  }
-
-  .switch {
-    position: absolute;
-    top: 155px;
-    left: 45px;
-    margin: 0;
-    height: 30px;
-    width: 90px;
-  }
-  .switch .knob {
-    width: 20px;
-    height: 20px;
-  }
-  .switch.play .knob {
-    transform: translateX(-60px);
-  }
-  .switch:before {
-    padding-left: 12px;
-    font-size: 12px;
-    line-height: 26px;
-  }
-  .switch:after {
-    padding-right: 12px;
-    font-size: 12px;
-    line-height: 26px;
   }
 
   .jimb-active .tomb-large,
