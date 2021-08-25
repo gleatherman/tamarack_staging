@@ -613,7 +613,7 @@ nav .menu-button:hover {
   width: 70px;
   margin: 30px 0;
   border-left: 1px solid rgba(65, 71, 49, 0.1);
-  background: url("../img/icon-right-arrow.svg") center center no-repeat;
+  background: url("../img/icon-circle-i.svg") center center no-repeat;
 }
 .founder-card-small .arrow-right:hover {
   cursor: pointer;
@@ -1072,7 +1072,7 @@ nav .menu-button:hover {
   width: 70px;
   margin: 30px 0;
   border-left: 1px solid rgba(65, 71, 49, 0.1);
-  background: url("../img/icon-right-arrow.svg") center center no-repeat;
+  background: url("../img/icon-circle-i.svg") center center no-repeat;
 }
 .partner-card-small .arrow-right:hover {
   cursor: pointer;
@@ -1111,9 +1111,10 @@ nav .menu-button:hover {
   transition: opacity 0.1s ease;
   opacity: 0;
   visibility: hidden;
+  transform: translateX(-390px);
   position: absolute;
   top: 90px;
-  width: 240%;
+  width: 1000%;
   display: flex;
 }
 .partners-active .partners-cards-large-container {
@@ -1126,13 +1127,40 @@ nav .menu-button:hover {
   transform: translateX(0);
 }
 .tomb-active .partners-cards-large-container {
-  transform: translateX(-33%);
+  transform: translateX(calc(-922px));
 }
 .dougc-active .partners-cards-large-container {
-  transform: translateX(-66%);
+  transform: translateX(calc(-922px * 2));
 }
 .barryf-active .partners-cards-large-container {
-  transform: translateX(-90%);
+  transform: translateX(calc(-922px * 3));
+}
+.johng-active .partners-cards-large-container {
+  transform: translateX(calc(-922px * 4));
+}
+.deanj-active .partners-cards-large-container {
+  transform: translateX(calc(-922px * 5));
+}
+.scottk-active .partners-cards-large-container {
+  transform: translateX(calc(-922px * 6));
+}
+.rachelm-active .partners-cards-large-container {
+  transform: translateX(calc(-922px * 7));
+}
+.joem-active .partners-cards-large-container {
+  transform: translateX(calc(-922px * 8));
+}
+.paulm-active .partners-cards-large-container {
+  transform: translateX(calc(-922px * 9));
+}
+.paular-active .partners-cards-large-container {
+  transform: translateX(calc(-922px * 10));
+}
+.douglasss-active .partners-cards-large-container {
+  transform: translateX(calc(-922px * 11));
+}
+.tomv-active .partners-cards-large-container {
+  transform: translateX(calc(-922px * 12));
 }
 
 .partner-card-large {
@@ -1143,6 +1171,7 @@ nav .menu-button:hover {
   box-shadow: 0 6px 12px 0 rgba(65, 71, 49, 0.07);
   padding: 40px 120px 30px 30px;
   display: flex;
+  margin-left: 20px;
 }
 .partner-card-large .card-info {
   min-width: 280px;
@@ -1348,10 +1377,27 @@ nav .menu-button:hover {
 .tomb-active .dougc-large,
 .jimb-active .tomb-large,
 .jimb-active .dougc-large,
-.dougc-active .jimb-large,
 .dougc-active .tomb-large,
+.dougc-active .barryf-large,
 .barryf-active .dougc-large,
-.barryf-active .johng-large {
+.barryf-active .johng-large,
+.johng-active .barryf-large,
+.johng-active .deanj-large,
+.deanj-active .johng-large,
+.deanj-active .scottk-large,
+.scottk-active .rachelm-large,
+.scottk-active .deanj-large,
+.rachelm-active .scottk-large,
+.rachelm-active .joem-large,
+.joem-active .rachelm-large,
+.joem-active .paulm-large,
+.paulm-active .joem-large,
+.paulm-active .paular-large,
+.paular-active .paulm-large,
+.paular-active .douglasss-large,
+.douglasss-active .paular-large,
+.douglasss-active .tomv-large,
+.tomv-active .douglasss-large {
   transition: all 0.3s ease;
   opacity: 0.5;
 }

@@ -105,7 +105,7 @@ $(document).ready(function() {
         }
     });
 
-    const partnerCardIDs = ['jimb-active', 'tomb-active', 'dougc-active'];
+    const partnerCardIDs = ['jimb-active', 'tomb-active', 'dougc-active', 'barryf-active', 'johng-active', 'deanj-active', 'scottk-active', 'rachelm-active', 'joem-active', 'paulm-active', 'paular-active', 'douglasss-active', 'tomv-active'];
 
     $('.partner-card-large').on('click', function(e) {
         const inactivePNames = partnerCardIDs.filter(value => value != this.id);
@@ -170,9 +170,9 @@ $(document).ready(function() {
         $('.partners').removeClass('partners-active');
         $('.play-active').removeClass('play-active');
         $('.play').removeClass('play');
-
+        const inactivePClasses = partnerCardIDs.join(' ');
         setTimeout(function() {
-            $('.partners').removeClass('jimb-active tomb-active dougc-active');
+            $('.partners').removeClass(inactivePClasses);
         }, 300);
         return false;
     });
@@ -348,4 +348,10 @@ $('.partners-cards').slick({
 //         breakpoint: 480,
 //         settings: "unslick"
 //     }]
+// });
+
+// $('.partners-cards-large-container').flickity({
+//     // options
+//     cellAlign: 'left',
+//     contain: true
 // });

@@ -676,7 +676,7 @@ nav {
         width: 70px;
         margin: 30px 0;
         border-left: 1px solid rgba($black, .1);
-        background: url('../img/icon-right-arrow.svg') center center no-repeat;
+        background: url('../img/icon-circle-i.svg') center center no-repeat;
         &:hover {
             cursor: pointer;
         }
@@ -1167,7 +1167,7 @@ nav {
         width: 70px;
         margin: 30px 0;
         border-left: 1px solid rgba($black, .1);
-        background: url('../img/icon-right-arrow.svg') center center no-repeat;
+        background: url('../img/icon-circle-i.svg') center center no-repeat;
         &:hover {
             cursor: pointer;
         }
@@ -1211,10 +1211,10 @@ nav {
     visibility: hidden;
     // transform: translateY(60px);
     // transform: translate(-390px,60px);
-    // transform: translateX(-390px);
+    transform: translateX(-390px);
     position: absolute;
     top: 90px;
-    width: 240%;
+    width: 1000%;
     display: flex;
     .partners-active & {
         opacity: 1;
@@ -1226,13 +1226,40 @@ nav {
         transform: translateX(0);
     }
     .tomb-active & {
-        transform: translateX(-33%);
+        transform: translateX(calc(-922px));
     }
     .dougc-active & {
-        transform: translateX(-66%);
+        transform: translateX(calc(-922px * 2));
     }
     .barryf-active & {
-        transform: translateX(-90%);
+        transform: translateX(calc(-922px * 3));
+    }
+    .johng-active & {
+        transform: translateX(calc(-922px * 4));
+    }
+    .deanj-active & {
+        transform: translateX(calc(-922px * 5));
+    }
+    .scottk-active & {
+        transform: translateX(calc(-922px * 6));
+    }
+    .rachelm-active & {
+        transform: translateX(calc(-922px * 7));
+    }
+    .joem-active & {
+        transform: translateX(calc(-922px * 8));
+    }
+    .paulm-active & {
+        transform: translateX(calc(-922px * 9));
+    }
+    .paular-active & {
+        transform: translateX(calc(-922px * 10));
+    }
+    .douglasss-active & {
+        transform: translateX(calc(-922px * 11));
+    }
+    .tomv-active & {
+        transform: translateX(calc(-922px * 12));
     }
 }
 
@@ -1244,6 +1271,7 @@ nav {
     box-shadow: 0 6px 12px 0 rgba($black, 0.07);
     padding: 40px 120px 30px 30px;
     display: flex;
+    margin-left: 20px;
     .card-info {
         min-width: 280px;
         margin-right: 30px;
@@ -1467,14 +1495,42 @@ nav {
     }
 }
 
+// sass generate active large class code
+// $partners-list: jimb, tomb, dougc, barryf, johng, deanj, scottk, rachelm, joem, paulm, paular, douglasss, tomv;
+// @each $current-partner in $partners-list {
+//     $i: index($partners-list);
+//     $previous-partner: nth($partners-list , $i - 1 );
+//     $next-partner: nth($partners-list , $i + 1 )
+//     .#{$current-partner}-active {
+//         & .# {next-partner}-large{
+//         }
+//     }
+// }
 .tomb-active .jimb-large,
 .tomb-active .dougc-large,
 .jimb-active .tomb-large,
 .jimb-active .dougc-large,
-.dougc-active .jimb-large,
 .dougc-active .tomb-large,
+.dougc-active .barryf-large,
 .barryf-active .dougc-large,
-.barryf-active .johng-large {
+.barryf-active .johng-large,
+.johng-active .barryf-large,
+.johng-active .deanj-large,
+.deanj-active .johng-large,
+.deanj-active .scottk-large,
+.scottk-active .rachelm-large,
+.scottk-active .deanj-large,
+.rachelm-active .scottk-large,
+.rachelm-active .joem-large,
+.joem-active .rachelm-large,
+.joem-active .paulm-large,
+.paulm-active .joem-large,
+.paulm-active .paular-large,
+.paular-active .paulm-large,
+.paular-active .douglasss-large,
+.douglasss-active .paular-large,
+.douglasss-active .tomv-large,
+.tomv-active .douglasss-large {
     transition: all 0.3s ease;
     opacity: 0.5;
 }

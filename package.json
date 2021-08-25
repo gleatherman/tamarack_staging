@@ -1,10 +1,12 @@
 {
     "devDependencies": {
         "browser-sync": "^2.26.7",
-        "flickity": "^2.2.2",
         "gulp": "latest",
         "gulp-autoprefixer": "latest",
         "gulp-clean-css": "latest",
         "gulp-sass": "latest"
+    },
+    "dependencies": {
+        "flickity": "^2.2.2"
     }
 }
