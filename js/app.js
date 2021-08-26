@@ -323,35 +323,12 @@ $('.partners-cards').slick({
     slidesToScroll: 3,
     dots: true,
     responsive: [{
-        breakpoint: 800,
+        breakpoint: 1100,
         settings: {
             slidesToShow: 2,
         }
     }, {
-        breakpoint: 480,
+        breakpoint: 800,
         settings: "unslick"
     }]
 });
-// Initialize Slick JS partner small cards
-// $('.partners-cards-large-container').slick({
-//     infinite: false,
-//     centerMode: true,
-//     centerPadding: '60px',
-//     slidesToShow: 2,
-//     dots: false,
-//     responsive: [{
-//         breakpoint: 800,
-//         settings: {
-//             slidesToShow: 2,
-//         }
-//     }, {
-//         breakpoint: 480,
-//         settings: "unslick"
-//     }]
-// });
-
-// $('.partners-cards-large-container').flickity({
-//     // options
-//     cellAlign: 'left',
-//     contain: true
-// });

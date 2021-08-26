@@ -1193,6 +1193,15 @@ nav {
             width: 50px;
         }
     }
+    /* slick-theme.css | http://dadbook-pro-16.local:5757/js/slick/slick-theme.css */
+    .slick-next {
+        right: 0 !important;
+        z-index: 101;
+    }
+    .slick-prev {
+        left: 0 !important;
+        z-index: 101;
+    }
 }
 
 @include breakpoint(medium) {
@@ -1226,40 +1235,40 @@ nav {
         transform: translateX(0);
     }
     .tomb-active & {
-        transform: translateX(calc(-922px));
+        transform: translateX(calc((-100% / 12) + 77px));
     }
     .dougc-active & {
-        transform: translateX(calc(-922px * 2));
+        transform: translateX(calc(((-100% / 12) + 77px) * 2));
     }
     .barryf-active & {
-        transform: translateX(calc(-922px * 3));
+        transform: translateX(calc(((-100% / 12) + 77px)* 3));
     }
     .johng-active & {
-        transform: translateX(calc(-922px * 4));
+        transform: translateX(calc(((-100% / 12) + 77px)* 4));
     }
     .deanj-active & {
-        transform: translateX(calc(-922px * 5));
+        transform: translateX(calc(((-100% / 12) + 77px)* 5));
     }
     .scottk-active & {
-        transform: translateX(calc(-922px * 6));
+        transform: translateX(calc(((-100% / 12) + 77px)* 6));
     }
     .rachelm-active & {
-        transform: translateX(calc(-922px * 7));
+        transform: translateX(calc(((-100% / 12) + 77px)* 7));
     }
     .joem-active & {
-        transform: translateX(calc(-922px * 8));
+        transform: translateX(calc(((-100% / 12) + 77px) * 8));
     }
     .paulm-active & {
-        transform: translateX(calc(-922px * 9));
+        transform: translateX(calc(((-100% / 12) + 77px) * 9));
     }
     .paular-active & {
-        transform: translateX(calc(-922px * 10));
+        transform: translateX(calc(((-100% / 12) + 77px) * 10));
     }
     .douglasss-active & {
-        transform: translateX(calc(-922px * 11));
+        transform: translateX(calc(((-100% / 12) + 77px) * 11));
     }
     .tomv-active & {
-        transform: translateX(calc(-922px * 12));
+        transform: translateX(calc(((-100% / 12) + 77px) * 12));
     }
 }
 
@@ -1416,61 +1425,94 @@ nav {
             }
         }
     }
-    .jimb-active {
-        .tomb-large,
-        .dougc-large {
-            display: none;
-        }
-        .jimb-large {
-            opacity: 1;
-            visibility: visible;
-        }
-        .partners-cards-large-container {
-            transform: translateX(0);
-        }
-    }
-    .tomb-active {
-        .jimb-large,
-        .dougc-large {
-            display: none;
-        }
-        .tomb-large {
-            opacity: 1;
-            visibility: visible;
-            margin-left: 0;
-        }
-        .partners-cards-large-container {
-            transform: translateX(0);
-        }
-    }
-    .dougc-active {
-        .jimb-large,
-        .tomb-large {
-            display: none;
-        }
-        .dougc-large {
-            opacity: 1;
-            visibility: visible;
-            margin-left: 0;
-        }
-        .partners-cards-large-container {
-            transform: translateX(0);
+    $partners-list: jimb,
+    tomb,
+    dougc,
+    barryf,
+    johng,
+    deanj,
+    scottk,
+    rachelm,
+    joem,
+    paulm,
+    paular,
+    douglasss,
+    tomv;
+    @each $current-partner in $partners-list {
+        .#{$current-partner}-active {
+            @for $i from 1 through length($partners-list) {
+                $partner: nth($partners-list, $i);
+                @if $partner !=$current-partner {
+                    & .#{$partner}-large,
+                    {
+                        display: none;
+                    }
+                }
+            }
+            & .#{$current-partner}-large {
+                opacity: 1;
+                visibility: visible;
+            }
+            & .partners-cards-large-container {
+                transform: translateX(0);
+            }
         }
     }
-    .barryf-active {
-        .dougc-large,
-        .johng-large {
-            display: none;
-        }
-        .barryf-large {
-            opacity: 1;
-            visibility: visible;
-            margin-left: 0;
-        }
-        .partners-cards-large-container {
-            transform: translateX(0);
-        }
-    }
+    // .jimb-active {
+    //     .tomb-large,
+    //     .dougc-large {
+    //         display: none;
+    //     }
+    //     .jimb-large {
+    //         opacity: 1;
+    //         visibility: visible;
+    //     }
+    //     .partners-cards-large-container {
+    //         transform: translateX(0);
+    //     }
+    // }
+    // .tomb-active {
+    //     .jimb-large,
+    //     .dougc-large {
+    //         display: none;
+    //     }
+    //     .tomb-large {
+    //         opacity: 1;
+    //         visibility: visible;
+    //         margin-left: 0;
+    //     }
+    //     .partners-cards-large-container {
+    //         transform: translateX(0);
+    //     }
+    // }
+    // .dougc-active {
+    //     .jimb-large,
+    //     .tomb-large {
+    //         display: none;
+    //     }
+    //     .dougc-large {
+    //         opacity: 1;
+    //         visibility: visible;
+    //         margin-left: 0;
+    //     }
+    //     .partners-cards-large-container {
+    //         transform: translateX(0);
+    //     }
+    // }
+    // .barryf-active {
+    //     .dougc-large,
+    //     .johng-large {
+    //         display: none;
+    //     }
+    //     .barryf-large {
+    //         opacity: 1;
+    //         visibility: visible;
+    //         margin-left: 0;
+    //     }
+    //     .partners-cards-large-container {
+    //         transform: translateX(0);
+    //     }
+    // }
 }
 
 @include breakpoint(small) {
@@ -1495,17 +1537,6 @@ nav {
     }
 }
 
-// sass generate active large class code
-// $partners-list: jimb, tomb, dougc, barryf, johng, deanj, scottk, rachelm, joem, paulm, paular, douglasss, tomv;
-// @each $current-partner in $partners-list {
-//     $i: index($partners-list);
-//     $previous-partner: nth($partners-list , $i - 1 );
-//     $next-partner: nth($partners-list , $i + 1 )
-//     .#{$current-partner}-active {
-//         & .# {next-partner}-large{
-//         }
-//     }
-// }
 .tomb-active .jimb-large,
 .tomb-active .dougc-large,
 .jimb-active .tomb-large,

@@ -1096,6 +1096,17 @@ nav .menu-button:hover {
   .partner-card-small .arrow-right {
     width: 50px;
   }
+
+  /* slick-theme.css | http://dadbook-pro-16.local:5757/js/slick/slick-theme.css */
+  .slick-next {
+    right: 0 !important;
+    z-index: 101;
+  }
+
+  .slick-prev {
+    left: 0 !important;
+    z-index: 101;
+  }
 }
 @media (max-width: 800px) {
   .partners-cards {
@@ -1127,40 +1138,40 @@ nav .menu-button:hover {
   transform: translateX(0);
 }
 .tomb-active .partners-cards-large-container {
-  transform: translateX(calc(-922px));
+  transform: translateX(calc((-100% / 12) + 77px));
 }
 .dougc-active .partners-cards-large-container {
-  transform: translateX(calc(-922px * 2));
+  transform: translateX(calc(((-100% / 12) + 77px) * 2));
 }
 .barryf-active .partners-cards-large-container {
-  transform: translateX(calc(-922px * 3));
+  transform: translateX(calc(((-100% / 12) + 77px)* 3));
 }
 .johng-active .partners-cards-large-container {
-  transform: translateX(calc(-922px * 4));
+  transform: translateX(calc(((-100% / 12) + 77px)* 4));
 }
 .deanj-active .partners-cards-large-container {
-  transform: translateX(calc(-922px * 5));
+  transform: translateX(calc(((-100% / 12) + 77px)* 5));
 }
 .scottk-active .partners-cards-large-container {
-  transform: translateX(calc(-922px * 6));
+  transform: translateX(calc(((-100% / 12) + 77px)* 6));
 }
 .rachelm-active .partners-cards-large-container {
-  transform: translateX(calc(-922px * 7));
+  transform: translateX(calc(((-100% / 12) + 77px)* 7));
 }
 .joem-active .partners-cards-large-container {
-  transform: translateX(calc(-922px * 8));
+  transform: translateX(calc(((-100% / 12) + 77px) * 8));
 }
 .paulm-active .partners-cards-large-container {
-  transform: translateX(calc(-922px * 9));
+  transform: translateX(calc(((-100% / 12) + 77px) * 9));
 }
 .paular-active .partners-cards-large-container {
-  transform: translateX(calc(-922px * 10));
+  transform: translateX(calc(((-100% / 12) + 77px) * 10));
 }
 .douglasss-active .partners-cards-large-container {
-  transform: translateX(calc(-922px * 11));
+  transform: translateX(calc(((-100% / 12) + 77px) * 11));
 }
 .tomv-active .partners-cards-large-container {
-  transform: translateX(calc(-922px * 12));
+  transform: translateX(calc(((-100% / 12) + 77px) * 12));
 }
 
 .partner-card-large {
@@ -1300,8 +1311,40 @@ nav .menu-button:hover {
     display: block;
   }
 
-  .jimb-active .tomb-large,
-.jimb-active .dougc-large {
+  .jimb-active .tomb-large {
+    display: none;
+  }
+  .jimb-active .dougc-large {
+    display: none;
+  }
+  .jimb-active .barryf-large {
+    display: none;
+  }
+  .jimb-active .johng-large {
+    display: none;
+  }
+  .jimb-active .deanj-large {
+    display: none;
+  }
+  .jimb-active .scottk-large {
+    display: none;
+  }
+  .jimb-active .rachelm-large {
+    display: none;
+  }
+  .jimb-active .joem-large {
+    display: none;
+  }
+  .jimb-active .paulm-large {
+    display: none;
+  }
+  .jimb-active .paular-large {
+    display: none;
+  }
+  .jimb-active .douglasss-large {
+    display: none;
+  }
+  .jimb-active .tomv-large {
     display: none;
   }
   .jimb-active .jimb-large {
@@ -1312,42 +1355,531 @@ nav .menu-button:hover {
     transform: translateX(0);
   }
 
-  .tomb-active .jimb-large,
-.tomb-active .dougc-large {
+  .tomb-active .jimb-large {
+    display: none;
+  }
+  .tomb-active .dougc-large {
+    display: none;
+  }
+  .tomb-active .barryf-large {
+    display: none;
+  }
+  .tomb-active .johng-large {
+    display: none;
+  }
+  .tomb-active .deanj-large {
+    display: none;
+  }
+  .tomb-active .scottk-large {
+    display: none;
+  }
+  .tomb-active .rachelm-large {
+    display: none;
+  }
+  .tomb-active .joem-large {
+    display: none;
+  }
+  .tomb-active .paulm-large {
+    display: none;
+  }
+  .tomb-active .paular-large {
+    display: none;
+  }
+  .tomb-active .douglasss-large {
+    display: none;
+  }
+  .tomb-active .tomv-large {
     display: none;
   }
   .tomb-active .tomb-large {
     opacity: 1;
     visibility: visible;
-    margin-left: 0;
   }
   .tomb-active .partners-cards-large-container {
     transform: translateX(0);
   }
 
-  .dougc-active .jimb-large,
-.dougc-active .tomb-large {
+  .dougc-active .jimb-large {
+    display: none;
+  }
+  .dougc-active .tomb-large {
+    display: none;
+  }
+  .dougc-active .barryf-large {
+    display: none;
+  }
+  .dougc-active .johng-large {
+    display: none;
+  }
+  .dougc-active .deanj-large {
+    display: none;
+  }
+  .dougc-active .scottk-large {
+    display: none;
+  }
+  .dougc-active .rachelm-large {
+    display: none;
+  }
+  .dougc-active .joem-large {
+    display: none;
+  }
+  .dougc-active .paulm-large {
+    display: none;
+  }
+  .dougc-active .paular-large {
+    display: none;
+  }
+  .dougc-active .douglasss-large {
+    display: none;
+  }
+  .dougc-active .tomv-large {
     display: none;
   }
   .dougc-active .dougc-large {
     opacity: 1;
     visibility: visible;
-    margin-left: 0;
   }
   .dougc-active .partners-cards-large-container {
     transform: translateX(0);
   }
 
-  .barryf-active .dougc-large,
-.barryf-active .johng-large {
+  .barryf-active .jimb-large {
+    display: none;
+  }
+  .barryf-active .tomb-large {
+    display: none;
+  }
+  .barryf-active .dougc-large {
+    display: none;
+  }
+  .barryf-active .johng-large {
+    display: none;
+  }
+  .barryf-active .deanj-large {
+    display: none;
+  }
+  .barryf-active .scottk-large {
+    display: none;
+  }
+  .barryf-active .rachelm-large {
+    display: none;
+  }
+  .barryf-active .joem-large {
+    display: none;
+  }
+  .barryf-active .paulm-large {
+    display: none;
+  }
+  .barryf-active .paular-large {
+    display: none;
+  }
+  .barryf-active .douglasss-large {
+    display: none;
+  }
+  .barryf-active .tomv-large {
     display: none;
   }
   .barryf-active .barryf-large {
     opacity: 1;
     visibility: visible;
-    margin-left: 0;
   }
   .barryf-active .partners-cards-large-container {
+    transform: translateX(0);
+  }
+
+  .johng-active .jimb-large {
+    display: none;
+  }
+  .johng-active .tomb-large {
+    display: none;
+  }
+  .johng-active .dougc-large {
+    display: none;
+  }
+  .johng-active .barryf-large {
+    display: none;
+  }
+  .johng-active .deanj-large {
+    display: none;
+  }
+  .johng-active .scottk-large {
+    display: none;
+  }
+  .johng-active .rachelm-large {
+    display: none;
+  }
+  .johng-active .joem-large {
+    display: none;
+  }
+  .johng-active .paulm-large {
+    display: none;
+  }
+  .johng-active .paular-large {
+    display: none;
+  }
+  .johng-active .douglasss-large {
+    display: none;
+  }
+  .johng-active .tomv-large {
+    display: none;
+  }
+  .johng-active .johng-large {
+    opacity: 1;
+    visibility: visible;
+  }
+  .johng-active .partners-cards-large-container {
+    transform: translateX(0);
+  }
+
+  .deanj-active .jimb-large {
+    display: none;
+  }
+  .deanj-active .tomb-large {
+    display: none;
+  }
+  .deanj-active .dougc-large {
+    display: none;
+  }
+  .deanj-active .barryf-large {
+    display: none;
+  }
+  .deanj-active .johng-large {
+    display: none;
+  }
+  .deanj-active .scottk-large {
+    display: none;
+  }
+  .deanj-active .rachelm-large {
+    display: none;
+  }
+  .deanj-active .joem-large {
+    display: none;
+  }
+  .deanj-active .paulm-large {
+    display: none;
+  }
+  .deanj-active .paular-large {
+    display: none;
+  }
+  .deanj-active .douglasss-large {
+    display: none;
+  }
+  .deanj-active .tomv-large {
+    display: none;
+  }
+  .deanj-active .deanj-large {
+    opacity: 1;
+    visibility: visible;
+  }
+  .deanj-active .partners-cards-large-container {
+    transform: translateX(0);
+  }
+
+  .scottk-active .jimb-large {
+    display: none;
+  }
+  .scottk-active .tomb-large {
+    display: none;
+  }
+  .scottk-active .dougc-large {
+    display: none;
+  }
+  .scottk-active .barryf-large {
+    display: none;
+  }
+  .scottk-active .johng-large {
+    display: none;
+  }
+  .scottk-active .deanj-large {
+    display: none;
+  }
+  .scottk-active .rachelm-large {
+    display: none;
+  }
+  .scottk-active .joem-large {
+    display: none;
+  }
+  .scottk-active .paulm-large {
+    display: none;
+  }
+  .scottk-active .paular-large {
+    display: none;
+  }
+  .scottk-active .douglasss-large {
+    display: none;
+  }
+  .scottk-active .tomv-large {
+    display: none;
+  }
+  .scottk-active .scottk-large {
+    opacity: 1;
+    visibility: visible;
+  }
+  .scottk-active .partners-cards-large-container {
+    transform: translateX(0);
+  }
+
+  .rachelm-active .jimb-large {
+    display: none;
+  }
+  .rachelm-active .tomb-large {
+    display: none;
+  }
+  .rachelm-active .dougc-large {
+    display: none;
+  }
+  .rachelm-active .barryf-large {
+    display: none;
+  }
+  .rachelm-active .johng-large {
+    display: none;
+  }
+  .rachelm-active .deanj-large {
+    display: none;
+  }
+  .rachelm-active .scottk-large {
+    display: none;
+  }
+  .rachelm-active .joem-large {
+    display: none;
+  }
+  .rachelm-active .paulm-large {
+    display: none;
+  }
+  .rachelm-active .paular-large {
+    display: none;
+  }
+  .rachelm-active .douglasss-large {
+    display: none;
+  }
+  .rachelm-active .tomv-large {
+    display: none;
+  }
+  .rachelm-active .rachelm-large {
+    opacity: 1;
+    visibility: visible;
+  }
+  .rachelm-active .partners-cards-large-container {
+    transform: translateX(0);
+  }
+
+  .joem-active .jimb-large {
+    display: none;
+  }
+  .joem-active .tomb-large {
+    display: none;
+  }
+  .joem-active .dougc-large {
+    display: none;
+  }
+  .joem-active .barryf-large {
+    display: none;
+  }
+  .joem-active .johng-large {
+    display: none;
+  }
+  .joem-active .deanj-large {
+    display: none;
+  }
+  .joem-active .scottk-large {
+    display: none;
+  }
+  .joem-active .rachelm-large {
+    display: none;
+  }
+  .joem-active .paulm-large {
+    display: none;
+  }
+  .joem-active .paular-large {
+    display: none;
+  }
+  .joem-active .douglasss-large {
+    display: none;
+  }
+  .joem-active .tomv-large {
+    display: none;
+  }
+  .joem-active .joem-large {
+    opacity: 1;
+    visibility: visible;
+  }
+  .joem-active .partners-cards-large-container {
+    transform: translateX(0);
+  }
+
+  .paulm-active .jimb-large {
+    display: none;
+  }
+  .paulm-active .tomb-large {
+    display: none;
+  }
+  .paulm-active .dougc-large {
+    display: none;
+  }
+  .paulm-active .barryf-large {
+    display: none;
+  }
+  .paulm-active .johng-large {
+    display: none;
+  }
+  .paulm-active .deanj-large {
+    display: none;
+  }
+  .paulm-active .scottk-large {
+    display: none;
+  }
+  .paulm-active .rachelm-large {
+    display: none;
+  }
+  .paulm-active .joem-large {
+    display: none;
+  }
+  .paulm-active .paular-large {
+    display: none;
+  }
+  .paulm-active .douglasss-large {
+    display: none;
+  }
+  .paulm-active .tomv-large {
+    display: none;
+  }
+  .paulm-active .paulm-large {
+    opacity: 1;
+    visibility: visible;
+  }
+  .paulm-active .partners-cards-large-container {
+    transform: translateX(0);
+  }
+
+  .paular-active .jimb-large {
+    display: none;
+  }
+  .paular-active .tomb-large {
+    display: none;
+  }
+  .paular-active .dougc-large {
+    display: none;
+  }
+  .paular-active .barryf-large {
+    display: none;
+  }
+  .paular-active .johng-large {
+    display: none;
+  }
+  .paular-active .deanj-large {
+    display: none;
+  }
+  .paular-active .scottk-large {
+    display: none;
+  }
+  .paular-active .rachelm-large {
+    display: none;
+  }
+  .paular-active .joem-large {
+    display: none;
+  }
+  .paular-active .paulm-large {
+    display: none;
+  }
+  .paular-active .douglasss-large {
+    display: none;
+  }
+  .paular-active .tomv-large {
+    display: none;
+  }
+  .paular-active .paular-large {
+    opacity: 1;
+    visibility: visible;
+  }
+  .paular-active .partners-cards-large-container {
+    transform: translateX(0);
+  }
+
+  .douglasss-active .jimb-large {
+    display: none;
+  }
+  .douglasss-active .tomb-large {
+    display: none;
+  }
+  .douglasss-active .dougc-large {
+    display: none;
+  }
+  .douglasss-active .barryf-large {
+    display: none;
+  }
+  .douglasss-active .johng-large {
+    display: none;
+  }
+  .douglasss-active .deanj-large {
+    display: none;
+  }
+  .douglasss-active .scottk-large {
+    display: none;
+  }
+  .douglasss-active .rachelm-large {
+    display: none;
+  }
+  .douglasss-active .joem-large {
+    display: none;
+  }
+  .douglasss-active .paulm-large {
+    display: none;
+  }
+  .douglasss-active .paular-large {
+    display: none;
+  }
+  .douglasss-active .tomv-large {
+    display: none;
+  }
+  .douglasss-active .douglasss-large {
+    opacity: 1;
+    visibility: visible;
+  }
+  .douglasss-active .partners-cards-large-container {
+    transform: translateX(0);
+  }
+
+  .tomv-active .jimb-large {
+    display: none;
+  }
+  .tomv-active .tomb-large {
+    display: none;
+  }
+  .tomv-active .dougc-large {
+    display: none;
+  }
+  .tomv-active .barryf-large {
+    display: none;
+  }
+  .tomv-active .johng-large {
+    display: none;
+  }
+  .tomv-active .deanj-large {
+    display: none;
+  }
+  .tomv-active .scottk-large {
+    display: none;
+  }
+  .tomv-active .rachelm-large {
+    display: none;
+  }
+  .tomv-active .joem-large {
+    display: none;
+  }
+  .tomv-active .paulm-large {
+    display: none;
+  }
+  .tomv-active .paular-large {
+    display: none;
+  }
+  .tomv-active .douglasss-large {
+    display: none;
+  }
+  .tomv-active .tomv-large {
+    opacity: 1;
+    visibility: visible;
+  }
+  .tomv-active .partners-cards-large-container {
     transform: translateX(0);
   }
 }
