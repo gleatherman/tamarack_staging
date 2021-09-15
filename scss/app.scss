@@ -1584,6 +1584,12 @@ nav {
     min-height: 250px;
 }
 
+.partner-card-large .card-info #svg {
+    filter: brightness(0) saturate(100%) invert(87%) sepia(23%) saturate(3738%) hue-rotate(23deg) brightness(91%) contrast(74%);
+    height: 60px;
+    margin-top: 20px;
+}
+
 
 /* Indusry Partners */
 
