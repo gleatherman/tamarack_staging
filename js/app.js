@@ -105,7 +105,7 @@ $(document).ready(function() {
         }
     });
 
-    const partnerCardIDs = ['jimb-active', 'tomb-active', 'dougc-active', 'barryf-active', 'johng-active', 'deanj-active', 'scottk-active', 'rachelm-active', 'joem-active', 'paulm-active', 'paular-active', 'douglasss-active', 'tomv-active'];
+    const partnerCardIDs = ['jimb-active', 'tomb-active', 'dougc-active', 'barryf-active', 'johng-active', 'deanj-active', 'scottk-active', 'rachelm-active', 'scottn-active', 'paulm-active', 'paular-active', 'douglasss-active', 'tomv-active'];
 
     $('.partner-card-large').on('click', function(e) {
         const inactivePNames = partnerCardIDs.filter(value => value != this.id);
@@ -326,6 +326,7 @@ $('.partners-cards').slick({
         breakpoint: 1100,
         settings: {
             slidesToShow: 2,
+            slidesToScroll: 2,
         }
     }, {
         breakpoint: 800,

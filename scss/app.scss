@@ -1119,6 +1119,15 @@ nav {
     display: flex;
     margin: 0 -27px;
     // margin: 36px 0;
+    /* slick module for partners cards  */
+    .slick-next {
+        right: 0 !important;
+        z-index: 101;
+    }
+    .slick-prev {
+        left: 0 !important;
+        z-index: 101;
+    }
 }
 
 .partner-photo {
@@ -1193,20 +1202,21 @@ nav {
             width: 50px;
         }
     }
-    /* slick-theme.css | http://dadbook-pro-16.local:5757/js/slick/slick-theme.css */
-    .slick-next {
-        right: 0 !important;
-        z-index: 101;
-    }
-    .slick-prev {
-        left: 0 !important;
-        z-index: 101;
-    }
+    // /* slick-theme.css  */
+    // .slick-next {
+    //     right: 0 !important;
+    //     z-index: 101;
+    // }
+    // .slick-prev {
+    //     left: 0 !important;
+    //     z-index: 101;
+    // }
 }
 
 @include breakpoint(medium) {
     .partners-cards {
         flex-direction: column;
+        margin: 0;
     }
     .partner-card-small {
         margin: 0 0 20px !important;
@@ -1255,10 +1265,10 @@ nav {
     .rachelm-active & {
         transform: translateX(calc(((-100% / 12) + 77px)* 7));
     }
-    .joem-active & {
+    .paulm-active & {
         transform: translateX(calc(((-100% / 12) + 77px) * 8));
     }
-    .paulm-active & {
+    .scottn-active & {
         transform: translateX(calc(((-100% / 12) + 77px) * 9));
     }
     .paular-active & {
@@ -1433,8 +1443,8 @@ nav {
     deanj,
     scottk,
     rachelm,
-    joem,
     paulm,
+    scottn,
     paular,
     douglasss,
     tomv;
@@ -1552,12 +1562,12 @@ nav {
 .scottk-active .rachelm-large,
 .scottk-active .deanj-large,
 .rachelm-active .scottk-large,
-.rachelm-active .joem-large,
-.joem-active .rachelm-large,
-.joem-active .paulm-large,
-.paulm-active .joem-large,
-.paulm-active .paular-large,
-.paular-active .paulm-large,
+.rachelm-active .paulm-large,
+.paulm-active .scottn-large,
+.paulm-active .rachelm-large,
+.scottn-active .paular-large,
+.scottn-active .paulm-large,
+.paular-active .scottn-large,
 .paular-active .douglasss-large,
 .douglasss-active .paular-large,
 .douglasss-active .tomv-large,
