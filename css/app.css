@@ -1067,6 +1067,7 @@ nav .menu-button:hover {
   font-size: 18px;
   line-height: 1em;
   height: 20px;
+  font-style: italic;
 }
 .partner-card-small .partner-photo {
   position: absolute;
@@ -1191,6 +1192,7 @@ nav .menu-button:hover {
 .partner-card-large .card-info p {
   margin: 0;
   font-size: 18px;
+  font-style: italic;
 }
 .partner-card-large .card-content {
   position: relative;
