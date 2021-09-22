@@ -1116,6 +1116,7 @@ nav .menu-button:hover {
   .partner-card-small {
     margin: 0 0 20px !important;
     padding: 30px 70px 30px 150px;
+    line-height: 1em;
   }
 }
 .partners-cards-large-container {
@@ -1138,40 +1139,40 @@ nav .menu-button:hover {
   transform: translateX(0);
 }
 .tomb-active .partners-cards-large-container {
-  transform: translateX(calc((-100% / 12) + 77px));
+  transform: translateX(calc(-8.3333333333% + 77px));
 }
 .dougc-active .partners-cards-large-container {
-  transform: translateX(calc(((-100% / 12) + 77px) * 2));
+  transform: translateX(calc((-8.3333333333% + 77px) * 2));
 }
 .barryf-active .partners-cards-large-container {
-  transform: translateX(calc(((-100% / 12) + 77px)* 3));
+  transform: translateX(calc((-8.3333333333% + 77px) * 3));
 }
 .johng-active .partners-cards-large-container {
-  transform: translateX(calc(((-100% / 12) + 77px)* 4));
+  transform: translateX(calc((-8.3333333333% + 77px) * 4));
 }
 .deanj-active .partners-cards-large-container {
-  transform: translateX(calc(((-100% / 12) + 77px)* 5));
+  transform: translateX(calc((-8.3333333333% + 77px) * 5));
 }
 .scottk-active .partners-cards-large-container {
-  transform: translateX(calc(((-100% / 12) + 77px)* 6));
+  transform: translateX(calc((-8.3333333333% + 77px) * 6));
 }
 .rachelm-active .partners-cards-large-container {
-  transform: translateX(calc(((-100% / 12) + 77px)* 7));
+  transform: translateX(calc((-8.3333333333% + 77px) * 7));
 }
 .paulm-active .partners-cards-large-container {
-  transform: translateX(calc(((-100% / 12) + 77px) * 8));
+  transform: translateX(calc((-8.3333333333% + 77px) * 8));
 }
 .scottn-active .partners-cards-large-container {
-  transform: translateX(calc(((-100% / 12) + 77px) * 9));
+  transform: translateX(calc((-8.3333333333% + 77px) * 9));
 }
 .paular-active .partners-cards-large-container {
-  transform: translateX(calc(((-100% / 12) + 77px) * 10));
+  transform: translateX(calc((-8.3333333333% + 77px) * 10));
 }
 .douglasss-active .partners-cards-large-container {
-  transform: translateX(calc(((-100% / 12) + 77px) * 11));
+  transform: translateX(calc((-8.3333333333% + 77px) * 11));
 }
 .tomv-active .partners-cards-large-container {
-  transform: translateX(calc(((-100% / 12) + 77px) * 12));
+  transform: translateX(calc((-8.3333333333% + 77px) * 12));
 }
 
 .partner-card-large {
@@ -2130,6 +2131,7 @@ nav .menu-button:hover {
     text-align: left;
     line-height: 24px;
     margin: 0 20px 15px;
+    min-height: 165px;
   }
   .sector-grid .item img {
     position: absolute;
@@ -2394,8 +2396,8 @@ a.pin {
 }
 .sunburst-green {
   position: absolute;
-  bottom: calc( -1077px / 2);
-  right: calc( -1077px / 2);
+  bottom: -538.5px;
+  right: -538.5px;
   background: url(../img/sunburst-green.svg);
   background-size: 100%;
   width: 1077px;
@@ -2405,14 +2407,14 @@ a.pin {
 .sunburst-green.big {
   width: 1200px;
   height: 1200px;
-  bottom: calc( -1200px / 2);
-  right: calc( -1200px / 2);
+  bottom: -600px;
+  right: -600px;
 }
 
 .sunburst-gold {
   position: absolute;
-  bottom: calc( -1077px / 2);
-  left: calc( -1077px / 2);
+  bottom: -538.5px;
+  left: -538.5px;
   background: url(../img/sunburst-gold.svg);
   background-size: 100%;
   width: 1077px;
@@ -2422,8 +2424,8 @@ a.pin {
 .sunburst-gold.big {
   width: 1200px;
   height: 1200px;
-  bottom: calc( -1200px / 2);
-  left: calc( -1200px / 2);
+  bottom: -600px;
+  left: -600px;
 }
 
 .parallax-window,

@@ -1222,6 +1222,7 @@ nav {
     .partner-card-small {
         margin: 0 0 20px !important;
         padding: 30px 70px 30px 150px;
+        line-height: 1.0em;
     }
 }
 
@@ -1782,6 +1783,7 @@ nav {
             text-align: left;
             line-height: 24px;
             margin: 0 20px 15px;
+            min-height: 165px;
             img {
                 position: absolute;
                 width: 32px;
